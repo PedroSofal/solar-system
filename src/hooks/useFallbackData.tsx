@@ -14,7 +14,6 @@ export default function useFallbackData(bodyData: BodyType) {
       mainAnomaly,
       nodalPeriod,
       apsidalPeriod,
-      needsPrecessionCorrection,
     } = bodyData;
 
     const randomInRange = (min: number, max: number) => {
@@ -40,7 +39,6 @@ export default function useFallbackData(bodyData: BodyType) {
       sideralRotation: sideralRotation || randomInRange(1, 30),
       nodalPeriod: nodalPeriod || 1_000_000,
       apsidalPeriod: apsidalPeriod || 1_000_000,
-      needsPrecessionCorrection: needsPrecessionCorrection || false,
     };
   }, [bodyData]);
 

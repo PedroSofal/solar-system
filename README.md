@@ -14,7 +14,7 @@ Este projeto, ainda sem nome, se trata de um modelo 3D, em escala, do Sistema So
 
 - **Acesso offline:** por não depender de dados em tempo real, você pode continuar usando o app normalmente sem depender de internet, após iniciá-lo;
 
-- **Performance otimizada:** o app utiliza culling, LOD e diversas outras técnicas para garantir a melhor experiência de performance, ao trabalhar com milhares de polígonos;
+- **Performance otimizada:** o app utiliza culling, LOD, lazy loading e diversas outras técnicas para garantir a melhor experiência de performance, ao trabalhar com milhares de polígonos;
 
 ## Pontos de interesse
 

@@ -4,15 +4,11 @@ import { getActiveLOD } from '../utils';
 import { Mesh, Vector3 } from 'three';
 import { lazy, Suspense, useRef, useState } from 'react';
 
-// const LazyMoon = lazy(() => import('./Moon'));
 const LazySaturnRings = lazy(() => import('./SaturnRings'));
 
 export default function Planet({ bodyData }: { bodyData: BodyType }) {
   const bodyRef = useRef<Mesh>(null);
-
-  const { id, moonBodies } = bodyData;
-
-  // const [loadedMoons, setLoadedMoons] = useState<BodyType[]>([]);
+  const { id } = bodyData;
   const [loadedRings, setLoadedRings] = useState(false);
 
   useFrame(({ camera }) => {
@@ -24,33 +20,19 @@ export default function Planet({ bodyData }: { bodyData: BodyType }) {
 
     if (distance < 2000) {
       if (!loadedRings) setLoadedRings(true);
-
-      // moonBodies?.forEach((moon) => {
-      //   setLoadedMoons((prev) => {
-      //     if (prev.some((loadedMoon) => loadedMoon.id === moon.id)) return prev;
-      //     return [...prev, moon];
-      //   });
-      // });
     }
   });
 
   return (
     <Node bodyData={bodyData} bodyRef={bodyRef}>
-      <>
-        {/* <Suspense fallback={null}>
-          {loadedMoons?.map((moon) => (
-            <LazyMoon key={moon.id} bodyData={moon} />
-          ))}
-        </Suspense> */}
-        <Suspense fallback={null}>
-          {id === 'saturn' && loadedRings && (
-            <LazySaturnRings
-              bodyRef={bodyRef}
-              saturnEquaRadius={bodyData.equaRadius as number}
-            />
-          )}
-        </Suspense>
-      </>
+      <Suspense fallback={null}>
+        {id === 'saturn' && loadedRings && (
+          <LazySaturnRings
+            bodyRef={bodyRef}
+            saturnEquaRadius={bodyData.equaRadius as number}
+          />
+        )}
+      </Suspense>
     </Node>
   );
 }
