@@ -16,8 +16,6 @@
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "^4.0.14",
     "@types/three": "^0.173.0",
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
     "gsap": "^3.12.7",
     "leva": "^0.10.0",
     "node-fetch": "^3.3.2",
