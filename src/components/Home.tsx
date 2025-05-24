@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center bg-black">
           <img
             className="absolute block object-cover"
-            src="/src/assets/img/cover.png"
+            src="/img/cover.png"
             alt="Saturno e seus anéis"
           />
           <p className="z-10 animate-pulse text-xl text-white">Carregando...</p>
