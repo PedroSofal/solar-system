@@ -2,6 +2,10 @@
 
 Este projeto, ainda sem nome, se trata de um modelo 3D, em escala, do Sistema Solar, construído com Three.js, a partir de dados reais obtidos principalmente do sistema Horizons da NASA.
 
+## Versão online
+
+Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.onrender.com/).
+
 ## Recursos principais
 
 - **Máquina do tempo:** acelere a passagem do tempo, volte ao passado ou digite uma data personalizada para visualizar como era o Sistema Solar no momento exato em que você nasceu;
