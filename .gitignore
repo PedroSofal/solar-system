@@ -25,11 +25,6 @@ dist-ssr
 
 # Entrada de dados
 .entrada
-server
-bodies-bckp.json
-newData.json
-updateFromHorizons.cjs
-updateFromLocalFile.cjs
 
 # To do
 todo

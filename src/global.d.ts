@@ -38,6 +38,7 @@ interface Parent {
 }
 
 type BodyTypeOptions =
+  | 'Estrela'
   | 'Planeta'
   | 'Satélite Natural'
   | 'Planeta-anão'

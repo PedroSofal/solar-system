@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import bodies from '../data/bodies.json';
 
 export default function useFetchBodies() {
   const [loading, setLoading] = useState(true);
@@ -15,21 +14,26 @@ export default function useFetchBodies() {
 
   useEffect(() => {
     setLoading(true);
-    try {
-      // prettier-ignore
-      setData({
-        sun: bodies.find((body) => body.bodyType === 'Estrela') as BodyType,
-        planets: bodies.filter((body) => body.bodyType === 'Planeta') as BodyType[],
-        moons: bodies.filter((body) => body.bodyType === 'Satélite Natural') as BodyType[],
-        dwarfPlanets: bodies.filter((body) => body.bodyType === 'Planeta-anão') as BodyType[],
-        asteroids: bodies.filter((body) => body.bodyType === 'Asteróide') as BodyType[],
-        comets: bodies.filter((body) => body.bodyType === 'Cometa') as BodyType[],
-      });
-    } catch (err) {
-      setError((err as Error).message);
-    } finally {
-      setLoading(false);
-    }
+
+    fetch('/data/bodies.json')
+      .then((res) => {
+        if (!res.ok)
+          throw new Error(`Erro ao carregar bodies.json: ${res.statusText}`);
+        return res.json();
+      })
+      .then((bodies: BodyType[]) => {
+        // prettier-ignore
+        setData({
+          sun: bodies.find((body) => body.bodyType === 'Estrela'),
+          planets: bodies.filter((body) => body.bodyType === 'Planeta'),
+          moons: bodies.filter((body) => body.bodyType === 'Satélite Natural'),
+          dwarfPlanets: bodies.filter((body) => body.bodyType === 'Planeta-anão'),
+          asteroids: bodies.filter((body) => body.bodyType === 'Asteróide'),
+          comets: bodies.filter((body) => body.bodyType === 'Cometa'),
+        });
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
   }, []);
 
   return { data, loading, error };

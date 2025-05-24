@@ -1,16 +1,16 @@
-import Sun from './Sun';
-import Background from './Background';
-import { memo, useContext, useMemo } from 'react';
-import Planet from './Planet';
+import { lazy, memo, Suspense, useContext, useMemo } from 'react';
+import TimeTicker from './TimeTicker';
 import BodyDataContext from '../contexts/BodyDataContext';
 import LayerContext from '../contexts/LayerContext';
+import Sun from './Sun';
+import Planet from './Planet';
+import Background from './Background';
 
-import Moon from './Moon';
-import TimeTicker from './TimeTicker';
+// Lazy imports
+const Moon = lazy(() => import('./Moon'));
 
 export default memo(function SolarSystem() {
   const { sun, planets, dwarfPlanets, loading } = useContext(BodyDataContext);
-
   const { getLayer } = useContext(LayerContext);
   const ambientLightLayer = getLayer('ambient-light');
 
@@ -24,13 +24,13 @@ export default memo(function SolarSystem() {
 
       {!loading && sun && <Sun bodyData={sun} />}
 
-      {allPlanets?.map((planet) => (
-        <Planet key={planet.id} bodyData={planet} />
-      ))}
+      {allPlanets?.map((planet) => <Planet bodyData={planet} />)}
 
       {allPlanets.map((planet) =>
         planet.moonBodies?.map((moon) => (
-          <Moon key={moon.id} bodyData={moon} />
+          <Suspense key={moon.id} fallback={null}>
+            <Moon bodyData={moon} />
+          </Suspense>
         )),
       )}
 
