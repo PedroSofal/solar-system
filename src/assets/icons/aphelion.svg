@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="currentColor" strokeWidth="1.5">
+	<circle cx="26.19" cy="32" r="3.79" />
+	<path d="M56.64 35.77a20.17 20.17 0 0 1-1 3.36" />
+	<path strokeDasharray="7 7" d="M52.13 45.18a26.08 26.08 0 0 1-20.13 9C18.19 54.23 7 44.28 7 32S18.19 9.77 32 9.77c9.62 0 18 4.84 22.16 11.93" />
+	<path d="M55.69 24.87a20.17 20.17 0 0 1 1 3.36" />
+	<line x1="53.21" y1="32" x2="29.98" y2="32" />
+	<circle cx="57.01" cy="32" r="3.79" />
+</svg>

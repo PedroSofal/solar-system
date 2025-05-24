@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%" fill="none" stroke="currentColor" strokeWidth="1.5">
+  <circle cx="32" cy="32" r="21.72"/>
+  <path d="M7.59,21.81C-15,51,75.45,51.6,57.73,23.68"/>
+  <circle cx="32" cy="27.89" r="9.21"/>
+  <polyline points="32 21.43 32 27.89 37.28 27.89"/>
+  <polyline points="56.33 28.3 57.73 23.68 62.24 24.96"/>
+</svg>
