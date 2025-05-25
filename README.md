@@ -32,9 +32,19 @@ Atualizações futuras incluirão cometas e asteróides, além de anéis de plan
 
 A física dos corpos segue o **modelo kepleriano** com precessões seculares (nodal e apsidal), baseado em elementos orbitais para a época J2000 (1º de janeiro de 2000 às 10h no Horário de Brasília).
 
+Isso significa que a posição dos corpos celestes em qualquer instante é determinada por informações sobre suas órbitas, como o **semi-eixo maior, inclinação, longitude do nó ascendente, argumento do periápside, excentricidade e anomalia média**, essas duas últimas sendo usadas para calcular a anomalia excêntrica, através da equação de Kepler, e a anomalia verdadeira, que é a posição real do corpo em sua órbita elíptica.
+
+O movimento de translação é completado com a utilização do **período orbital e as precessões** do nodo ascendente e do argumento do periápside.
+
 Diferente de modelos n-body e modelos numéricos completos, o modelo com base kepleriana não considera perturbações gravitacionais, que podem resultar em órbitas altamente variáveis ao longo do tempo. Por esse motivo, quanto mais longe do J2000, a posição de algumas luas deve apresentar desvios em relação a um modelo mais preciso, como o Eyes on the Solar System, da NASA.
 
 Na tentativa de mitigar essas imprecisões, foram feitos alguns ajustes finos nos dados de precessão apsidal e nodal, e períodos orbitais. Os exemplos de correções mais extremas são as luas Valetudo, S/2003 J 23, S/2022 J 1 e S/2022 J 2 de Júpiter, e as luas Bestla, Skrymir, S/2004 S 7 e S/2019 S 6 de Saturno.
+
+Com relação ao movimento de rotação, o principal desafio é inclinar o eixo de rotação do corpo celeste na direção correta. Sabemos que a Terra é tombada cerca de 23° em relação ao plano de sua órbita, mas para que lado ocorre essa inclinação? Para os principais planetas do Sistema Solar e para a nossa Lua foram utilizados dados disponíveis sobre a **ascensão reta e a declinação (RA/DEC)** para calcular o vetor do norte polar e inclinar os objetos corretamente, por meio de quarteniões.
+
+Isso é particularmente importante nos casos de Saturno, que mantém seus anéis orientados exatamente como na vida real durante todo o período de simulação, além de Urano que possui uma obliquidade extrema, fazendo com que o planeta gire de lado como se estivesse rolando sobre sua órbita.
+
+A estratégia de coordenadas RA/DEC também foi adotada para construir o **plano de Laplace** dos satélites mais próximos de seus planetas, que costumam orbitar próximos ao plano equatorial do corpo primário. As demais luas, quando existentes, são referenciadas a partir da **Eclíptica**, seguindo o referencial adotado pelo sistema Horizons.
 
 # Créditos
 
