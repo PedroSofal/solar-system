@@ -332,11 +332,11 @@ function InfoItem({
 
   return (
     <li
-      className={`flex gap-4 px-6 py-3 hover:bg-slate-900 ${selectNewBody ? 'cursor-pointer' : ''}`}
+      className={`flex items-start gap-4 px-6 py-3 hover:bg-slate-900 ${selectNewBody ? 'cursor-pointer' : ''}`}
       onClick={handleClick}
       title={selectNewBody ? `Navegar até ${label}` : ''}
     >
-      <div className="flex w-12 items-center rounded-full border-1 border-emerald-400/40 bg-radial from-sky-500/40 to-transparent text-white">
+      <div className="flex w-12 shrink-0 items-center rounded-full border-1 border-emerald-400/40 bg-radial from-sky-500/40 to-transparent text-white">
         {icon}
       </div>
       <div className="flex flex-col justify-center">
