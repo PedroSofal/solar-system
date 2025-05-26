@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), glsl(), tailwindcss(), svgr()],
   build: {
     rollupOptions: {
@@ -19,4 +19,7 @@ export default defineConfig({
       },
     },
   },
-});
+  server: {
+    host: mode === 'lan' ? '192.168.15.8' : 'localhost',
+  },
+}));
