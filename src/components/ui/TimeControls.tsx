@@ -7,9 +7,11 @@ import { fromJulianDate, toJulianDate } from '../../utils';
 export default function TimeControls({
   isExpanded,
   setIsExpanded,
+  isOverlayHidden,
 }: {
   isExpanded: boolean;
   setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
+  isOverlayHidden: boolean;
 }) {
   const {
     play,
@@ -33,7 +35,9 @@ export default function TimeControls({
   }
 
   return (
-    <div className="pointer-events-none absolute bottom-0 w-full">
+    <div
+      className={`${isOverlayHidden ? 'translate-y-[100%]' : ''} pointer-events-none absolute bottom-0 w-full duration-700`}
+    >
       <div
         className={`flex flex-col items-center px-2 duration-300 ${isExpanded || !isValidTime ? '' : 'invisible translate-y-24 opacity-0'}`}
       >
