@@ -15,7 +15,7 @@ export default function Home() {
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-black">
           <img
-            className="absolute block object-cover"
+            className="absolute block h-full w-full object-cover"
             src="/img/cover.png"
             alt="Saturno e seus anéis"
           />
