@@ -24,7 +24,9 @@ export default memo(function SolarSystem() {
 
       {!loading && sun && <Sun bodyData={sun} />}
 
-      {allPlanets?.map((planet) => <Planet bodyData={planet} />)}
+      {allPlanets?.map((planet) => (
+        <Planet key={planet.id} bodyData={planet} />
+      ))}
 
       {allPlanets.map((planet) =>
         planet.moonBodies?.map((moon) => (
