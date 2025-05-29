@@ -90,10 +90,10 @@ export function getHitboxCullingPoints(
       };
     case 'Satélite Natural':
       return {
-        farStart: declustered ? radius + 15 : radius + 1000,
-        farEnd: declustered ? radius + 3 : radius + 60,
+        farStart: declustered ? radius + 30 : radius + 1000,
+        farEnd: declustered ? radius + 0.5 : radius + 60,
         nearStart: radius + 0.5,
-        nearEnd: radius + 0.2,
+        nearEnd: radius + 0.1,
       };
     case 'Planeta-anão':
       return {
@@ -122,10 +122,10 @@ export function getOrbitCullingPoints(
       };
     case 'Satélite Natural':
       return {
-        farStart: declustered ? radius + 15 : radius + 800,
-        farEnd: declustered ? radius + 3 : radius + 10,
+        farStart: declustered ? radius + 30 : radius + 800,
+        farEnd: declustered ? radius + 0.5 : radius + 10,
         nearStart: radius + 0.5,
-        nearEnd: radius + 0.2,
+        nearEnd: radius + 0.1,
       };
     case 'Planeta-anão':
       return {

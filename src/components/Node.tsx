@@ -38,6 +38,7 @@ export default function Node({
     aroundPlanet,
     meanRadius,
     obliquity,
+    referencePlane,
   } = bodyData;
 
   const {
@@ -66,8 +67,12 @@ export default function Node({
 
   const isMoon = bodyType === 'Satélite Natural';
   const color = getNodeColor(aroundPlanet?.planet || id, isMoon);
-  const declustered = id === 'mercury' || id === 'venus' || id === 'mars';
   const needsPrecessionCorrection = id === 'moon';
+  const declustered =
+    id === 'mercury' ||
+    id === 'venus' ||
+    id === 'mars' ||
+    (referencePlane.ref === 'laplace' && semimajorAxis < 377396); // Helene (Saturno)
 
   const hitboxCulling = getHitboxCullingPoints(bodyData, declustered);
   const orbitCulling = getOrbitCullingPoints(bodyData, declustered);
