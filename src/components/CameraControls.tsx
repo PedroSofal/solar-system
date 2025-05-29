@@ -87,17 +87,15 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     if (!orbitControlsRef.current) return;
 
     const orbitControls = orbitControlsRef.current;
-    const targetStart = orbitControls.target.clone();
-    const newCameraPosition = new Vector3(-3000, 4000, 2000);
 
     gsap.to(orbitControls.object.position, {
-      x: newCameraPosition.x,
-      y: newCameraPosition.y,
-      z: newCameraPosition.z,
+      x: -3000,
+      y: 4000,
+      z: 2000,
       ease: 'power4.out',
       duration: 2.5,
       onUpdate: () => {
-        orbitControls.target.copy(targetStart);
+        orbitControls.target.copy(new Vector3(0, 0, 0));
         orbitControls.update();
       },
     });
@@ -123,10 +121,31 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         (activeBody.scale.x + activeBody.scale.y + activeBody.scale.z) / 3;
       const bodyRadius = boundingSphere.radius * avgScale;
 
+      // Direção do corpo em relação ao Sol
+      const center = new Vector3(0, 0, 0);
+      const toCenter = new Vector3()
+        .subVectors(center, bodyPosition)
+        .normalize();
+
+      // Vetores ortogonais relativos à direção do Sol
+      const worldUp = new Vector3(0, 0, 1);
+      const side = new Vector3().crossVectors(toCenter, worldUp).normalize();
+      const up = new Vector3().crossVectors(side, toCenter).normalize();
+
+      const sideAmount = 0.8;
+      const upAmount = 0.2;
+
+      // Desvia a câmera um pouco
+      const offsetDir = new Vector3()
+        .copy(toCenter)
+        .add(side.multiplyScalar(sideAmount))
+        .add(up.multiplyScalar(upAmount))
+        .normalize();
+
       const distance = bodyRadius * 4;
       const newCameraPosition = new Vector3()
         .copy(bodyPosition)
-        .add(new Vector3(0, distance, distance));
+        .add(offsetDir.multiplyScalar(distance));
 
       const targetStart = orbitControls.target.clone();
       const targetEnd = bodyPosition.clone();
@@ -134,24 +153,29 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
       const newMinDistance = Math.max(0.0003, bodyRadius * 1.5);
       orbitControls.minDistance = newMinDistance;
 
-      const animationConfig = (vec: Vector3) => ({
-        x: vec.x,
-        y: vec.y,
-        z: vec.z,
-        ease: 'power4.out',
+      // Animação da posição da câmera
+      gsap.to(orbitControls.object.position, {
+        x: newCameraPosition.x,
+        y: newCameraPosition.y,
+        z: newCameraPosition.z,
         duration: 1.2,
+        ease: 'power4.out',
         onUpdate: () => {
-          orbitControls.target.copy(targetStart);
           orbitControls.update();
         },
       });
 
-      gsap.to(orbitControls.object.position, {
-        ...animationConfig(newCameraPosition),
-      });
-
+      // Animação do alvo (target) da câmera
       gsap.to(targetStart, {
-        ...animationConfig(targetEnd),
+        x: targetEnd.x,
+        y: targetEnd.y,
+        z: targetEnd.z,
+        duration: 1.2,
+        ease: 'power4.out',
+        onUpdate: () => {
+          orbitControls.target.copy(targetStart);
+          orbitControls.update();
+        },
       });
     }
   }
