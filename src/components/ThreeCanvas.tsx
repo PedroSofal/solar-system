@@ -8,8 +8,10 @@ import { SceneProvider } from '../contexts/SceneContext';
 // import { Perf } from 'r3f-perf';
 
 export default function ThreeCanvas({
+  isLoaded,
   setIsLoaded,
 }: {
+  isLoaded: boolean;
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
@@ -18,7 +20,7 @@ export default function ThreeCanvas({
       dpr={[1, 2]}
       gl={{ logarithmicDepthBuffer: true }}
       camera={{
-        position: [-3000, 4000, 2000],
+        position: [0, 50000, 18000],
         up: [0, 0, 1],
         fov: 30,
         near: 0.00001,
@@ -27,7 +29,7 @@ export default function ThreeCanvas({
     >
       <SceneProvider>
         <LoadingProgress setIsLoaded={setIsLoaded} />
-        <CameraControls />
+        <CameraControls isLoaded={isLoaded} />
         <ResponsiveFOV />
         <SolarSystem />
         {/* <Perf className="left-[50%] w-fit -translate-x-[50%]" /> */}

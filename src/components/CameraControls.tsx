@@ -11,7 +11,7 @@ import gsap from 'gsap';
 import { useMatch } from 'react-router-dom';
 import { getActiveLOD } from '../utils';
 
-export default function CameraControls() {
+export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   const orbitControlsRef = useRef<OrbitControlsType>(null);
   const trackballControlsRef = useRef<TrackballControlsType>(null);
   const targetRef = useRef<Object3D | null>(null);
@@ -21,6 +21,10 @@ export default function CameraControls() {
 
   const { scene } = useThree();
   const match = useMatch('/corpos/:id');
+
+  useEffect(() => {
+    if (isLoaded && !match) initialZoom();
+  }, [isLoaded]);
 
   useEffect(() => {
     // Se o app é iniciado com /corpos/:id, navegamos até o corpo
@@ -78,6 +82,26 @@ export default function CameraControls() {
       orbitControls.update();
     }
   });
+
+  function initialZoom() {
+    if (!orbitControlsRef.current) return;
+
+    const orbitControls = orbitControlsRef.current;
+    const targetStart = orbitControls.target.clone();
+    const newCameraPosition = new Vector3(-3000, 4000, 2000);
+
+    gsap.to(orbitControls.object.position, {
+      x: newCameraPosition.x,
+      y: newCameraPosition.y,
+      z: newCameraPosition.z,
+      ease: 'power4.out',
+      duration: 2.5,
+      onUpdate: () => {
+        orbitControls.target.copy(targetStart);
+        orbitControls.update();
+      },
+    });
+  }
 
   function focusOnTarget(body: Mesh) {
     if (!orbitControlsRef.current || !body) return;
