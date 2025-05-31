@@ -4,27 +4,22 @@ import TextureContext from '../contexts/TextureContext';
 export default function MoonMaterial({
   id,
   meanRadius,
-  dimension,
 }: {
   id: string;
   meanRadius: number;
-  dimension: string;
 }) {
   const isMoon = id === 'moon';
-  const isSmall = meanRadius < 1000;
-  const isExtraSmall = meanRadius < 300;
-  const isIrregular = !!dimension;
+  const isSmall = meanRadius < 600;
 
   const { getTexture } = useContext(TextureContext);
 
-  // MOON -----------------
+  // EARTH'S MOON -----------------
   const moonTexture = getTexture('moon');
 
-  // OTHER -----------------
-  const genericTextureRad = isIrregular ? 'jaggedRockyGround1' : 'lunarRock2';
-  const albedo = getTexture(`${genericTextureRad}_albedo`);
-  const height = getTexture(`${genericTextureRad}_height`);
-  const normal = getTexture(`${genericTextureRad}_normal`);
+  // OTHER MOONS -----------------
+  const albedo = getTexture('lunarRock2_albedo');
+  const height = getTexture('lunarRock2_height');
+  const normal = getTexture('lunarRock2_normal');
 
   if (isMoon) {
     return <meshStandardMaterial map={moonTexture} roughness={1} />;
@@ -33,9 +28,9 @@ export default function MoonMaterial({
       <meshLambertMaterial
         map={albedo}
         normalMap={normal}
-        normalScale={isExtraSmall ? 0.8 : isSmall ? 0.5 : 0.2}
+        normalScale={isSmall ? 0.5 : 0.2}
         displacementMap={height}
-        displacementScale={isIrregular ? 0.1 : meanRadius * 0.0000002}
+        displacementScale={meanRadius * 0.0000002}
       />
     );
   }

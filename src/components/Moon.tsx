@@ -1,4 +1,4 @@
-import { Group, Mesh, Quaternion, Vector3 } from 'three';
+import { Group, Quaternion, Vector3 } from 'three';
 import { useContext, useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import LayerContext from '../contexts/LayerContext';
@@ -30,7 +30,7 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
   const { getLayer } = useContext(LayerContext);
 
   const moonGroupRef = useRef<Group>(null);
-  const bodyRef = useRef<Mesh>(null);
+  const bodyRef = useRef<Group>(null);
   const planetRef = useRef<Group>(null);
 
   const areAllMoonsVisible = getLayer('all-moons')?.value;
@@ -78,8 +78,8 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
   }, [referencePlane, id, parentId]);
 
   return (
-    <group ref={moonGroupRef}>
-      <group quaternion={refPlaneQuaternion}>
+    <group ref={moonGroupRef} name="ancoragem do satélite">
+      <group quaternion={refPlaneQuaternion} name="reference plane">
         <Node bodyData={bodyData} bodyRef={bodyRef} />
       </group>
     </group>

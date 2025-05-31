@@ -1,11 +1,13 @@
 import { useMemo } from 'react';
-import { Mesh } from 'three';
+import { Group } from 'three';
 import { Detailed } from '@react-three/drei';
 import { toModelScale } from '../utils';
+import IrregularBody from './IrregularBody';
 
 export default function Body({
   bodyRef,
   id,
+  meanRadius,
   scaledEquaRadius,
   scaledPolarRadius,
   dimension,
@@ -13,8 +15,9 @@ export default function Body({
   atmosphere,
   shine,
 }: {
-  bodyRef: React.RefObject<Mesh | null>;
+  bodyRef: React.RefObject<Group | null>;
   id: string;
+  meanRadius: number;
   scaledEquaRadius: number;
   scaledPolarRadius: number;
   dimension?: string;
@@ -26,7 +29,7 @@ export default function Body({
     let initialRadius: number;
     let deformation: [x: number, y: number, z: number];
 
-    if (dimension) {
+    if (dimension && (!meanRadius || meanRadius < 150)) {
       const xyz = dimension.split('x').map(Number);
       initialRadius = 1;
       deformation = [
@@ -51,18 +54,22 @@ export default function Body({
 
   return (
     <group ref={bodyRef} name={id}>
-      <Detailed distances={detailLevels.map((level) => level.distance)}>
-        {detailLevels.map(({ segments }, index) => (
-          <mesh key={index} scale={geometryInfo.deformation}>
-            <sphereGeometry
-              args={[geometryInfo.initialRadius, segments, segments]}
-            />
-            {material}
-            {atmosphere}
-            {shine}
-          </mesh>
-        ))}
-      </Detailed>
+      {meanRadius < 150 ? (
+        <IrregularBody geometryInfo={geometryInfo} />
+      ) : (
+        <Detailed distances={detailLevels.map((level) => level.distance)}>
+          {detailLevels.map(({ segments }, index) => (
+            <mesh key={index} scale={geometryInfo.deformation}>
+              <sphereGeometry
+                args={[geometryInfo.initialRadius, segments, segments]}
+              />
+              {material}
+              {atmosphere}
+              {shine}
+            </mesh>
+          ))}
+        </Detailed>
+      )}
     </group>
   );
 }

@@ -1,4 +1,4 @@
-import { Vector3, Mesh, Group } from 'three';
+import { Vector3, Group } from 'three';
 import { useContext, useMemo, useRef, useState } from 'react';
 import { ThreeEvent, useFrame } from '@react-three/fiber';
 import { Line2, LineSegments2 } from 'three/examples/jsm/Addons.js';
@@ -28,7 +28,7 @@ export default function Hitbox({
   nearStart,
   nearEnd,
 }: {
-  bodyRef: React.RefObject<Mesh | null>;
+  bodyRef: React.RefObject<Group | null>;
   circleRef: React.RefObject<Line2 | LineSegments2 | null>;
   orbitRef?: React.RefObject<Line2 | LineSegments2 | null>;
   bodyRadius: number;

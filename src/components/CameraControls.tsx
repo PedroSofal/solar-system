@@ -6,15 +6,15 @@ import {
   OrbitControls as OrbitControlsType,
   TrackballControls as TrackballControlsType,
 } from 'three-stdlib';
-import { Mesh, Object3D, Sphere, Vector3 } from 'three';
+import { Group, Sphere, Vector3 } from 'three';
 import gsap from 'gsap';
 import { useMatch } from 'react-router-dom';
-import { getActiveLOD } from '../utils';
+import { getBodyMeshFromGroup } from '../utils';
 
-export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
+export default function CameraControls() {
   const orbitControlsRef = useRef<OrbitControlsType>(null);
   const trackballControlsRef = useRef<TrackballControlsType>(null);
-  const targetRef = useRef<Object3D | null>(null);
+  const targetRef = useRef<Group | null>(null);
 
   const { isFollowing, focusTrigger, resetTrigger, setResetTrigger } =
     useContext(CameraContext);
@@ -23,18 +23,23 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   const match = useMatch('/corpos/:id');
 
   useEffect(() => {
-    if (isLoaded && !match) initialZoom();
-  }, [isLoaded]);
-
-  useEffect(() => {
-    // Se o app é iniciado com /corpos/:id, navegamos até o corpo
-    if (match && match.params.id) {
-      const sceneBody = scene.getObjectByName(match.params.id);
-      if (sceneBody) {
-        targetRef.current = sceneBody;
-        focusOnTarget(sceneBody as Mesh);
+    const animationFrameHandle = requestAnimationFrame(() => {
+      if (match && match.params.id) {
+        // Se o app é iniciado com /corpos/:id, navegamos até o corpo
+        const sceneBody = scene.getObjectByName(match.params.id);
+        if (sceneBody) {
+          targetRef.current = sceneBody as Group;
+          focusOnTarget(sceneBody as Group);
+        }
+      } else {
+        // Se não, aplicamos um zoom introdutório
+        initialZoom();
       }
-    }
+    });
+
+    return () => {
+      cancelAnimationFrame(animationFrameHandle);
+    };
   }, []);
 
   useEffect(() => {
@@ -42,8 +47,8 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     if (focusTrigger.id) {
       const sceneBody = scene.getObjectByName(focusTrigger.id);
       if (sceneBody) {
-        targetRef.current = sceneBody;
-        focusOnTarget(sceneBody as Mesh);
+        targetRef.current = sceneBody as Group;
+        focusOnTarget(sceneBody as Group);
       }
     }
   }, [focusTrigger.trigger]);
@@ -61,9 +66,9 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
       targetRef.current.updateMatrixWorld(true);
 
       const orbitControls = orbitControlsRef.current;
-      const bodyPosition = getActiveLOD(targetRef.current).getWorldPosition(
-        new Vector3(),
-      );
+      const bodyPosition = getBodyMeshFromGroup(
+        targetRef.current,
+      ).getWorldPosition(new Vector3());
 
       const direction = new Vector3()
         .subVectors(orbitControls.object.position, orbitControls.target)
@@ -101,12 +106,11 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     });
   }
 
-  function focusOnTarget(body: Mesh) {
+  function focusOnTarget(body: Group) {
     if (!orbitControlsRef.current || !body) return;
 
-    const activeBody = getActiveLOD(body) as Mesh;
     const orbitControls = orbitControlsRef.current;
-    const bodyPosition = activeBody.getWorldPosition(new Vector3());
+    const bodyPosition = body.getWorldPosition(new Vector3());
     const cameraPosition = orbitControls.object.position.clone();
     const tolerance = 0.05;
 
@@ -115,11 +119,15 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
       Math.abs(bodyPosition.y - cameraPosition.y) > tolerance ||
       Math.abs(bodyPosition.z - cameraPosition.z) > tolerance
     ) {
-      activeBody.geometry.computeBoundingSphere();
-      const boundingSphere = activeBody.geometry.boundingSphere as Sphere;
-      const avgScale =
-        (activeBody.scale.x + activeBody.scale.y + activeBody.scale.z) / 3;
-      const bodyRadius = boundingSphere.radius * avgScale;
+      const mesh = getBodyMeshFromGroup(body);
+
+      if (!mesh.geometry.boundingSphere) {
+        mesh.geometry.computeBoundingSphere();
+      }
+
+      const boundingSphere = mesh.geometry.boundingSphere;
+      const avgScale = (mesh.scale.x + mesh.scale.y + mesh.scale.z) / 3;
+      const bodyRadius = (boundingSphere as Sphere).radius * avgScale;
 
       // Direção do corpo em relação ao Sol
       const center = new Vector3(0, 0, 0);
@@ -142,7 +150,7 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         .add(up.multiplyScalar(upAmount))
         .normalize();
 
-      const distance = bodyRadius * 4;
+      const distance = bodyRadius * 6;
       const newCameraPosition = new Vector3()
         .copy(bodyPosition)
         .add(offsetDir.multiplyScalar(distance));
@@ -158,7 +166,7 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         x: newCameraPosition.x,
         y: newCameraPosition.y,
         z: newCameraPosition.z,
-        duration: 1.2,
+        duration: 1.8,
         ease: 'power4.out',
         onUpdate: () => {
           orbitControls.update();
@@ -170,7 +178,7 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         x: targetEnd.x,
         y: targetEnd.y,
         z: targetEnd.z,
-        duration: 1.2,
+        duration: 1.8,
         ease: 'power4.out',
         onUpdate: () => {
           orbitControls.target.copy(targetStart);
@@ -185,7 +193,7 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     const orbitControls = orbitControlsRef.current;
 
     const sceneSun = scene.getObjectByName('sun');
-    if (sceneSun) targetRef.current = sceneSun;
+    if (sceneSun) targetRef.current = sceneSun as Group;
 
     gsap.to(orbitControls.object.position, {
       x: -3000,

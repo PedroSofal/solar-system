@@ -1,4 +1,4 @@
-import { LOD, Object3D } from 'three';
+import { Group, LOD, Mesh, Object3D } from 'three';
 
 export function toModelScale(number: number) {
   return number / 200_000;
@@ -48,6 +48,28 @@ export function getActiveLOD<T extends Object3D>(target: T): T {
   }
 
   return target;
+}
+
+export function getBodyMeshFromGroup(body: Group): Mesh {
+  let mesh: Mesh | null = null;
+
+  body.traverse((child: Object3D) => {
+    if (mesh) return;
+
+    if (child instanceof Mesh) {
+      if (child.parent instanceof LOD) {
+        mesh = getActiveLOD(child);
+      } else {
+        mesh = child;
+      }
+    }
+  });
+
+  if (!mesh) {
+    throw new Error('Nenhum mesh encontrado em ' + body.name);
+  }
+
+  return mesh;
 }
 
 export function getNodeColor(id: string, isMoon = false) {

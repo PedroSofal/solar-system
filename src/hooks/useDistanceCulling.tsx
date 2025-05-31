@@ -47,6 +47,7 @@ export default function useDistanceCulling({
     if (!reference.current || (farStart === 200000 && nearStart === 0)) return;
 
     const activeReference = getActiveLOD(reference.current) as Object3D;
+    // console.log(activeReference, reference.current);
     const bodyPosition = activeReference.getWorldPosition(new Vector3());
     const distance = camera.position.distanceTo(bodyPosition);
 

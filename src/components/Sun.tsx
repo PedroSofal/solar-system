@@ -1,7 +1,7 @@
 import Body from './Body';
 import { useMemo, useRef } from 'react';
 import { useLoader } from '@react-three/fiber';
-import { Mesh, TextureLoader } from 'three';
+import { Group, Mesh, TextureLoader } from 'three';
 import vertexShader from '../shaders/sun/vertex.glsl';
 import fragmentShader from '../shaders/sun/fragment.glsl';
 import useStickySize from '../hooks/useStickySize';
@@ -11,7 +11,7 @@ import { toModelScale } from '../utils';
 import { getBodyTiltQuaternionFromPole } from '../getQuaternionFromPole';
 
 export default function Sun({ bodyData }: { bodyData: BodyType }) {
-  const sunRef = useRef<Mesh>(null);
+  const sunRef = useRef<Group>(null);
   const sunshineRef = useRef<Mesh>(null);
 
   const { id, meanRadius, obliquity } = bodyData;
@@ -34,6 +34,7 @@ export default function Sun({ bodyData }: { bodyData: BodyType }) {
         <Body
           bodyRef={sunRef}
           id={id}
+          meanRadius={meanRadius}
           scaledEquaRadius={scaledMeanRadius}
           scaledPolarRadius={scaledMeanRadius}
           material={

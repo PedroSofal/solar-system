@@ -1,6 +1,6 @@
 import { Detailed, Line } from '@react-three/drei';
 import { useContext, useMemo, useRef } from 'react';
-import { EllipseCurve, MathUtils, Mesh, Quaternion, Vector3 } from 'three';
+import { EllipseCurve, MathUtils, Group, Quaternion, Vector3 } from 'three';
 import { formatBodyType, toModelScale } from '../../utils';
 import { Line2, LineSegments2 } from 'three-stdlib';
 import LayerContext from '../../contexts/LayerContext';
@@ -26,7 +26,7 @@ export default function OrbitLine({
   nearEnd,
 }: {
   orbitRef: React.RefObject<Line2 | LineSegments2 | null>;
-  bodyRef: React.RefObject<Mesh | null>;
+  bodyRef: React.RefObject<Group | null>;
   bodyType: BodyTypeOptions;
   semimajorAxis: number;
   eccentricity: number;

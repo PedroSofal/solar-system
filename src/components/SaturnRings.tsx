@@ -6,14 +6,21 @@ import TimeContext from '../contexts/TimeContext';
 import { Detailed } from '@react-three/drei';
 import TextureContext from '../contexts/TextureContext';
 import { getActiveLOD, toModelScale } from '../utils';
-import { Color, MathUtils, Mesh, Points, ShaderMaterial, Vector3 } from 'three';
+import {
+  Color,
+  MathUtils,
+  Group,
+  Points,
+  ShaderMaterial,
+  Vector3,
+} from 'three';
 import LayerContext from '../contexts/LayerContext';
 
 export default function SaturnRings({
   bodyRef,
   saturnEquaRadius,
 }: {
-  bodyRef: React.RefObject<Mesh | null>;
+  bodyRef: React.RefObject<Group | null>;
   saturnEquaRadius: number;
 }) {
   const particlesRef = useRef<Points | null>(null);

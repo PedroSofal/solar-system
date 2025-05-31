@@ -1,20 +1,20 @@
 import { useFrame } from '@react-three/fiber';
 import Node from './Node';
-import { getActiveLOD } from '../utils';
-import { Mesh, Vector3 } from 'three';
+import { getBodyMeshFromGroup } from '../utils';
+import { Group, Vector3 } from 'three';
 import { lazy, Suspense, useRef, useState } from 'react';
 
 const LazySaturnRings = lazy(() => import('./SaturnRings'));
 
 export default function Planet({ bodyData }: { bodyData: BodyType }) {
-  const bodyRef = useRef<Mesh>(null);
+  const bodyRef = useRef<Group>(null);
   const { id } = bodyData;
   const [loadedRings, setLoadedRings] = useState(false);
 
   useFrame(({ camera }) => {
     if (!bodyRef.current) return;
 
-    const activeReference = getActiveLOD(bodyRef.current);
+    const activeReference = getBodyMeshFromGroup(bodyRef.current);
     const bodyPosition = activeReference.getWorldPosition(new Vector3());
     const distance = camera.position.distanceTo(bodyPosition);
 

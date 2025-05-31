@@ -16,9 +16,6 @@ const texturePaths: Record<string, string> = {
   lunarRock2_albedo: '/textures/moons/lunar-rock2-bl/lunar-rock2_albedo.jpg',
   lunarRock2_height: '/textures/moons/lunar-rock2-bl/lunar-rock2_height.jpg',
   lunarRock2_normal: '/textures/moons/lunar-rock2-bl/lunar-rock2_normal.jpg',
-  jaggedRockyGround1_albedo: '/textures/moons/jagged-rocky-ground1-bl/jagged-rocky-ground1_albedo.jpg',
-  jaggedRockyGround1_height: '/textures/moons/jagged-rocky-ground1-bl/jagged-rocky-ground1_height.jpg',
-  jaggedRockyGround1_normal: '/textures/moons/jagged-rocky-ground1-bl/jagged-rocky-ground1_normal.jpg',
 
   // Planets
   earth_clouds: '/textures/planets/earth/8k_earth_clouds.jpg',

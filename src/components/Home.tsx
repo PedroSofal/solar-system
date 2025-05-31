@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black">
       <div className="absolute inset-0">
-        <ThreeCanvas isLoaded={isLoaded} setIsLoaded={setIsLoaded} />
+        <ThreeCanvas setIsLoaded={setIsLoaded} />
       </div>
       {isLoaded ? (
         <Overlay />

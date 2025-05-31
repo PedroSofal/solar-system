@@ -1,16 +1,15 @@
-import { lazy, memo, Suspense, useContext, useMemo } from 'react';
+import { memo, useContext, useMemo } from 'react';
 import TimeTicker from './TimeTicker';
 import BodyDataContext from '../contexts/BodyDataContext';
 import LayerContext from '../contexts/LayerContext';
 import Sun from './Sun';
 import Planet from './Planet';
+import Moon from './Moon';
 import Background from './Background';
-
-// Lazy imports
-const Moon = lazy(() => import('./Moon'));
+import { useGLTF } from '@react-three/drei';
 
 export default memo(function SolarSystem() {
-  const { sun, planets, dwarfPlanets, loading } = useContext(BodyDataContext);
+  const { sun, planets, dwarfPlanets } = useContext(BodyDataContext);
   const { getLayer } = useContext(LayerContext);
   const ambientLightLayer = getLayer('ambient-light');
 
@@ -18,11 +17,13 @@ export default memo(function SolarSystem() {
     return [...(planets || []), ...(dwarfPlanets || [])];
   }, [planets, dwarfPlanets]);
 
+  useGLTF.preload('/models/generic-moon/scene.gltf');
+
   return (
     <>
       <Background />
 
-      {!loading && sun && <Sun bodyData={sun} />}
+      <Sun bodyData={sun as BodyType} />
 
       {allPlanets?.map((planet) => (
         <Planet key={planet.id} bodyData={planet} />
@@ -30,9 +31,7 @@ export default memo(function SolarSystem() {
 
       {allPlanets.map((planet) =>
         planet.moonBodies?.map((moon) => (
-          <Suspense key={moon.id} fallback={null}>
-            <Moon bodyData={moon} />
-          </Suspense>
+          <Moon key={moon.id} bodyData={moon} />
         )),
       )}
 

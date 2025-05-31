@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import useFallbackData from '../hooks/useFallbackData';
 import { Line2, LineSegments2 } from 'three/examples/jsm/Addons.js';
-import { Color, Group, Mesh } from 'three';
+import { Color, Group } from 'three';
 import Body from './Body';
 import Hitbox from './ui/Hitbox';
 import Atmosphere from './Atmosphere';
@@ -25,7 +25,7 @@ export default function Node({
   children,
 }: {
   bodyData: BodyType;
-  bodyRef: React.RefObject<Mesh | null>;
+  bodyRef: React.RefObject<Group | null>;
   children?: React.ReactNode;
 }) {
   const {
@@ -102,23 +102,20 @@ export default function Node({
   });
 
   return (
-    <group ref={nodeRef}>
-      <group ref={positionRef}>
-        <group quaternion={obliquityQuaternion}>
-          <group ref={rotationRef}>
+    <group ref={nodeRef} name="node">
+      <group ref={positionRef} name="orbit position">
+        <group quaternion={obliquityQuaternion} name="obliquity">
+          <group ref={rotationRef} name="rotation">
             <Body
               bodyRef={bodyRef}
               id={id}
+              meanRadius={meanRadius}
               scaledEquaRadius={scaledEquaRadius}
               scaledPolarRadius={scaledPolarRadius}
               dimension={dimension}
               material={
                 isMoon ? (
-                  <MoonMaterial
-                    id={id}
-                    meanRadius={meanRadius}
-                    dimension={dimension}
-                  />
+                  <MoonMaterial id={id} meanRadius={meanRadius} />
                 ) : (
                   <PlanetMaterial id={id} />
                 )

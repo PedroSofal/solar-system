@@ -1,17 +1,15 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import CameraControls from './CameraControls';
 import { PerspectiveCamera } from 'three';
-import { useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import SolarSystem from './SolarSystem';
 import { useProgress } from '@react-three/drei';
 import { SceneProvider } from '../contexts/SceneContext';
 // import { Perf } from 'r3f-perf';
 
 export default function ThreeCanvas({
-  isLoaded,
   setIsLoaded,
 }: {
-  isLoaded: boolean;
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
@@ -27,13 +25,14 @@ export default function ThreeCanvas({
         far: 200000,
       }}
     >
-      <SceneProvider>
-        <LoadingProgress setIsLoaded={setIsLoaded} />
-        <CameraControls isLoaded={isLoaded} />
-        <ResponsiveFOV />
-        <SolarSystem />
-        {/* <Perf className="left-[50%] w-fit -translate-x-[50%]" /> */}
-      </SceneProvider>
+      <Suspense fallback={<LoadingProgress setIsLoaded={setIsLoaded} />}>
+        <SceneProvider>
+          <SolarSystem />
+          <CameraControls />
+          <ResponsiveFOV />
+          {/* <Perf className="left-[50%] w-fit -translate-x-[50%]" /> */}
+        </SceneProvider>
+      </Suspense>
     </Canvas>
   );
 }
