@@ -26,7 +26,7 @@ A cena compreende todos os planetas e planetas-anões, bem como seus respectivos
 
 Não deixe de visitar Saturno e chegar bem pertinho dos anéis construídos a partir de milhares de partículas otimizadas para performance, e de apreciar o nosso planeta Terra flutuando no espaço com sua camada de atmosfera e efeitos de shaders baseados na luz do Sol.
 
-Atualizações futuras incluirão cometas e asteróides, além de anéis de planetas como Urano e Netuno, e formatos rochosos não esféricos para os corpos menores do Sistema Solar.
+Atualizações futuras incluirão cometas e asteróides, além de anéis de planetas como Urano e Netuno.
 
 ## Precisão
 
@@ -53,5 +53,7 @@ Projeto desenvolvido por Pedro Sofal.
 O banco de dados foi construído a partir da API [Le système solaire à portée de votre souris](https://api.le-systeme-solaire.net/), apesar de bastante modificada e atualizada com dados do [Horizons System, do Jet Propulsion Laboratory da NASA](https://ssd.jpl.nasa.gov/).
 
 As texturas dos planetas, planetas-anões, Sol e Lua foram fornecidas pelo [Solar System Scope](https://www.solarsystemscope.com/textures/). Já as demais texturas foram baixadas do site [Free PBR](https://freepbr.com/).
+
+O modelo usado para representar corpos sem equilíbrio hidrostático foi construído por Pasquill e disponibilizado em [Sketchfab](https://sketchfab.com/3d-models/asteroid-low-poly-9a43ef48a70647188576ccb5987b7e64).
 
 A ideia do projeto nasceu de um curso básico de Three.js do canal [Zero to Mastery](https://www.youtube.com/watch?v=KM64t3pA4fs), no YouTube.
