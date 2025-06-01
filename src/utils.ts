@@ -107,19 +107,19 @@ export function getHitboxCullingPoints(
       return {
         farStart: declustered ? 60000 : undefined,
         farEnd: declustered ? 15000 : undefined,
-        nearStart: radius * 200,
-        nearEnd: radius * 150,
+        nearStart: radius * 300,
+        nearEnd: radius * 200,
       };
     case 'Satélite Natural':
       return {
-        farStart: declustered ? radius + 30 : radius + 1000,
-        farEnd: declustered ? radius + 0.5 : radius + 60,
-        nearStart: radius + 0.5,
-        nearEnd: radius + 0.1,
+        farStart: declustered ? 30 : 1000,
+        farEnd: declustered ? 0.5 : 60,
+        nearStart: radius * 100,
+        nearEnd: radius * 50,
       };
     case 'Planeta-anão':
       return {
-        farStart: id === 'ceres' ? 3000 : 150000,
+        farStart: id === 'ceres' ? 30000 : 150000,
         farEnd: id === 'ceres' ? 10000 : 50000,
         nearStart: radius * 200,
         nearEnd: radius * 150,
@@ -139,15 +139,15 @@ export function getOrbitCullingPoints(
   switch (bodyType) {
     case 'Planeta':
       return {
-        nearStart: radius * 300,
-        nearEnd: radius * 200,
+        nearStart: radius * 150,
+        nearEnd: radius * 100,
       };
     case 'Satélite Natural':
       return {
-        farStart: declustered ? radius + 30 : radius + 800,
-        farEnd: declustered ? radius + 0.5 : radius + 10,
-        nearStart: radius + 0.5,
-        nearEnd: radius + 0.1,
+        farStart: declustered ? 30 : 500,
+        farEnd: declustered ? 0.5 : 10,
+        nearStart: radius * 100,
+        nearEnd: radius * 50,
       };
     case 'Planeta-anão':
       return {
