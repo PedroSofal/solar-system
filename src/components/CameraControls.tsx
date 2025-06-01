@@ -86,7 +86,7 @@ export default function CameraControls() {
       orbitControls.target.copy(bodyPosition);
       orbitControls.update();
     }
-  });
+  }, -1);
 
   function initialZoom() {
     if (!orbitControlsRef.current) return;
