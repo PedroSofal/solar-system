@@ -1,57 +1,29 @@
 import { OrbitControls, TrackballControls } from '@react-three/drei';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect } from 'react';
 import CameraContext from '../contexts/CameraContext';
 import { useFrame, useThree } from '@react-three/fiber';
-import {
-  OrbitControls as OrbitControlsType,
-  TrackballControls as TrackballControlsType,
-} from 'three-stdlib';
-import { Group, Sphere, Vector3 } from 'three';
+import { Group, Vector3 } from 'three';
 import gsap from 'gsap';
-import { useMatch } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { getBodyMeshFromGroup } from '../utils';
 
 export default function CameraControls() {
-  const orbitControlsRef = useRef<OrbitControlsType>(null);
-  const trackballControlsRef = useRef<TrackballControlsType>(null);
-  const targetRef = useRef<Group | null>(null);
-
-  const { isFollowing, focusTrigger, resetTrigger, setResetTrigger } =
-    useContext(CameraContext);
+  const {
+    orbitControlsRef,
+    trackballControlsRef,
+    targetRef,
+    isFollowing,
+    resetTrigger,
+    setResetTrigger,
+  } = useContext(CameraContext);
 
   const { scene } = useThree();
-  const match = useMatch('/corpos/:id');
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const animationFrameHandle = requestAnimationFrame(() => {
-      if (match && match.params.id) {
-        // Se o app é iniciado com /corpos/:id, navegamos até o corpo
-        const sceneBody = scene.getObjectByName(match.params.id);
-        if (sceneBody) {
-          targetRef.current = sceneBody as Group;
-          focusOnTarget(sceneBody as Group);
-        }
-      } else {
-        // Se não, aplicamos um zoom introdutório
-        initialZoom();
-      }
-    });
-
-    return () => {
-      cancelAnimationFrame(animationFrameHandle);
-    };
+    // Se o app é iniciado pela rota principal, executa um zoom inicial
+    if (pathname === '/') initialZoom();
   }, []);
-
-  useEffect(() => {
-    // Executa somente a partir do clique do usuário para navegar até um corpo celeste
-    if (focusTrigger.id) {
-      const sceneBody = scene.getObjectByName(focusTrigger.id);
-      if (sceneBody) {
-        targetRef.current = sceneBody as Group;
-        focusOnTarget(sceneBody as Group);
-      }
-    }
-  }, [focusTrigger.trigger]);
 
   useEffect(() => {
     // Executa somente a partir do clique do usuário para resetar a câmera
@@ -88,6 +60,17 @@ export default function CameraControls() {
     }
   }, -1);
 
+  useFrame(() => {
+    const orbitControls = orbitControlsRef.current;
+    const trackballControls = trackballControlsRef.current;
+
+    if (orbitControls && trackballControls) {
+      const { x, y, z } = orbitControls.target;
+      trackballControls.target.set(x, y, z);
+      trackballControls.update();
+    }
+  });
+
   function initialZoom() {
     if (!orbitControlsRef.current) return;
 
@@ -104,88 +87,6 @@ export default function CameraControls() {
         orbitControls.update();
       },
     });
-  }
-
-  function focusOnTarget(body: Group) {
-    if (!orbitControlsRef.current || !body) return;
-
-    const orbitControls = orbitControlsRef.current;
-    const bodyPosition = body.getWorldPosition(new Vector3());
-    const cameraPosition = orbitControls.object.position.clone();
-    const tolerance = 0.05;
-
-    if (
-      Math.abs(bodyPosition.x - cameraPosition.x) > tolerance ||
-      Math.abs(bodyPosition.y - cameraPosition.y) > tolerance ||
-      Math.abs(bodyPosition.z - cameraPosition.z) > tolerance
-    ) {
-      const mesh = getBodyMeshFromGroup(body);
-
-      if (!mesh.geometry.boundingSphere) {
-        mesh.geometry.computeBoundingSphere();
-      }
-
-      const boundingSphere = mesh.geometry.boundingSphere;
-      const avgScale = (mesh.scale.x + mesh.scale.y + mesh.scale.z) / 3;
-      const bodyRadius = (boundingSphere as Sphere).radius * avgScale;
-
-      // Direção do corpo em relação ao Sol
-      const center = new Vector3(0, 0, 0);
-      const toCenter = new Vector3()
-        .subVectors(center, bodyPosition)
-        .normalize();
-
-      // Vetores ortogonais relativos à direção do Sol
-      const worldUp = new Vector3(0, 0, 1);
-      const side = new Vector3().crossVectors(toCenter, worldUp).normalize();
-      const up = new Vector3().crossVectors(side, toCenter).normalize();
-
-      const sideAmount = 0.8;
-      const upAmount = 0.2;
-
-      // Desvia a câmera um pouco
-      const offsetDir = new Vector3()
-        .copy(toCenter)
-        .add(side.multiplyScalar(sideAmount))
-        .add(up.multiplyScalar(upAmount))
-        .normalize();
-
-      const distance = bodyRadius * 6;
-      const newCameraPosition = new Vector3()
-        .copy(bodyPosition)
-        .add(offsetDir.multiplyScalar(distance));
-
-      const targetStart = orbitControls.target.clone();
-      const targetEnd = bodyPosition.clone();
-
-      const newMinDistance = Math.max(0.0003, bodyRadius * 1.5);
-      orbitControls.minDistance = newMinDistance;
-
-      // Animação da posição da câmera
-      gsap.to(orbitControls.object.position, {
-        x: newCameraPosition.x,
-        y: newCameraPosition.y,
-        z: newCameraPosition.z,
-        duration: 1.8,
-        ease: 'power4.out',
-        onUpdate: () => {
-          orbitControls.update();
-        },
-      });
-
-      // Animação do alvo (target) da câmera
-      gsap.to(targetStart, {
-        x: targetEnd.x,
-        y: targetEnd.y,
-        z: targetEnd.z,
-        duration: 1.8,
-        ease: 'power4.out',
-        onUpdate: () => {
-          orbitControls.target.copy(targetStart);
-          orbitControls.update();
-        },
-      });
-    }
   }
 
   function resetCamera() {
@@ -207,17 +108,6 @@ export default function CameraControls() {
       },
     });
   }
-
-  useFrame(() => {
-    const orbitControls = orbitControlsRef.current;
-    const trackballControls = trackballControlsRef.current;
-
-    if (orbitControls && trackballControls) {
-      const { x, y, z } = orbitControls.target;
-      trackballControls.target.set(x, y, z);
-      trackballControls.update();
-    }
-  });
 
   return (
     <>

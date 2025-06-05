@@ -3,6 +3,7 @@ import { Group } from 'three';
 import { Detailed } from '@react-three/drei';
 import { toModelScale } from '../utils';
 import IrregularBody from './IrregularBody';
+import useFocusOnBody from '../hooks/useFocusOnBody';
 
 export default function Body({
   bodyRef,
@@ -25,6 +26,8 @@ export default function Body({
   atmosphere?: React.ReactNode;
   shine?: React.ReactNode;
 }) {
+  useFocusOnBody(id, bodyRef);
+
   const geometryInfo = useMemo(() => {
     let initialRadius: number;
     let deformation: [x: number, y: number, z: number];
