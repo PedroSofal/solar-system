@@ -31,7 +31,6 @@ export default function TimeControls({
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     updateTimeScale(Number(e.target.value));
-    play();
   }
 
   return (
