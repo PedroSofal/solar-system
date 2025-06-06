@@ -38,9 +38,8 @@ export default function CameraControls() {
       targetRef.current.updateMatrixWorld(true);
 
       const orbitControls = orbitControlsRef.current;
-      const bodyPosition = getBodyMeshFromGroup(
-        targetRef.current,
-      ).getWorldPosition(new Vector3());
+      const body = getBodyMeshFromGroup(targetRef.current);
+      const bodyPosition = body.getWorldPosition(new Vector3());
 
       const direction = new Vector3()
         .subVectors(orbitControls.object.position, orbitControls.target)
