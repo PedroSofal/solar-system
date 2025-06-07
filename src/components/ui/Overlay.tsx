@@ -140,7 +140,9 @@ function TopLeftActions({
           title={isNavbarExpanded ? 'Ocultar navegador' : 'Mostrar navegador'}
         />
       </nav>
-      <aside className={`min-w-96 ${!isNavbarExpanded ? 'hidden' : ''}`}>
+      <aside
+        className={`max-w-[34rem] min-w-[20rem] ${!isNavbarExpanded ? 'hidden' : ''}`}
+      >
         <NavBar
           isExpanded={isNavbarExpanded}
           selectedBody={selectedBody}

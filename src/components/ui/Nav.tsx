@@ -96,7 +96,7 @@ export default function Nav({
               <li
                 key={index}
                 onClick={() => navigateTo(item)}
-                className="gradient-bg border-bottom flex items-center justify-between p-4 font-semibold"
+                className="gradient-bg border-bottom flex items-center justify-between overflow-hidden p-4 font-semibold"
               >
                 <p className="uppercase">{item.label}</p>
                 {item.subItems && <ArrowRightCircleIcon className="size-5" />}
