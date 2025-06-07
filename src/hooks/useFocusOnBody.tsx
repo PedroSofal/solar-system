@@ -4,6 +4,7 @@ import { Group, Sphere, Vector3 } from 'three';
 import { getBodyMeshFromGroup } from '../utils';
 import CameraContext from '../contexts/CameraContext';
 import gsap from 'gsap';
+import TimeContext from '../contexts/TimeContext';
 
 function getCameraOffsetFromBodyPosition(bodyPosition: Vector3) {
   // Direção do corpo em relação ao Sol
@@ -44,6 +45,8 @@ export default function useFocusOnBody(
   bodyRef: RefObject<Group | null>,
 ) {
   const match = useMatch('/corpos/:id');
+
+  const { timeScale } = useContext(TimeContext);
   const {
     targetRef,
     orbitControlsRef,
@@ -86,14 +89,18 @@ export default function useFocusOnBody(
 
     const camTargetOrigin = orbitControls.target;
     const camTargetDestiny = bodyPosition.clone();
-
+    console.log(timeScale);
     if (isFollowing) {
-      // Reinicia o acompanhamento do corpo para evitar um flash de foco instantâneo
+      // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
       setIsFollowing(false);
-      setTimeout(() => {
-        setIsFollowing(true);
-        targetRef.current = bodyRef.current;
-      }, 0);
+      setTimeout(
+        () => {
+          setIsFollowing(true);
+          targetRef.current = bodyRef.current;
+        },
+        // Reinicia o acompanhamento imediatamente, se o tempo está acelerado, para evitar foco no vazio
+        Math.abs(timeScale) > 1 ? 0 : 2500,
+      );
     }
 
     // Animação da posição da câmera
