@@ -43,7 +43,7 @@ const Moon = memo(function ({
   bodyData: BodyType;
   isFocused: boolean;
 }) {
-  const { aroundPlanet, referencePlane, meanRadius, id } = bodyData;
+  const { parent, referencePlane, meanRadius, id } = bodyData;
 
   const sceneRef = useContext(SceneContext);
   const { getLayer } = useContext(LayerContext);
@@ -54,8 +54,7 @@ const Moon = memo(function ({
 
   const areAllMoonsVisible = getLayer('all-moons')?.value;
 
-  const parent = aroundPlanet as Parent;
-  const parentId = parent.planet;
+  const parentId = (parent as Parent).name;
 
   useEffect(() => {
     planetRef.current = sceneRef.current.getObjectByName(parentId) as Group;
@@ -95,7 +94,7 @@ const Moon = memo(function ({
       return q.copy(getReferencePlaneQuaternionFromPole(ra, dec));
     }
   }, [referencePlane, id, parentId]);
-  console.log(id);
+
   return (
     <group ref={moonGroupRef} name="ancoragem do satélite">
       <group quaternion={refPlaneQuaternion} name="reference plane">

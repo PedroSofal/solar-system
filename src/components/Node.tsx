@@ -35,7 +35,7 @@ export default function Node({
     semimajorAxis,
     eccentricity,
     inclination,
-    aroundPlanet,
+    parent,
     meanRadius,
     obliquity,
     referencePlane,
@@ -66,7 +66,7 @@ export default function Node({
   const scaledSemimajorAxis = toModelScale(semimajorAxis);
 
   const isMoon = bodyType === 'Satélite Natural';
-  const color = getNodeColor(aroundPlanet?.planet || id, isMoon);
+  const color = getNodeColor(parent?.name || id, isMoon);
   const needsPrecessionCorrection = id === 'moon';
   const declustered =
     id === 'mercury' ||

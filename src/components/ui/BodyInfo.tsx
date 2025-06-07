@@ -133,7 +133,7 @@ function constructOrbitInfo(body: BodyType) {
           label: 'Inclinação orbital',
           value:
             `${body.inclination.toLocaleString()}°` +
-            `${body.aroundPlanet && body.id !== 'moon' ? ` do equador de ${body.aroundPlanet.planet}` : ' da eclíptica'}`,
+            `${body.parent && body.id !== 'moon' ? ` do equador de ${body.parent.name}` : ' da eclíptica'}`,
           tooltip:
             'Ângulo entre o plano orbital e um plano de referência: a eclíptica (plano em que a Terra orbita o Sol) ou o plano do equador do objeto-pai.',
         }

@@ -32,11 +32,6 @@ interface Moon {
   rel: string;
 }
 
-interface Parent {
-  planet: string;
-  rel: string;
-}
-
 type BodyTypeOptions =
   | 'Estrela'
   | 'Planeta'
@@ -44,6 +39,12 @@ type BodyTypeOptions =
   | 'Planeta-anão'
   | 'Asteróide'
   | 'Cometa';
+
+interface Parent {
+  name: string;
+  type: BodyTypeOptions;
+  rel: string;
+}
 
 type ReferencePlane =
   | {
@@ -87,7 +88,7 @@ interface BodyType {
   dimension: string;
   sideralOrbit: number | null;
   sideralRotation: number | null;
-  aroundPlanet: Parent | null;
+  parent: Parent | null;
   discoveredBy: string;
   discoveryDate: string;
   alternativeName: string;

@@ -29,8 +29,9 @@
     "dimension": "",
     "sideralOrbit": 27.322,
     "sideralRotation": 655.728,
-    "aroundPlanet": {
-      "planet": "earth",
+    "parent": {
+      "name": "earth",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/terre"
     },
     "discoveredBy": "",
@@ -85,8 +86,9 @@
     "dimension": "25.9x22.6x18.32",
     "sideralOrbit": 0.319033,
     "sideralRotation": 0.7653,
-    "aroundPlanet": {
-      "planet": "mars",
+    "parent": {
+      "name": "mars",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/mars"
     },
     "discoveredBy": "Asaph Hall",
@@ -141,8 +143,9 @@
     "dimension": "15.0x12x10.4",
     "sideralOrbit": 1.262361,
     "sideralRotation": 30.29856,
-    "aroundPlanet": {
-      "planet": "mars",
+    "parent": {
+      "name": "mars",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/mars"
     },
     "discoveredBy": "Asaph Hall",
@@ -194,8 +197,9 @@
     "dimension": "3660x3637.4x3630.6",
     "sideralOrbit": 1.762732,
     "sideralRotation": 42.4593,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Galileo Galilei",
@@ -247,8 +251,9 @@
     "dimension": "",
     "sideralOrbit": 3.525463,
     "sideralRotation": 85.2293,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Galileo Galilei",
@@ -300,8 +305,9 @@
     "dimension": "",
     "sideralOrbit": 7.155588,
     "sideralRotation": 171.7093,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Galileo Galilei",
@@ -353,8 +359,9 @@
     "dimension": "",
     "sideralOrbit": 16.69044,
     "sideralRotation": 400.536,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Galileo Galilei",
@@ -406,8 +413,9 @@
     "dimension": "125x73x64",
     "sideralOrbit": 0.499918,
     "sideralRotation": 11.9563,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "E. Barnard",
@@ -459,8 +467,9 @@
     "dimension": "",
     "sideralOrbit": 250.56221,
     "sideralRotation": 7.7808,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "C. Perrine",
@@ -512,8 +521,9 @@
     "dimension": "",
     "sideralOrbit": 259.639884,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "C. Perrine",
@@ -565,8 +575,9 @@
     "dimension": "",
     "sideralOrbit": 743.612321,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "P. Melotte",
@@ -618,8 +629,9 @@
     "dimension": "",
     "sideralOrbit": 758.849903,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Seth Barnes Nicholson",
@@ -671,8 +683,9 @@
     "dimension": "",
     "sideralOrbit": 259.8,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Seth Barnes Nicholson",
@@ -724,8 +737,9 @@
     "dimension": "",
     "sideralOrbit": 734.18528,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Seth Barnes Nicholson",
@@ -777,8 +791,9 @@
     "dimension": "",
     "sideralOrbit": 629.791691,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Seth Barnes Nicholson",
@@ -830,8 +845,9 @@
     "dimension": "",
     "sideralOrbit": 241.48,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Charles Kowa",
@@ -883,8 +899,9 @@
     "dimension": "58x49x42",
     "sideralOrbit": 0.676105,
     "sideralRotation": 16.188,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -936,8 +953,9 @@
     "dimension": "10x8x7",
     "sideralOrbit": 0.29826,
     "sideralRotation": 0.7158,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "David C. Jewitt, G. E. Danielson",
@@ -989,8 +1007,9 @@
     "dimension": "30x20x17",
     "sideralOrbit": 0.294779,
     "sideralRotation": 0.7075,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -1042,8 +1061,9 @@
     "dimension": "",
     "sideralOrbit": 756,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "J.V. Scott",
@@ -1095,8 +1115,9 @@
     "dimension": "",
     "sideralOrbit": 130.028096,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Charles Kowal 1975 - Scott S. Sheppard, David C. Jewitt 2000",
@@ -1148,8 +1169,9 @@
     "dimension": "",
     "sideralOrbit": 752.86,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1201,8 +1223,9 @@
     "dimension": "",
     "sideralOrbit": 735,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1254,8 +1277,9 @@
     "dimension": "",
     "sideralOrbit": 723.712689,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1307,8 +1331,9 @@
     "dimension": "",
     "sideralOrbit": 619.5,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1360,8 +1385,9 @@
     "dimension": "",
     "sideralOrbit": 741,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1413,8 +1439,9 @@
     "dimension": "",
     "sideralOrbit": 630,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1466,8 +1493,9 @@
     "dimension": "",
     "sideralOrbit": 728.482799,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1519,8 +1547,9 @@
     "dimension": "",
     "sideralOrbit": 726.273223,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1572,8 +1601,9 @@
     "dimension": "",
     "sideralOrbit": 622.5,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1625,8 +1655,9 @@
     "dimension": "",
     "sideralOrbit": 761.001946,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1678,8 +1709,9 @@
     "dimension": "",
     "sideralOrbit": 627.175794,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1731,8 +1763,9 @@
     "dimension": "",
     "sideralOrbit": 633.904723,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1784,8 +1817,9 @@
     "dimension": "",
     "sideralOrbit": 733,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1837,8 +1871,9 @@
     "dimension": "",
     "sideralOrbit": 715,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1890,8 +1925,9 @@
     "dimension": "",
     "sideralOrbit": 619,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1943,8 +1979,9 @@
     "dimension": "",
     "sideralOrbit": 545,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -1996,8 +2033,9 @@
     "dimension": "",
     "sideralOrbit": 622.585958,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2049,8 +2087,9 @@
     "dimension": "",
     "sideralOrbit": 747,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2102,8 +2141,9 @@
     "dimension": "",
     "sideralOrbit": 729.64267,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2155,8 +2195,9 @@
     "dimension": "",
     "sideralOrbit": 721,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2208,8 +2249,9 @@
     "dimension": "",
     "sideralOrbit": 739.80682,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2261,8 +2303,9 @@
     "dimension": "",
     "sideralOrbit": 620.068159,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2314,8 +2357,9 @@
     "dimension": "",
     "sideralOrbit": 761.464554,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2367,8 +2411,9 @@
     "dimension": "",
     "sideralOrbit": 628.025732,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2420,8 +2465,9 @@
     "dimension": "",
     "sideralOrbit": 735,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2473,8 +2519,9 @@
     "dimension": "",
     "sideralOrbit": 731,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2526,8 +2573,9 @@
     "dimension": "",
     "sideralOrbit": 626,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2579,8 +2627,9 @@
     "dimension": "",
     "sideralOrbit": 452,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2632,8 +2681,9 @@
     "dimension": "",
     "sideralOrbit": 730.301672,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2685,8 +2735,9 @@
     "dimension": "",
     "sideralOrbit": 751.974673,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2738,8 +2789,9 @@
     "dimension": "",
     "sideralOrbit": 779,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2791,8 +2843,9 @@
     "dimension": "",
     "sideralOrbit": 734.522343,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2844,8 +2897,9 @@
     "dimension": "",
     "sideralOrbit": 627,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2897,8 +2951,9 @@
     "dimension": "",
     "sideralOrbit": 614,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -2950,8 +3005,9 @@
     "dimension": "",
     "sideralOrbit": 718.095543,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3003,8 +3059,9 @@
     "dimension": "",
     "sideralOrbit": 729.84767,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3056,8 +3113,9 @@
     "dimension": "",
     "sideralOrbit": 736.861154,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3109,8 +3167,9 @@
     "dimension": "",
     "sideralOrbit": 755.429041,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3162,8 +3221,9 @@
     "dimension": "",
     "sideralOrbit": 627.243242,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3215,8 +3275,9 @@
     "dimension": "",
     "sideralOrbit": 702.535939,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3268,8 +3329,9 @@
     "dimension": "",
     "sideralOrbit": 619.5,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3321,8 +3383,9 @@
     "dimension": "",
     "sideralOrbit": 598.121316,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3374,8 +3437,9 @@
     "dimension": "",
     "sideralOrbit": 734.778675,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3427,8 +3491,9 @@
     "dimension": "",
     "sideralOrbit": 751,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -3480,8 +3545,9 @@
     "dimension": "415x394x381",
     "sideralOrbit": 0.944915,
     "sideralRotation": 22.56,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "William Herschel",
@@ -3533,8 +3599,9 @@
     "dimension": "",
     "sideralOrbit": 1.37198,
     "sideralRotation": 32.88,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "William Herschel",
@@ -3586,8 +3653,9 @@
     "dimension": "",
     "sideralOrbit": 1.887802,
     "sideralRotation": 45.312,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Jean-Dominique Cassini",
@@ -3639,8 +3707,9 @@
     "dimension": "",
     "sideralOrbit": 2.736916,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Jean-Dominique Cassini",
@@ -3692,8 +3761,9 @@
     "dimension": "",
     "sideralOrbit": 4.51758,
     "sideralRotation": 108.432,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Jean-Dominique Cassini",
@@ -3745,8 +3815,9 @@
     "dimension": "",
     "sideralOrbit": 15.9465,
     "sideralRotation": 382.8,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Christian Huygens",
@@ -3798,8 +3869,9 @@
     "dimension": "328x260x214",
     "sideralOrbit": 21.28,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "William Cranch Bond, George Phillips Bond",
@@ -3851,8 +3923,9 @@
     "dimension": "",
     "sideralOrbit": 79.331002,
     "sideralRotation": 1735.92,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Jean-Dominique Cassini",
@@ -3904,8 +3977,9 @@
     "dimension": "230x220x210",
     "sideralOrbit": 550.30391,
     "sideralRotation": 9.2736,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "William Henry Pickering",
@@ -3957,8 +4031,9 @@
     "dimension": "203.4x185.8x149",
     "sideralOrbit": 0.694585,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Audouin Dollfus",
@@ -4010,8 +4085,9 @@
     "dimension": "129.8x114.6x106",
     "sideralOrbit": 0.697012,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Richard L. Walker",
@@ -4060,8 +4136,9 @@
     "dimension": "43.4x38.2x26",
     "sideralOrbit": 2.73868,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Pierre Laques, Raymond Despiau, Jean Lecacheux",
@@ -4113,8 +4190,9 @@
     "dimension": "30x23x14",
     "sideralOrbit": 1.887795,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Bradford A. Smith, Harold J. Reitsema, Stephen M. Larson, John W. Fountain",
@@ -4166,8 +4244,9 @@
     "dimension": "31x24x21",
     "sideralOrbit": 1.887795,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Dan Pascu, P. Kenneth Seidelmann, William A. Baum, Douglas Currie",
@@ -4219,8 +4298,9 @@
     "dimension": "42x36x18",
     "sideralOrbit": 0.604602,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Richard J. Terrile",
@@ -4272,8 +4352,9 @@
     "dimension": "137x81x56",
     "sideralOrbit": 0.615878,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Stewart A. Collins, D. Carlson",
@@ -4325,8 +4406,9 @@
     "dimension": "103x80x64",
     "sideralOrbit": 0.6285035,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Stewart A. Collins",
@@ -4378,8 +4460,9 @@
     "dimension": "35x32x21",
     "sideralOrbit": 0.575051,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Mark R. Showalter",
@@ -4431,8 +4514,9 @@
     "dimension": "",
     "sideralOrbit": 1315.07801,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Brett J. Gladman",
@@ -4484,8 +4568,9 @@
     "dimension": "",
     "sideralOrbit": 686.937962,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4537,8 +4622,9 @@
     "dimension": "",
     "sideralOrbit": 926.425784,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4590,8 +4676,9 @@
     "dimension": "",
     "sideralOrbit": 451.428063,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4643,8 +4730,9 @@
     "dimension": "",
     "sideralOrbit": 1016.697887,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4696,8 +4784,9 @@
     "dimension": "",
     "sideralOrbit": 449.172103,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Brett J. Gladman",
@@ -4749,8 +4838,9 @@
     "dimension": "",
     "sideralOrbit": 952.858247,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4802,8 +4892,9 @@
     "dimension": "",
     "sideralOrbit": 783.459219,
     "sideralRotation": 13.32,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4855,8 +4946,9 @@
     "dimension": "",
     "sideralOrbit": 728.088602,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4908,8 +5000,9 @@
     "dimension": "",
     "sideralOrbit": 871.092737,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -4961,8 +5054,9 @@
     "dimension": "",
     "sideralOrbit": 895.577261,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -5014,8 +5108,9 @@
     "dimension": "",
     "sideralOrbit": 1092.170793,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman",
@@ -5067,8 +5162,9 @@
     "dimension": "",
     "sideralOrbit": 1003.946106,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna",
@@ -5120,8 +5216,9 @@
     "dimension": "3.88x2.58x2.42",
     "sideralOrbit": 1.009549,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco, Sébastien Charnoz",
@@ -5173,8 +5270,9 @@
     "dimension": "5.76x4.16x3.68",
     "sideralOrbit": 1.156059,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco, Sébastien Charnoz",
@@ -5226,8 +5324,9 @@
     "dimension": "3x2x2",
     "sideralOrbit": 2.73773,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco",
@@ -5279,8 +5378,9 @@
     "dimension": "9.2x9x5.6",
     "sideralOrbit": 0.59408,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco",
@@ -5332,8 +5432,9 @@
     "dimension": "",
     "sideralOrbit": 1119.336994,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5385,8 +5486,9 @@
     "dimension": "",
     "sideralOrbit": 834.848338,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5438,8 +5540,9 @@
     "dimension": "",
     "sideralOrbit": 1005.53083,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5491,8 +5594,9 @@
     "dimension": "",
     "sideralOrbit": 1078,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5544,8 +5648,9 @@
     "dimension": "",
     "sideralOrbit": 1087.261627,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5597,8 +5702,9 @@
     "dimension": "",
     "sideralOrbit": 1260.193443,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5650,8 +5756,9 @@
     "dimension": "",
     "sideralOrbit": 1494.105551,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5703,8 +5810,9 @@
     "dimension": "",
     "sideralOrbit": 1040.051211,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5756,8 +5864,9 @@
     "dimension": "",
     "sideralOrbit": 931.900309,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5809,8 +5918,9 @@
     "dimension": "",
     "sideralOrbit": 1231.189968,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5862,8 +5972,9 @@
     "dimension": "",
     "sideralOrbit": 1311.79803,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5915,8 +6026,9 @@
     "dimension": "",
     "sideralOrbit": 878.37584,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -5968,8 +6080,9 @@
     "dimension": "",
     "sideralOrbit": 1295.595736,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6021,8 +6134,9 @@
     "dimension": "1x1x1",
     "sideralOrbit": 1.038898,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco, l'équipe Cassini",
@@ -6074,8 +6188,9 @@
     "dimension": "",
     "sideralOrbit": 1006.46334,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6127,8 +6242,9 @@
     "dimension": "",
     "sideralOrbit": 937.004967,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6180,8 +6296,9 @@
     "dimension": "",
     "sideralOrbit": 884.988724,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6233,8 +6350,9 @@
     "dimension": "1.4x0.5x0.4",
     "sideralOrbit": 0.808115,
     "sideralRotation": 19.63,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco",
@@ -6286,8 +6404,9 @@
     "dimension": "",
     "sideralOrbit": 1130,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6339,8 +6458,9 @@
     "dimension": "",
     "sideralOrbit": 1048.568818,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6392,8 +6512,9 @@
     "dimension": "",
     "sideralOrbit": 943,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6445,8 +6566,9 @@
     "dimension": "",
     "sideralOrbit": 1020,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6498,8 +6620,9 @@
     "dimension": "",
     "sideralOrbit": 964.238364,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6551,8 +6674,9 @@
     "dimension": "",
     "sideralOrbit": 1180,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6604,8 +6728,9 @@
     "dimension": "",
     "sideralOrbit": 754.907597,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6657,8 +6782,9 @@
     "dimension": "",
     "sideralOrbit": 1034.449032,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt, Jan Kleyna, Brian G. Marsden",
@@ -6710,8 +6836,9 @@
     "dimension": "0.3x0.3x0.3",
     "sideralOrbit": 0.47,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco",
@@ -6763,8 +6890,9 @@
     "dimension": "",
     "sideralOrbit": 2.52068,
     "sideralRotation": 60.4891,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "William Lassell",
@@ -6816,8 +6944,9 @@
     "dimension": "",
     "sideralOrbit": 4.144548,
     "sideralRotation": 99.499,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "William Lassell",
@@ -6869,8 +6998,9 @@
     "dimension": "",
     "sideralOrbit": 8.706444,
     "sideralRotation": 208.9408,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "William Herschel",
@@ -6922,8 +7052,9 @@
     "dimension": "",
     "sideralOrbit": 13.463606,
     "sideralRotation": 323.1176,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "William Herschel",
@@ -6975,8 +7106,9 @@
     "dimension": "480x468.4x465.8",
     "sideralOrbit": 1.413784,
     "sideralRotation": 33.9235,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Gerard Kuiper",
@@ -7028,8 +7160,9 @@
     "dimension": "",
     "sideralOrbit": 0.3345683,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Richard J. Terrile",
@@ -7081,8 +7214,9 @@
     "dimension": "",
     "sideralOrbit": 0.376855,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Richard J. Terrile",
@@ -7134,8 +7268,9 @@
     "dimension": "",
     "sideralOrbit": 0.435007,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Bradford A. Smith",
@@ -7187,8 +7322,9 @@
     "dimension": "",
     "sideralOrbit": 0.463154,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7240,8 +7376,9 @@
     "dimension": "",
     "sideralOrbit": 0.4732274,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7293,8 +7430,9 @@
     "dimension": "",
     "sideralOrbit": 0.493479,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7346,8 +7484,9 @@
     "dimension": "",
     "sideralOrbit": 0.513196,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7399,8 +7538,9 @@
     "dimension": "",
     "sideralOrbit": 0.558459,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7452,8 +7592,9 @@
     "dimension": "",
     "sideralOrbit": 0.623527,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7505,8 +7646,9 @@
     "dimension": "",
     "sideralOrbit": 0.761477,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -7558,8 +7700,9 @@
     "dimension": "",
     "sideralOrbit": 579.7595,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Brett J. Gladman, Philip D. Nicholson, Joseph A. Burns, John J. Kavelaars",
@@ -7611,8 +7754,9 @@
     "dimension": "",
     "sideralOrbit": 1288.4048,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Philip D. Nicholson, Brett J. Gladman, Joseph A. Burns, John J. Kavelaars",
@@ -7664,8 +7808,9 @@
     "dimension": "",
     "sideralOrbit": 1979.4067,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Brett J. Gladman, Jean-Marc Petit, Hans Scholl",
@@ -7717,8 +7862,9 @@
     "dimension": "",
     "sideralOrbit": 2224.9383,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "John J. Kavelaars, Brett J. Gladman, Matthew J. Holman, Jean-Marc Petit, Hans Scholl",
@@ -7770,8 +7916,9 @@
     "dimension": "",
     "sideralOrbit": 677.5575,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Brett J. Gladman, Matthew J. Holman, John J. Kavelaars, Jean-Marc Petit, Hans Scholl",
@@ -7823,8 +7970,9 @@
     "dimension": "",
     "sideralOrbit": 749.24,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Dan Milisavljevic",
@@ -7876,8 +8024,9 @@
     "dimension": "",
     "sideralOrbit": 267.1086,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Dan Milisavljevic, Brett J. Gladman",
@@ -7929,8 +8078,9 @@
     "dimension": "",
     "sideralOrbit": 1655.1634,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -7982,8 +8132,9 @@
     "dimension": "",
     "sideralOrbit": 2808.6998,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Dan Milisavljevic, Brett J. Gladman",
@@ -8035,8 +8186,9 @@
     "dimension": "",
     "sideralOrbit": 0.638413,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Erich Karkoschka",
@@ -8088,8 +8240,9 @@
     "dimension": "",
     "sideralOrbit": 0.923293,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Mark R. Showalter, Jack J. Lissauer",
@@ -8141,8 +8294,9 @@
     "dimension": "",
     "sideralOrbit": 0.613168,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "uranus",
+    "parent": {
+      "name": "uranus",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/uranus"
     },
     "discoveredBy": "Mark R. Showalter, Jack J. Lissauer",
@@ -8194,8 +8348,9 @@
     "dimension": "",
     "sideralOrbit": 5.876994,
     "sideralRotation": 141.0444,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "William Lassell",
@@ -8247,8 +8402,9 @@
     "dimension": "",
     "sideralOrbit": 360.133039,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Gerard Kuiper",
@@ -8300,8 +8456,9 @@
     "dimension": "48x30x26",
     "sideralOrbit": 0.29398,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Richard J. Terrile",
@@ -8353,8 +8510,9 @@
     "dimension": "54x50x26",
     "sideralOrbit": 0.311078,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Richard J. Terrile",
@@ -8406,8 +8564,9 @@
     "dimension": "90x74x64",
     "sideralOrbit": 0.3346556,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -8459,8 +8618,9 @@
     "dimension": "102x92x72",
     "sideralOrbit": 0.428744,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Stephen P. Synnott",
@@ -8512,8 +8672,9 @@
     "dimension": "108x102x84",
     "sideralOrbit": 0.554989,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Harold J. Reitsema, William B. Hubbard, Larry A. Lebofsky, David J. Tholen",
@@ -8565,8 +8726,9 @@
     "dimension": "220x208x202",
     "sideralOrbit": 1.122315,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Stephen P. Synnott, Bradford A. Smith",
@@ -8618,8 +8780,9 @@
     "dimension": "",
     "sideralOrbit": 1879.7825,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Tommy Grav, Wesley C. Fraser, Dan Milisavljevic",
@@ -8671,8 +8834,9 @@
     "dimension": "",
     "sideralOrbit": 9149.5139,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -8724,8 +8888,9 @@
     "dimension": "",
     "sideralOrbit": 2919.4287,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Tommy Grav, Wesley C. Fraser, Dan Milisavljevic",
@@ -8777,8 +8942,9 @@
     "dimension": "",
     "sideralOrbit": 3176.1252,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Matthew J. Holman, John J. Kavelaars, Tommy Grav, Wesley C. Fraser, Dan Milisavljevic",
@@ -8830,8 +8996,9 @@
     "dimension": "",
     "sideralOrbit": 9794.986,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Matthew J. Holman",
@@ -8886,8 +9053,9 @@
     "dimension": "",
     "sideralOrbit": 6.387222,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "pluto",
+    "parent": {
+      "name": "pluto",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/pluton"
     },
     "discoveredBy": "James W. Christy",
@@ -8939,8 +9107,9 @@
     "dimension": "49.8x33.2x31.1",
     "sideralOrbit": 24.853,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "pluto",
+    "parent": {
+      "name": "pluto",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/pluton"
     },
     "discoveredBy": "Hubble Space Telescope Pluto Companion Search Team",
@@ -8992,8 +9161,9 @@
     "dimension": "50.9x36.1x30.9",
     "sideralOrbit": 37.929,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "pluto",
+    "parent": {
+      "name": "pluto",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/pluton"
     },
     "discoveredBy": "Hubble Space Telescope Pluto Companion Search Team",
@@ -9045,8 +9215,9 @@
     "dimension": "",
     "sideralOrbit": 18.27,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "haumea",
+    "parent": {
+      "name": "haumea",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/haumea"
     },
     "discoveredBy": "Michael E. Brown",
@@ -9098,8 +9269,9 @@
     "dimension": "",
     "sideralOrbit": 49.12,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "haumea",
+    "parent": {
+      "name": "haumea",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/haumea"
     },
     "discoveredBy": "Michael E. Brown",
@@ -9151,8 +9323,9 @@
     "dimension": "",
     "sideralOrbit": 15.785,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "eris",
+    "parent": {
+      "name": "eris",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/eris"
     },
     "discoveredBy": "Michael E. Brown",
@@ -9204,8 +9377,9 @@
     "dimension": "",
     "sideralOrbit": 279.212821,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard, David C. Jewitt",
@@ -9254,8 +9428,9 @@
     "dimension": "",
     "sideralOrbit": 0.62,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carl Murray",
@@ -9304,8 +9479,9 @@
     "dimension": "",
     "sideralOrbit": 0.61,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carl Murray",
@@ -9354,8 +9530,9 @@
     "dimension": "",
     "sideralOrbit": 0.61,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "Carolyn C. Porco",
@@ -9404,8 +9581,9 @@
     "dimension": "",
     "sideralOrbit": 736.512347,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Jacobson, Brozovic, Gladman, Alexandersen",
@@ -9454,8 +9632,9 @@
     "dimension": "",
     "sideralOrbit": 618.841217,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Christian Veillet",
@@ -9510,7 +9689,7 @@
     "dimension": "",
     "sideralOrbit": 1681.63,
     "sideralRotation": 9.07,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Giuseppe Piazzi",
     "discoveryDate": "01/01/1801",
     "alternativeName": "A899 OF - 1943 XB",
@@ -9560,7 +9739,7 @@
     "dimension": "",
     "sideralOrbit": 1380.373,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Karl Ludwig Hencke",
     "discoveryDate": "01/07/1847",
     "alternativeName": "",
@@ -9607,7 +9786,7 @@
     "dimension": "",
     "sideralOrbit": 91678,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "E. P. Rubenstein, L.-G. Strolger",
     "discoveryDate": "01/10/1999",
     "alternativeName": "1999 TC36",
@@ -9657,8 +9836,9 @@
     "dimension": "",
     "sideralOrbit": 4.76,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "eugenia",
+    "parent": {
+      "name": "eugenia",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/eugenia"
     },
     "discoveredBy": "W. J. Merline, L. M. Close, C. Dumas, C. R. Chapman, F. Roddier, F. Menard, D. C. Slater, G. Duvert, J. C. Shelton, T. Morgan",
@@ -9710,7 +9890,7 @@
     "dimension": "",
     "sideralOrbit": 2049.475,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "G. N. Neujmin",
     "discoveryDate": "03/09/1913",
     "alternativeName": "1913 SQ",
@@ -9760,7 +9940,7 @@
     "dimension": "4.26x2.03x1.7",
     "sideralOrbit": 1463.14,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Christian Pollas",
     "discoveryDate": "04/01/1989",
     "alternativeName": "1989 AC - 1934 CT",
@@ -9815,7 +9995,7 @@
     "dimension": "",
     "sideralOrbit": 104347.575,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Chadwick Trujillo, Michael E. Brown",
     "discoveryDate": "04/06/2002",
     "alternativeName": "2002 LM60",
@@ -9862,7 +10042,7 @@
     "dimension": "6.83x5.70x4.42",
     "sideralOrbit": 1327.3582,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "N. S. Tchernykh",
     "discoveryDate": "04/11/1969",
     "alternativeName": "1969 VC - 1954 QL",
@@ -9920,7 +10100,7 @@
     "dimension": "",
     "sideralOrbit": 203830,
     "sideralRotation": 25.92,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Michael E. Brown, Chadwick Trujillo, David L. Rabinowitz",
     "discoveryDate": "05/01/2005",
     "alternativeName": "2003 UB313",
@@ -9970,7 +10150,7 @@
     "dimension": "",
     "sideralOrbit": 1507.279,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Karl Ludwig Hencke",
     "discoveryDate": "08/12/1845",
     "alternativeName": "1969 SE",
@@ -10020,7 +10200,7 @@
     "dimension": "",
     "sideralOrbit": 33711,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "David Rabinowitz / Spacewatch",
     "discoveryDate": "09/01/1992",
     "alternativeName": "1992 AD",
@@ -10070,7 +10250,7 @@
     "dimension": "1.8x0.8x0.8",
     "sideralOrbit": 400.428,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Eleanor F. Helin",
     "discoveryDate": "09/08/1989",
     "alternativeName": "1989 PB",
@@ -10120,8 +10300,9 @@
     "dimension": "",
     "sideralOrbit": 1.37,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "sylvia",
+    "parent": {
+      "name": "sylvia",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/sylvia"
     },
     "discoveredBy": "Franck Marchis, Pascal Descamps, Daniel Hestroffer, Jérome Berthier",
@@ -10173,7 +10354,7 @@
     "dimension": "370x195x195",
     "sideralOrbit": 4358.521,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "August Kopff",
     "discoveryDate": "10/02/1907",
     "alternativeName": "1907 XM - 1948 VD",
@@ -10232,7 +10413,7 @@
     "dimension": "276x94x78",
     "sideralOrbit": 1707,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Johann Palisa",
     "discoveryDate": "10/04/1880",
     "alternativeName": "A905 OA - A910 RA",
@@ -10282,7 +10463,7 @@
     "dimension": "",
     "sideralOrbit": 364.019,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "J. Duncan Waldron, Giovanni de Sanctis, Richard M. West",
     "discoveryDate": "10/10/1986",
     "alternativeName": "1983 UH - 1986 TO",
@@ -10332,7 +10513,7 @@
     "dimension": "290x240x190",
     "sideralOrbit": 1593.926,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Karl L. Harding",
     "discoveryDate": "12/01/1804",
     "alternativeName": "",
@@ -10382,7 +10563,7 @@
     "dimension": "",
     "sideralOrbit": 2029.776,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Annibale de Gasparis",
     "discoveryDate": "12/04/1849",
     "alternativeName": "",
@@ -10432,7 +10613,7 @@
     "dimension": "",
     "sideralOrbit": 1387.902,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "H. M. S. Goldschmidt",
     "discoveryDate": "12/11/1852",
     "alternativeName": "",
@@ -10482,7 +10663,7 @@
     "dimension": "66x48x46",
     "sideralOrbit": 1572.491,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Johann Palisa",
     "discoveryDate": "12/11/1885",
     "alternativeName": "1949 OL1 - A915 TN",
@@ -10644,7 +10825,7 @@
     "dimension": "",
     "sideralOrbit": 30685.4,
     "sideralRotation": 17.24,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "William Herschel",
     "discoveryDate": "13/03/1781",
     "alternativeName": "",
@@ -10694,7 +10875,7 @@
     "dimension": "",
     "sideralOrbit": 1346.628,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "John Russell Hind",
     "discoveryDate": "13/08/1847",
     "alternativeName": "",
@@ -10744,7 +10925,7 @@
     "dimension": "33x13x13",
     "sideralOrbit": 643.219,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Gustav Witt",
     "discoveryDate": "13/08/1898",
     "alternativeName": "1898 DQ - 1956 PC",
@@ -10794,8 +10975,9 @@
     "dimension": "",
     "sideralOrbit": 9.539,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "orcus",
+    "parent": {
+      "name": "orcus",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/orcus"
     },
     "discoveredBy": "Michael E. Brown, T.A. Suer",
@@ -10847,7 +11029,7 @@
     "dimension": "",
     "sideralOrbit": 4154395,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Chadwick Trujillo, Michael E. Brown, David L. Rabinowitz",
     "discoveryDate": "14/11/2003",
     "alternativeName": "2003 VB12",
@@ -10894,7 +11076,7 @@
     "dimension": "",
     "sideralOrbit": 23084,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Spacewatch",
     "discoveryDate": "15/02/1997",
     "alternativeName": "1997 CU26",
@@ -10953,7 +11135,7 @@
     "dimension": "384x264x232",
     "sideralOrbit": 2381.639,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Norman Robert Pogson",
     "discoveryDate": "16/05/1866",
     "alternativeName": "A909 GA",
@@ -11000,8 +11182,9 @@
     "dimension": "1.6x1.4x1.2",
     "sideralOrbit": 1.54,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "ida",
+    "parent": {
+      "name": "ida",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/ida"
     },
     "discoveredBy": "Ann Harch",
@@ -11058,7 +11241,7 @@
     "dimension": "",
     "sideralOrbit": 89606,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Michael E. Brown, Chadwick Trujillo, David L. Rabinowitz",
     "discoveryDate": "17/02/2004",
     "alternativeName": "2004 DW",
@@ -11132,7 +11315,7 @@
     "dimension": "",
     "sideralOrbit": 90465,
     "sideralRotation": 153.2928,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Clyde W. Tombaugh",
     "discoveryDate": "18/02/1930",
     "alternativeName": "",
@@ -11179,7 +11362,7 @@
     "dimension": "",
     "sideralOrbit": 14880.9,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Robert H. McNaught",
     "discoveryDate": "18/02/1991",
     "alternativeName": "1991 DA",
@@ -11226,8 +11409,9 @@
     "dimension": "",
     "sideralOrbit": 3.6496,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "sylvia",
+    "parent": {
+      "name": "sylvia",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/sylvia"
     },
     "discoveredBy": "Michael E. Brown, Jean-Luc Margot",
@@ -11276,8 +11460,9 @@
     "dimension": "",
     "sideralOrbit": 2.3,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "kleopatra",
+    "parent": {
+      "name": "kleopatra",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/kleopatra"
     },
     "discoveredBy": "F. Marchis, P. Descamps, J. Berthier, F. Vachier, J. P. Emery",
@@ -11326,8 +11511,9 @@
     "dimension": "",
     "sideralOrbit": 1.8,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "kleopatra",
+    "parent": {
+      "name": "kleopatra",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/kleopatra"
     },
     "discoveredBy": "F. Marchis, P. Descamps, J. Berthier, F. Vachier, J. P. Emery",
@@ -11379,7 +11565,7 @@
     "dimension": "",
     "sideralOrbit": 1192.956,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "John Russell Hind",
     "discoveryDate": "18/10/1847",
     "alternativeName": "",
@@ -11429,7 +11615,7 @@
     "dimension": "",
     "sideralOrbit": 18429,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Charles T. Kowal",
     "discoveryDate": "18/10/1977",
     "alternativeName": "1977 UB",
@@ -11476,7 +11662,7 @@
     "dimension": "",
     "sideralOrbit": 686.829,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "David H. Levy",
     "discoveryDate": "20/06/1990",
     "alternativeName": "1990 MB",
@@ -11526,7 +11712,7 @@
     "dimension": "",
     "sideralOrbit": 4320.803,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Max Wolf",
     "discoveryDate": "22/02/1906",
     "alternativeName": "1906 TG",
@@ -11573,8 +11759,9 @@
     "dimension": "",
     "sideralOrbit": 12.438,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "quaoar",
+    "parent": {
+      "name": "quaoar",
+      "type": "Asteróide",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/quaoar"
     },
     "discoveredBy": "Michael E. Brown, T.A. Suer",
@@ -11626,7 +11813,7 @@
     "dimension": "756.9x684.9x684.9",
     "sideralOrbit": 90717,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Deep Ecliptic Survey",
     "discoveryDate": "22/05/2001",
     "alternativeName": "2001 KX76",
@@ -11736,7 +11923,7 @@
     "dimension": "",
     "sideralOrbit": 60189,
     "sideralRotation": 16.11,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Urbain Le Verrier, John Couch Adams, Johann Galle",
     "discoveryDate": "23/09/1846",
     "alternativeName": "",
@@ -11783,7 +11970,7 @@
     "dimension": "",
     "sideralOrbit": null,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Carolyn, Eugene M. Shoemaker, David Levy",
     "discoveryDate": "24/03/1993",
     "alternativeName": "",
@@ -11833,7 +12020,7 @@
     "dimension": "222x182x130",
     "sideralOrbit": 1346.815,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Andrew Graham",
     "discoveryDate": "25/04/1848",
     "alternativeName": "1974 QU 2",
@@ -11895,7 +12082,7 @@
     "dimension": "2100x1680x1074",
     "sideralOrbit": 103410,
     "sideralRotation": 3.915341,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Michael E. Brown, José Luis Ortiz Moreno",
     "discoveryDate": "28/12/2004",
     "alternativeName": "2003 EL61",
@@ -11942,7 +12129,7 @@
     "dimension": "",
     "sideralOrbit": 44561,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Spacewatch",
     "discoveryDate": "26/04/1993",
     "alternativeName": "1993 HA2",
@@ -11992,7 +12179,7 @@
     "dimension": "607x287x264",
     "sideralOrbit": 556.38,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "LINEAR",
     "discoveryDate": "26/09/1998",
     "alternativeName": "1998 SF36",
@@ -12039,7 +12226,7 @@
     "dimension": "",
     "sideralOrbit": 44561,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "David C. Jewitt, Jane X. Luu",
     "discoveryDate": "27/02/1995",
     "alternativeName": "1995 DW2",
@@ -12094,7 +12281,7 @@
     "dimension": "",
     "sideralOrbit": 1638.654,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Hermann Goldschmidt",
     "discoveryDate": "27/06/1857",
     "alternativeName": "1941 BN",
@@ -12141,7 +12328,7 @@
     "dimension": "",
     "sideralOrbit": 11800000,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Andrew Becker, Nathan Kaib",
     "discoveryDate": "27/09/2006",
     "alternativeName": "2006 SQ372",
@@ -12191,7 +12378,7 @@
     "dimension": "582x556x500",
     "sideralOrbit": 1685.927,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Heinrich Olbers",
     "discoveryDate": "28/03/1802",
     "alternativeName": "",
@@ -12238,7 +12425,7 @@
     "dimension": "",
     "sideralOrbit": 27796,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "James V. Scotti, Robert Jedicke/ Spacewatch",
     "discoveryDate": "28/03/1995",
     "alternativeName": "1995 GO",
@@ -12288,7 +12475,7 @@
     "dimension": "",
     "sideralOrbit": 103440,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Robert S. McMillan Spacewatch",
     "discoveryDate": "28/11/2000",
     "alternativeName": "2000 WR106",
@@ -12338,7 +12525,7 @@
     "dimension": "560x544x454",
     "sideralOrbit": 1325.886,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "H. W. Olbers",
     "discoveryDate": "29/03/1807",
     "alternativeName": "",
@@ -12393,7 +12580,7 @@
     "dimension": "59.8x25.4x18.6",
     "sideralOrbit": 1767.564,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Johann Palisa",
     "discoveryDate": "29/09/1884",
     "alternativeName": "",
@@ -12440,7 +12627,7 @@
     "dimension": "",
     "sideralOrbit": null,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Yuji Hyakutake",
     "discoveryDate": "30/01/1996",
     "alternativeName": "",
@@ -12490,7 +12677,7 @@
     "dimension": "18.2x10.5x8.9",
     "sideralOrbit": 1199.479,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Grigori Neujmin",
     "discoveryDate": "30/07/1916",
     "alternativeName": "1916 S45 - 1916 Σ45",
@@ -12540,7 +12727,7 @@
     "dimension": "",
     "sideralOrbit": 105757,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "David C. Jewitt, Jane X. Luu",
     "discoveryDate": "30/08/1992",
     "alternativeName": "1992 QB1",
@@ -12598,7 +12785,7 @@
     "dimension": "",
     "sideralOrbit": 112897,
     "sideralRotation": 22.8266,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Michael E. Brown, Chadwick Trujillo, David L. Rabinowitz",
     "discoveryDate": "31/03/2005",
     "alternativeName": "2005 FY9",
@@ -12648,7 +12835,7 @@
     "dimension": "14.42x7.4x7.4",
     "sideralOrbit": null,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13082,7 +13269,7 @@
     "dimension": "",
     "sideralOrbit": 4332.589,
     "sideralRotation": 9.925,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13144,7 +13331,7 @@
     "dimension": "",
     "sideralOrbit": 686.98,
     "sideralRotation": 24.6229,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13197,7 +13384,7 @@
     "dimension": "",
     "sideralOrbit": 87.969,
     "sideralRotation": 1407.6,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13835,7 +14022,7 @@
     "dimension": "",
     "sideralOrbit": 10759.22,
     "sideralRotation": 10.656,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13888,7 +14075,7 @@
     "dimension": "",
     "sideralOrbit": null,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13946,7 +14133,7 @@
     "dimension": "",
     "sideralOrbit": 365.25636,
     "sideralRotation": 23.9345,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -13999,7 +14186,7 @@
     "dimension": "",
     "sideralOrbit": 224.701,
     "sideralRotation": 5832.5,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "",
     "discoveryDate": "",
     "alternativeName": "",
@@ -14049,8 +14236,9 @@
     "dimension": "19x10x9",
     "sideralOrbit": 31.86,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "pluto",
+    "parent": {
+      "name": "pluto",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/pluton"
     },
     "discoveredBy": "Télescope spatial Hubble - Pluto Companion Search Team",
@@ -14099,8 +14287,9 @@
     "dimension": "",
     "sideralOrbit": 733.20626,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -14149,8 +14338,9 @@
     "dimension": "",
     "sideralOrbit": 718.316562,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -14202,8 +14392,9 @@
     "dimension": "16x9x8",
     "sideralOrbit": 20.164,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "pluto",
+    "parent": {
+      "name": "pluto",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/pluton"
     },
     "discoveredBy": "Télescope spatial Hubble - Pluto Companion Search Team - Mark Showalter",
@@ -14255,8 +14446,9 @@
     "dimension": "",
     "sideralOrbit": 0.950384,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "neptune",
+    "parent": {
+      "name": "neptune",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/neptune"
     },
     "discoveredBy": "Mark Showalter",
@@ -14305,8 +14497,9 @@
     "dimension": "",
     "sideralOrbit": 12.4,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "makemake",
+    "parent": {
+      "name": "makemake",
+      "type": "Planeta-anão",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/makemake"
     },
     "discoveredBy": "Alex H. Parker, Marc W. Buie, M. Grundy, Keith S. Noll",
@@ -14355,8 +14548,9 @@
     "dimension": "",
     "sideralOrbit": 756.406342,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14405,8 +14599,9 @@
     "dimension": "",
     "sideralOrbit": 618.491978,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14455,8 +14650,9 @@
     "dimension": "",
     "sideralOrbit": 544,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14505,8 +14701,9 @@
     "dimension": "",
     "sideralOrbit": 724.709424,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14555,8 +14752,9 @@
     "dimension": "",
     "sideralOrbit": 625.601566,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14605,8 +14803,9 @@
     "dimension": "",
     "sideralOrbit": 252.5,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14655,8 +14854,9 @@
     "dimension": "",
     "sideralOrbit": 737.284766,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14705,8 +14905,9 @@
     "dimension": "",
     "sideralOrbit": 733.993348,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14755,8 +14956,9 @@
     "dimension": "",
     "sideralOrbit": 626.562241,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14805,8 +15007,9 @@
     "dimension": "",
     "sideralOrbit": 719.760404,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14855,8 +15058,9 @@
     "dimension": "",
     "sideralOrbit": 666.110044,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14905,8 +15109,9 @@
     "dimension": "",
     "sideralOrbit": 250,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott Sheppard",
@@ -14955,7 +15160,7 @@
     "dimension": "35.95x19.9x9.75",
     "sideralOrbit": 107847,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Télescope spatial Hubble",
     "discoveryDate": "26/06/2014",
     "alternativeName": "2014 MU 69",
@@ -15002,7 +15207,7 @@
     "dimension": "",
     "sideralOrbit": 436.604,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "LINEAR",
     "discoveryDate": "11/09/1999",
     "alternativeName": "1999 RQ36",
@@ -15049,8 +15254,9 @@
     "dimension": "",
     "sideralOrbit": 1114.059593,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15099,8 +15305,9 @@
     "dimension": "",
     "sideralOrbit": 1328.583935,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15149,8 +15356,9 @@
     "dimension": "",
     "sideralOrbit": 1004.748101,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15199,8 +15407,9 @@
     "dimension": "",
     "sideralOrbit": 1193,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15249,8 +15458,9 @@
     "dimension": "",
     "sideralOrbit": 1360,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15299,8 +15509,9 @@
     "dimension": "",
     "sideralOrbit": 1142.966402,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15349,8 +15560,9 @@
     "dimension": "",
     "sideralOrbit": 1624.2,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15399,8 +15611,9 @@
     "dimension": "",
     "sideralOrbit": 1052.323857,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15449,8 +15662,9 @@
     "dimension": "",
     "sideralOrbit": 1220.685137,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15499,8 +15713,9 @@
     "dimension": "",
     "sideralOrbit": 837.78045,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15549,8 +15764,9 @@
     "dimension": "",
     "sideralOrbit": 1121.744245,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15599,8 +15815,9 @@
     "dimension": "",
     "sideralOrbit": 866.090744,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15649,8 +15866,9 @@
     "dimension": "",
     "sideralOrbit": 1157.969293,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15699,8 +15917,9 @@
     "dimension": "",
     "sideralOrbit": 1366.691228,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15749,8 +15968,9 @@
     "dimension": "",
     "sideralOrbit": 1420.795938,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15799,8 +16019,9 @@
     "dimension": "",
     "sideralOrbit": 1232.184588,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15849,8 +16070,9 @@
     "dimension": "",
     "sideralOrbit": 1349.370782,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15899,8 +16121,9 @@
     "dimension": "",
     "sideralOrbit": 755.634901,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15949,8 +16172,9 @@
     "dimension": "",
     "sideralOrbit": 1251.149838,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -15999,8 +16223,9 @@
     "dimension": "",
     "sideralOrbit": 1335.882236,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S. Sheppard, D. Jewitt, J. Kleyna",
@@ -16049,7 +16274,7 @@
     "dimension": "",
     "sideralOrbit": 6800,
     "sideralRotation": null,
-    "aroundPlanet": null,
+    "parent": null,
     "discoveredBy": "Wide-Field Infrared Survey Explorer",
     "discoveryDate": "27/03/2020",
     "alternativeName": "C/2020 F3",
@@ -16096,8 +16321,9 @@
     "dimension": "",
     "sideralOrbit": 914.618048,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16146,8 +16372,9 @@
     "dimension": "",
     "sideralOrbit": 721.603536,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -16196,8 +16423,9 @@
     "dimension": "",
     "sideralOrbit": 764.6038,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna",
@@ -16246,8 +16474,9 @@
     "dimension": "",
     "sideralOrbit": 925.912112,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16296,8 +16525,9 @@
     "dimension": "",
     "sideralOrbit": 980.080472,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16346,8 +16576,9 @@
     "dimension": "",
     "sideralOrbit": 1026.158033,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman",
@@ -16396,8 +16627,9 @@
     "dimension": "",
     "sideralOrbit": 1038.696711,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "D.C. Jewitt, S.S. Sheppard, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16446,8 +16678,9 @@
     "dimension": "",
     "sideralOrbit": 1107.588858,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16496,8 +16729,9 @@
     "dimension": "",
     "sideralOrbit": 762.493185,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16546,8 +16780,9 @@
     "dimension": "",
     "sideralOrbit": 1248,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "D.C. Jewitt, S.S. Sheppard, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16596,8 +16831,9 @@
     "dimension": "",
     "sideralOrbit": 1264.250853,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16646,8 +16882,9 @@
     "dimension": "",
     "sideralOrbit": 1260.442849,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16696,8 +16933,9 @@
     "dimension": "",
     "sideralOrbit": 1519.410709,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16746,8 +16984,9 @@
     "dimension": "",
     "sideralOrbit": 1633.866991,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "D.C. Jewitt, S.S. Sheppard, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16796,8 +17035,9 @@
     "dimension": "",
     "sideralOrbit": 1342.435676,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16846,8 +17086,9 @@
     "dimension": "",
     "sideralOrbit": 450.220076,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16896,8 +17137,9 @@
     "dimension": "",
     "sideralOrbit": 1177.822674,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16946,8 +17188,9 @@
     "dimension": "",
     "sideralOrbit": 983.139254,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -16996,8 +17239,9 @@
     "dimension": "",
     "sideralOrbit": 1042.285109,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17046,8 +17290,9 @@
     "dimension": "",
     "sideralOrbit": 1045,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17096,8 +17341,9 @@
     "dimension": "",
     "sideralOrbit": 1060.627398,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17146,8 +17392,9 @@
     "dimension": "",
     "sideralOrbit": 1152.673943,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17196,8 +17443,9 @@
     "dimension": "",
     "sideralOrbit": 1213.963208,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman",
@@ -17246,8 +17494,9 @@
     "dimension": "",
     "sideralOrbit": 1207.520293,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17296,8 +17545,9 @@
     "dimension": "",
     "sideralOrbit": 1275,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman",
@@ -17346,8 +17596,9 @@
     "dimension": "",
     "sideralOrbit": 1298.396815,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17396,8 +17647,9 @@
     "dimension": "",
     "sideralOrbit": 1389.33335,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17446,8 +17698,9 @@
     "dimension": "",
     "sideralOrbit": 567.265764,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17496,8 +17749,9 @@
     "dimension": "",
     "sideralOrbit": 746.878764,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17546,8 +17800,9 @@
     "dimension": "",
     "sideralOrbit": 949.496194,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17596,8 +17851,9 @@
     "dimension": "",
     "sideralOrbit": 754.285806,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna",
@@ -17646,8 +17902,9 @@
     "dimension": "",
     "sideralOrbit": 842,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17696,8 +17953,9 @@
     "dimension": "",
     "sideralOrbit": 1078.067217,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman",
@@ -17746,8 +18004,9 @@
     "dimension": "",
     "sideralOrbit": 445.514188,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, C. Veillet, M. Alexandersen",
@@ -17796,8 +18055,9 @@
     "dimension": "",
     "sideralOrbit": 1121.990703,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17846,8 +18106,9 @@
     "dimension": "",
     "sideralOrbit": 1125,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17896,8 +18157,9 @@
     "dimension": "",
     "sideralOrbit": 1138.01906,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -17946,8 +18208,9 @@
     "dimension": "",
     "sideralOrbit": 1144.78626,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -17996,8 +18259,9 @@
     "dimension": "",
     "sideralOrbit": 893.151832,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18046,8 +18310,9 @@
     "dimension": "",
     "sideralOrbit": 1161.596437,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18096,8 +18361,9 @@
     "dimension": "",
     "sideralOrbit": 1340.931763,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18146,8 +18412,9 @@
     "dimension": "",
     "sideralOrbit": 1291.386404,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, , D.C. Jewitt, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18196,8 +18463,9 @@
     "dimension": "",
     "sideralOrbit": 1327.060729,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18246,8 +18514,9 @@
     "dimension": "",
     "sideralOrbit": 1323,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18296,8 +18565,9 @@
     "dimension": "",
     "sideralOrbit": 799.84852,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18346,8 +18616,9 @@
     "dimension": "",
     "sideralOrbit": 1375.531571,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18396,8 +18667,9 @@
     "dimension": "",
     "sideralOrbit": 1636.368262,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18446,8 +18718,9 @@
     "dimension": "",
     "sideralOrbit": 837.74243,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18496,8 +18769,9 @@
     "dimension": "",
     "sideralOrbit": 903.892615,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18546,8 +18820,9 @@
     "dimension": "",
     "sideralOrbit": 991.43779,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18596,8 +18871,9 @@
     "dimension": "",
     "sideralOrbit": 1056,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18646,8 +18922,9 @@
     "dimension": "",
     "sideralOrbit": 1080.584698,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman",
@@ -18696,8 +18973,9 @@
     "dimension": "",
     "sideralOrbit": 1088.869492,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18746,8 +19024,9 @@
     "dimension": "",
     "sideralOrbit": 1093.091083,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, E.J. Ashton, B.J. Gladman",
@@ -18796,8 +19075,9 @@
     "dimension": "",
     "sideralOrbit": 451.09517,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18846,8 +19126,9 @@
     "dimension": "",
     "sideralOrbit": 1527.208982,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18896,8 +19177,9 @@
     "dimension": "",
     "sideralOrbit": 897.58814,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18946,8 +19228,9 @@
     "dimension": "",
     "sideralOrbit": 908.186488,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -18996,8 +19279,9 @@
     "dimension": "",
     "sideralOrbit": 926.962759,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19046,8 +19330,9 @@
     "dimension": "",
     "sideralOrbit": 925,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19096,8 +19381,9 @@
     "dimension": "",
     "sideralOrbit": 1167.944497,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19146,8 +19432,9 @@
     "dimension": "",
     "sideralOrbit": 861.2483,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19196,8 +19483,9 @@
     "dimension": "",
     "sideralOrbit": 1228.110579,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S Sheppard, D.C. Jewitt, J. Kleyna, E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19246,8 +19534,9 @@
     "dimension": "",
     "sideralOrbit": 1545,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "E.J. Ashton, B.J. Gladman, J.-M. Petit, M. Alexandersen",
@@ -19296,8 +19585,9 @@
     "dimension": "",
     "sideralOrbit": 647.89256,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "saturn",
+    "parent": {
+      "name": "saturn",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/saturne"
     },
     "discoveredBy": "S.S. Sheppard",
@@ -19346,8 +19636,9 @@
     "dimension": "",
     "sideralOrbit": 260.3,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19396,8 +19687,9 @@
     "dimension": "",
     "sideralOrbit": 713.641308,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19446,8 +19738,9 @@
     "dimension": "",
     "sideralOrbit": 727.010204,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19496,8 +19789,9 @@
     "dimension": "",
     "sideralOrbit": 250.5,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19546,8 +19840,9 @@
     "dimension": "",
     "sideralOrbit": 747.024566,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19596,8 +19891,9 @@
     "dimension": "",
     "sideralOrbit": 425.8,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19646,8 +19942,9 @@
     "dimension": "",
     "sideralOrbit": 627.143382,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19696,8 +19993,9 @@
     "dimension": "",
     "sideralOrbit": 623.13919,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19746,8 +20044,9 @@
     "dimension": "",
     "sideralOrbit": 617,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19796,8 +20095,9 @@
     "dimension": "",
     "sideralOrbit": 728.278426,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19846,8 +20146,9 @@
     "dimension": "",
     "sideralOrbit": 750,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19896,8 +20197,9 @@
     "dimension": "",
     "sideralOrbit": 720.968561,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19946,8 +20248,9 @@
     "dimension": "",
     "sideralOrbit": 718,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -19996,8 +20299,9 @@
     "dimension": "",
     "sideralOrbit": 739,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",
@@ -20046,8 +20350,9 @@
     "dimension": "",
     "sideralOrbit": 627,
     "sideralRotation": null,
-    "aroundPlanet": {
-      "planet": "jupiter",
+    "parent": {
+      "name": "jupiter",
+      "type": "Planeta",
       "rel": "https://api.le-systeme-solaire.net/rest/bodies/jupiter"
     },
     "discoveredBy": "Scott S. Sheppard",

@@ -13,12 +13,14 @@ function rankResult(searchTerm: string, bodies: BodyType[]): BodyType[] {
   const term = searchTerm.toLowerCase();
 
   for (const body of bodies) {
+    if (body.parent?.type === 'Asteróide') continue;
+
     if (body.name.toLowerCase().startsWith(term)) {
       nameMatches_strong.push(body);
     } else if (body.name.toLowerCase().includes(term)) {
       nameMatches_weak.push(body);
     } else if (
-      body.aroundPlanet?.planet.toLowerCase().includes(term) ||
+      body.parent?.name.toLowerCase().includes(term) ||
       body.moons?.some((moon) => moon.moon.toLowerCase().includes(term))
     ) {
       moonMatches.push(body);
