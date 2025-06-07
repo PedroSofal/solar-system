@@ -22,7 +22,7 @@ export function mapBodyToNavItem(body: BodyType): NavItem {
     id: body.id,
     label: body.name,
     type: body.bodyType,
-    info: body.aroundPlanet?.planet,
+    info: body.parent?.name,
   };
 }
 
