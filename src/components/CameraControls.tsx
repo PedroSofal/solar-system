@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { useLocation } from 'react-router-dom';
 import { getBodyMeshFromGroup } from '../utils';
 
-export default function CameraControls() {
+export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   const {
     orbitControlsRef,
     trackballControlsRef,
@@ -22,8 +22,8 @@ export default function CameraControls() {
 
   useEffect(() => {
     // Se o app é iniciado pela rota principal, executa um zoom inicial
-    if (pathname === '/') initialZoom();
-  }, []);
+    if (pathname === '/' && isLoaded) initialZoom();
+  }, [pathname, isLoaded]);
 
   useEffect(() => {
     // Executa somente a partir do clique do usuário para resetar a câmera
@@ -95,17 +95,8 @@ export default function CameraControls() {
     const sceneSun = scene.getObjectByName('sun');
     if (sceneSun) targetRef.current = sceneSun as Group;
 
-    gsap.to(orbitControls.object.position, {
-      x: -3000,
-      y: 4000,
-      z: 2000,
-      ease: 'power4.out',
-      duration: 1.2,
-      onUpdate: () => {
-        orbitControls.target.copy(new Vector3(0, 0, 0));
-        orbitControls.update();
-      },
-    });
+    orbitControls.object.position.set(0, 50000, 18000);
+    initialZoom();
   }
 
   return (

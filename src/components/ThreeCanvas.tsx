@@ -8,8 +8,10 @@ import { SceneProvider } from '../contexts/SceneContext';
 // import { Perf } from 'r3f-perf';
 
 export default function ThreeCanvas({
+  isLoaded,
   setIsLoaded,
 }: {
+  isLoaded: boolean;
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
@@ -28,13 +30,29 @@ export default function ThreeCanvas({
       <Suspense fallback={<LoadingProgress setIsLoaded={setIsLoaded} />}>
         <SceneProvider>
           <SolarSystem />
-          <CameraControls />
+          <CameraControls isLoaded={isLoaded} />
           <ResponsiveFOV />
           {/* <Perf className="left-[50%] w-fit -translate-x-[50%]" /> */}
         </SceneProvider>
       </Suspense>
     </Canvas>
   );
+}
+
+function LoadingProgress({
+  setIsLoaded,
+}: {
+  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const { progress } = useProgress();
+
+  useEffect(() => {
+    if (progress === 100) {
+      setTimeout(() => setIsLoaded(true), 500);
+    }
+  }, [progress]);
+
+  return null;
 }
 
 function ResponsiveFOV() {
@@ -52,22 +70,6 @@ function ResponsiveFOV() {
     perspectiveCamera.fov = Math.max(minFov, Math.min(maxFov, adjustedFov));
     perspectiveCamera.updateProjectionMatrix();
   }, [size.width]);
-
-  return null;
-}
-
-function LoadingProgress({
-  setIsLoaded,
-}: {
-  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
-  const { progress } = useProgress();
-
-  useEffect(() => {
-    if (progress === 100) {
-      setTimeout(() => setIsLoaded(true), 500);
-    }
-  }, [progress]);
 
   return null;
 }
