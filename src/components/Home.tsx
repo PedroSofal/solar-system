@@ -1,3 +1,4 @@
+import LoadingScreen from './LoadingScreen';
 import ThreeCanvas from './ThreeCanvas';
 import Overlay from './ui/Overlay';
 import { useState } from 'react';
@@ -10,18 +11,7 @@ export default function Home() {
       <div className="absolute inset-0">
         <ThreeCanvas isLoaded={isLoaded} setIsLoaded={setIsLoaded} />
       </div>
-      {isLoaded ? (
-        <Overlay />
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center bg-black">
-          <img
-            className="absolute block h-full w-full object-cover"
-            src="/img/cover.png"
-            alt="Saturno e seus anéis"
-          />
-          <p className="z-10 animate-pulse text-xl text-white">Carregando...</p>
-        </div>
-      )}
+      {isLoaded ? <Overlay /> : <LoadingScreen />}
     </main>
   );
 }

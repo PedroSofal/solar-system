@@ -1,5 +1,21 @@
 @import 'tailwindcss';
 
+@theme {
+  --animate-fadeCycle: fade infinite;
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+  }
+}
+
 .slider {
   --emerald-400: #34d399;
   --neutral-900: #171717;

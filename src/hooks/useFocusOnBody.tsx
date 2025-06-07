@@ -89,7 +89,7 @@ export default function useFocusOnBody(
 
     const camTargetOrigin = orbitControls.target;
     const camTargetDestiny = bodyPosition.clone();
-    console.log(timeScale);
+
     if (isFollowing) {
       // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
       setIsFollowing(false);
