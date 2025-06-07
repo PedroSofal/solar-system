@@ -1,5 +1,5 @@
 import { Group, Quaternion, Vector3 } from 'three';
-import { useContext, useEffect, useMemo, useRef } from 'react';
+import { memo, useContext, useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import LayerContext from '../contexts/LayerContext';
 import SceneContext from '../contexts/SceneContext';
@@ -22,9 +22,28 @@ function getSizeThreshold(parentId: string) {
   }
 }
 
-export default function Moon({ bodyData }: { bodyData: BodyType }) {
+export default function MoonsContainer({
+  allPlanets,
+}: {
+  allPlanets: BodyType[];
+}) {
+  const { id: routeId } = useParams();
+
+  return allPlanets.map((planet) =>
+    planet.moonBodies?.map((moon) => (
+      <Moon key={moon.id} bodyData={moon} isFocused={routeId === moon.id} />
+    )),
+  );
+}
+
+const Moon = memo(function ({
+  bodyData,
+  isFocused,
+}: {
+  bodyData: BodyType;
+  isFocused: boolean;
+}) {
   const { aroundPlanet, referencePlane, meanRadius, id } = bodyData;
-  const { id: idFromRoute } = useParams();
 
   const sceneRef = useContext(SceneContext);
   const { getLayer } = useContext(LayerContext);
@@ -34,7 +53,7 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
   const planetRef = useRef<Group>(null);
 
   const areAllMoonsVisible = getLayer('all-moons')?.value;
-  const isMoonFocusedOn = idFromRoute === id;
+
   const parent = aroundPlanet as Parent;
   const parentId = parent.planet;
 
@@ -48,7 +67,7 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
     if (
       areAllMoonsVisible ||
       (meanRadius && meanRadius >= getSizeThreshold(parentId)) ||
-      isMoonFocusedOn
+      isFocused
     ) {
       moonGroupRef.current.visible = true;
       moonGroupRef.current.traverse((obj) => (obj.visible = true));
@@ -56,7 +75,7 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
       moonGroupRef.current.visible = false;
       moonGroupRef.current.traverse((obj) => (obj.visible = false));
     }
-  }, [areAllMoonsVisible, isMoonFocusedOn]);
+  }, [areAllMoonsVisible, isFocused]);
 
   useFrame(() => {
     if (!planetRef.current || !moonGroupRef.current) return;
@@ -76,7 +95,7 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
       return q.copy(getReferencePlaneQuaternionFromPole(ra, dec));
     }
   }, [referencePlane, id, parentId]);
-
+  console.log(id);
   return (
     <group ref={moonGroupRef} name="ancoragem do satélite">
       <group quaternion={refPlaneQuaternion} name="reference plane">
@@ -84,4 +103,4 @@ export default function Moon({ bodyData }: { bodyData: BodyType }) {
       </group>
     </group>
   );
-}
+});
