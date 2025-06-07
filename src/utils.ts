@@ -114,8 +114,8 @@ export function getHitboxCullingPoints(
       return {
         farStart: declustered ? 30 : 1000,
         farEnd: declustered ? 0.5 : 60,
-        nearStart: radius * 100,
-        nearEnd: radius * 50,
+        nearStart: Math.max(radius * 150, 0.01),
+        nearEnd: Math.max(radius * 100, 0.005),
       };
     case 'Planeta-anão':
       return {
@@ -146,8 +146,8 @@ export function getOrbitCullingPoints(
       return {
         farStart: declustered ? 30 : 500,
         farEnd: declustered ? 0.5 : 10,
-        nearStart: radius * 100,
-        nearEnd: radius * 50,
+        nearStart: Math.max(radius * 100, 0.1),
+        nearEnd: Math.max(radius * 50, 0.05),
       };
     case 'Planeta-anão':
       return {
