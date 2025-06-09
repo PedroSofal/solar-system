@@ -19,6 +19,7 @@ export default function ThreeCanvas({
       className="min-h-screen w-full cursor-grab bg-black active:cursor-grabbing"
       dpr={[1, 2]}
       gl={{ logarithmicDepthBuffer: true }}
+      shadows
       camera={{
         position: [0, 50000, 18000],
         up: [0, 0, 1],

@@ -3,10 +3,10 @@ import TimeTicker from './TimeTicker';
 import BodyDataContext from '../contexts/BodyDataContext';
 import LayerContext from '../contexts/LayerContext';
 import Sun from './Sun';
-import Planet from './Planet';
 import Background from './Background';
 import { useGLTF } from '@react-three/drei';
 import MoonsContainer from './Moon';
+import PlanetSystem from './Planet';
 
 export default memo(function SolarSystem() {
   const { sun, planets, dwarfPlanets, loading } = useContext(BodyDataContext);
@@ -26,11 +26,7 @@ export default memo(function SolarSystem() {
       <Background />
 
       {<Sun bodyData={sun as BodyType} />}
-
-      {allPlanets?.map((planet) => (
-        <Planet key={planet.id} bodyData={planet} />
-      ))}
-
+      <PlanetSystem allPlanets={allPlanets} />
       <MoonsContainer allPlanets={allPlanets} />
 
       <TimeTicker />

@@ -62,7 +62,12 @@ export default function Body({
       ) : (
         <Detailed distances={detailLevels.map((level) => level.distance)}>
           {detailLevels.map(({ segments }, index) => (
-            <mesh key={index} scale={geometryInfo.deformation}>
+            <mesh
+              key={index}
+              scale={geometryInfo.deformation}
+              castShadow
+              receiveShadow
+            >
               <sphereGeometry
                 args={[geometryInfo.initialRadius, segments, segments]}
               />

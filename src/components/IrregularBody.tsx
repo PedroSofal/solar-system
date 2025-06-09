@@ -40,6 +40,8 @@ export default function IrregularBody({
       geometry={(nodes.Daphne_LP001_1_0 as Mesh).geometry}
       material={materials.material}
       scale={scaledDeformation}
+      castShadow
+      receiveShadow
     />
   );
 }

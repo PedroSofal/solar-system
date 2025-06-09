@@ -9,8 +9,11 @@ import { AdditiveBlending } from 'three';
 import { BackSide } from 'three';
 import { toModelScale } from '../utils';
 import { getBodyTiltQuaternionFromPole } from '../getQuaternionFromPole';
+import { useMatch } from 'react-router-dom';
 
 export default function Sun({ bodyData }: { bodyData: BodyType }) {
+  const planetSystemMatch = useMatch('/corpos/:id');
+
   const sunRef = useRef<Group>(null);
   const sunshineRef = useRef<Mesh>(null);
 
@@ -67,6 +70,7 @@ export default function Sun({ bodyData }: { bodyData: BodyType }) {
         color={'white'}
         name="sunLight"
         decay={1.1}
+        visible={!planetSystemMatch}
       />
     </group>
   );
