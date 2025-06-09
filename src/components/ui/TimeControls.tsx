@@ -13,16 +13,8 @@ export default function TimeControls({
   setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
   isOverlayHidden: boolean;
 }) {
-  const {
-    play,
-    pause,
-    reset,
-    modifier,
-    updateTimeScale,
-    isPaused,
-    label,
-    isValidTime,
-  } = useContext(TimeContext);
+  const { play, pause, reset, modifier, isPaused, label, isValidTime } =
+    useContext(TimeContext);
 
   function fixSlider(e: React.DragEvent<HTMLInputElement>) {
     e.preventDefault();
@@ -30,7 +22,7 @@ export default function TimeControls({
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    updateTimeScale(Number(e.target.value));
+    play(Number(e.target.value));
   }
 
   return (
@@ -66,7 +58,7 @@ export default function TimeControls({
             <Button label="Reset" onClick={reset} title="Tempo ao vivo" />
             <Button
               label={isPaused ? 'Play' : 'Pause'}
-              onClick={isPaused ? play : pause}
+              onClick={isPaused ? () => play() : pause}
               title={
                 isPaused
                   ? 'Continuar simulação do tempo'

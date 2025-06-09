@@ -86,7 +86,7 @@ const Planet = memo(function ({
       if (!loadedRings) setLoadedRings(true);
     }
   });
-  console.log(id);
+
   return (
     <>
       <Node bodyData={bodyData} bodyRef={bodyRef}>

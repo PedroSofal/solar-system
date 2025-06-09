@@ -2,9 +2,10 @@ import { useFrame } from '@react-three/fiber';
 import React, { useContext, useEffect, useMemo, useRef } from 'react';
 import vertexShader from '../shaders/saturn-rings/vertex.glsl';
 import fragmentShader from '../shaders/saturn-rings/fragment.glsl';
-import TimeContext from '../contexts/TimeContext';
 import { Detailed } from '@react-three/drei';
+import TimeContext from '../contexts/TimeContext';
 import TextureContext from '../contexts/TextureContext';
+import LayerContext from '../contexts/LayerContext';
 import { getActiveLOD, toModelScale } from '../utils';
 import {
   Color,
@@ -14,7 +15,6 @@ import {
   ShaderMaterial,
   Vector3,
 } from 'three';
-import LayerContext from '../contexts/LayerContext';
 
 export default function SaturnRings({
   bodyRef,

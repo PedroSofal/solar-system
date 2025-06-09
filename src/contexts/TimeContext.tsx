@@ -22,11 +22,10 @@ const TimeContext = createContext<{
   label: string;
   isPaused: boolean;
   setCustomJulianDate: (jd: number) => void;
-  play: () => void;
+  play: (newModifier?: number) => void;
   pause: () => void;
   reset: () => void;
   modifier: number;
-  updateTimeScale: (newModifier: number) => void;
   tick: (deltaSeconds: number) => void;
   checkValidJulianDateSpan: (jd: number) => boolean;
   isValidTime: boolean;
@@ -40,7 +39,6 @@ const TimeContext = createContext<{
   pause: () => {},
   reset: () => {},
   modifier: 0,
-  updateTimeScale: () => {},
   tick: () => {},
   checkValidJulianDateSpan: () => true,
   isValidTime: true,
@@ -77,7 +75,7 @@ export function TimeProvider({ children }: { children: React.ReactNode }) {
     [timeScale, isPaused],
   );
 
-  function updateTimeScale(newModifier: number) {
+  function play(newModifier = modifier) {
     const absoluteModifier = Math.abs(newModifier);
     const sign = newModifier === 0 ? 1 : Math.sign(newModifier);
     const { scale, label } = timeMachineMap[absoluteModifier];
@@ -85,19 +83,13 @@ export function TimeProvider({ children }: { children: React.ReactNode }) {
     setModifier(newModifier);
     setTimeScale(scale * sign);
     setLabel(label);
-  }
-
-  function play() {
-    const absoluteModifier = Math.abs(modifier);
-    const { label } = timeMachineMap[absoluteModifier];
-
-    setLabel(label);
     setIsPaused(false);
   }
 
   function pause() {
-    setIsPaused(true);
+    setTimeScale(0);
     setLabel('Parado');
+    setIsPaused(true);
   }
 
   function reset() {
@@ -116,7 +108,7 @@ export function TimeProvider({ children }: { children: React.ReactNode }) {
 
   function setCustomJulianDate(jd: number) {
     timerRef.current = jd;
-    updateTimeScale(modifier);
+    play();
   }
 
   function checkValidJulianDateSpan(jd: number) {
@@ -135,7 +127,6 @@ export function TimeProvider({ children }: { children: React.ReactNode }) {
         pause,
         reset,
         modifier,
-        updateTimeScale,
         tick,
         checkValidJulianDateSpan,
         isValidTime,
