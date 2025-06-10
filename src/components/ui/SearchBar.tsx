@@ -21,7 +21,7 @@ function rankResult(searchTerm: string, bodies: BodyType[]): BodyType[] {
       nameMatches_weak.push(body);
     } else if (
       body.parent?.name.toLowerCase().includes(term) ||
-      body.moons?.some((moon) => moon.moon.toLowerCase().includes(term))
+      body.moons?.some((moon) => moon.toLowerCase().includes(term))
     ) {
       moonMatches.push(body);
     } else if (body.description.toLowerCase().includes(term)) {

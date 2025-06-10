@@ -28,7 +28,7 @@ export function BodyDataProvider({ children }: { children: React.ReactNode }) {
   const getMoonsFromPlanet = useCallback(
     (planet: BodyType) => {
       return memoizedMoons.filter((moon) =>
-        planet.moons?.some((m) => m.moon === moon.frenchName),
+        planet.moons?.some((m) => m === moon.frenchName),
       );
     },
     [memoizedMoons],

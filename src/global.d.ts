@@ -27,11 +27,6 @@ interface Volume {
   volExponent: number;
 }
 
-interface Moon {
-  moon: string;
-  rel: string;
-}
-
 type BodyTypeOptions =
   | 'star'
   | 'planet'
@@ -71,7 +66,7 @@ interface BodyType {
   englishName: string;
   description: string;
   isPlanet: boolean;
-  moons: Moon[] | null;
+  moons: string[];
   semimajorAxis: number;
   perihelion: number | null;
   aphelion: number | null;
