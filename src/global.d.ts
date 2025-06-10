@@ -116,6 +116,7 @@ interface NavItem {
   id?: string;
   type?: string;
   info?: string;
+  static?: boolean;
 }
 
 interface CullingPoints {

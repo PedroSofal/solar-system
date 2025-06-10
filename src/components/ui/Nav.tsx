@@ -95,8 +95,8 @@ export default function Nav({
             {currentMenu.subItems.map((item, index) => (
               <li
                 key={index}
-                onClick={() => navigateTo(item)}
-                className="gradient-bg border-bottom flex items-center justify-between overflow-hidden p-4 font-semibold"
+                onClick={item.static ? undefined : () => navigateTo(item)}
+                className={`gradient-bg border-bottom flex items-center justify-between overflow-hidden p-4 font-semibold ${item.static ? 'cursor-default' : 'cursor-pointer'}`}
               >
                 <p className="uppercase">{item.label}</p>
                 {item.subItems && <ArrowRightCircleIcon className="size-5" />}

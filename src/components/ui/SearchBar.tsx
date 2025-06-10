@@ -67,7 +67,12 @@ export default function SearchBar({
         ? allBodies.map(mapBodyToNavItem)
         : rankedResults.length > 0
           ? rankedResults
-          : [{ label: `Nenhum resultado encontrado para "${searchTerm}"` }];
+          : [
+              {
+                label: `Nenhum resultado encontrado para "${searchTerm}"`,
+                static: true,
+              },
+            ];
 
     setHistory((prev) => {
       if (isSearching) {
