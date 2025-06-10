@@ -52,9 +52,13 @@ export default function useFocusOnBody(
     useContext(CameraContext);
 
   useEffect(() => {
-    // Foco em um corpo automaticamente se inicial o app a partir de uma rota específica
-    if (match?.params?.id === id && bodyRef.current) {
-      focusOnTarget(bodyRef.current);
+    // Foco em um corpo automaticamente ao iniciar o app a partir de uma rota específica
+    if (match?.params?.id === id) {
+      // RAF usado para garantir que as luas já tenham sido ancoradas ao seus planetas
+      const firstFocus = requestAnimationFrame(() => {
+        if (bodyRef.current) focusOnTarget(bodyRef.current);
+      });
+      return () => cancelAnimationFrame(firstFocus);
     }
   }, []);
 
