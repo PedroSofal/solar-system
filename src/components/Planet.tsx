@@ -129,7 +129,7 @@ const Planet = memo(function ({
         shadow-camera-right={shadowSourceFrustumFace}
         shadow-camera-top={shadowSourceFrustumFace}
         shadow-camera-bottom={-shadowSourceFrustumFace}
-        shadow-bias={0}
+        shadow-bias={-0.001}
       />
 
       {/* Debug das sombras
