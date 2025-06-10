@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import useStickySize from '../../hooks/useStickySize';
 import useDistanceCulling from '../../hooks/useDistanceCulling';
 import LayerContext from '../../contexts/LayerContext';
-import { getActiveLOD, formatBodyType } from '../../utils';
+import { getActiveLOD } from '../../utils';
 import CameraContext from '../../contexts/CameraContext';
 import CustomBillboard from '../CustomBillboard';
 
@@ -49,12 +49,12 @@ export default function Hitbox({
   const { getLayer } = useContext(LayerContext);
   const { handleFocus } = useContext(CameraContext);
 
-  const labelLayer = getLayer('label', formatBodyType(bodyType));
-  const circleLayer = getLayer('hitbox', formatBodyType(bodyType));
+  const labelLayer = getLayer('label', bodyType);
+  const circleLayer = getLayer('hitbox', bodyType);
 
   const [pointerDownElement, setPointerDownElement] = useState<string>();
 
-  const isMoon = bodyType === 'Satélite Natural';
+  const isMoon = bodyType === 'moon';
 
   useDistanceCulling({
     farStart,

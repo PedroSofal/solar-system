@@ -24,12 +24,12 @@ export default function useFetchBodies() {
       .then((bodies: BodyType[]) => {
         // prettier-ignore
         setData({
-          sun: bodies.find((body) => body.bodyType === 'Estrela'),
-          planets: bodies.filter((body) => body.bodyType === 'Planeta'),
-          moons: bodies.filter((body) => body.bodyType === 'Satélite Natural'),
-          dwarfPlanets: bodies.filter((body) => body.bodyType === 'Planeta-anão'),
-          asteroids: bodies.filter((body) => body.bodyType === 'Asteróide'),
-          comets: bodies.filter((body) => body.bodyType === 'Cometa'),
+          sun: bodies.find((body) => body.bodyType === 'star'),
+          planets: bodies.filter((body) => body.bodyType === 'planet'),
+          moons: bodies.filter((body) => body.bodyType === 'moon'),
+          dwarfPlanets: bodies.filter((body) => body.bodyType === 'dwarf-planet'),
+          asteroids: bodies.filter((body) => body.bodyType === 'asteroid'),
+          comets: bodies.filter((body) => body.bodyType === 'comet'),
         });
       })
       .catch((err) => setError(err.message))

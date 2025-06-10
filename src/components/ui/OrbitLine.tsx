@@ -1,7 +1,7 @@
 import { Detailed, Line } from '@react-three/drei';
 import { useContext, useMemo, useRef } from 'react';
 import { EllipseCurve, MathUtils, Group, Quaternion, Vector3 } from 'three';
-import { formatBodyType, toModelScale } from '../../utils';
+import { toModelScale } from '../../utils';
 import { Line2, LineSegments2 } from 'three-stdlib';
 import LayerContext from '../../contexts/LayerContext';
 import useDistanceCulling from '../../hooks/useDistanceCulling';
@@ -57,7 +57,7 @@ export default function OrbitLine({
   const { getDaysSinceEpoch } = useContext(TimeStaticContext);
   const { getLayer } = useContext(LayerContext);
 
-  const orbitLayer = getLayer('orbit', formatBodyType(bodyType));
+  const orbitLayer = getLayer('orbit', bodyType);
 
   function getOrbitPoints(segments: number) {
     const curve = new EllipseCurve(

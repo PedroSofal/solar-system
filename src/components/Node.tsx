@@ -65,7 +65,7 @@ export default function Node({
   const scaledMeanRadius = toModelScale(meanRadius);
   const scaledSemimajorAxis = toModelScale(semimajorAxis);
 
-  const isMoon = bodyType === 'Satélite Natural';
+  const isMoon = bodyType === 'moon';
   const color = getNodeColor(parent?.name || id, isMoon);
   const needsPrecessionCorrection = id === 'moon';
   const declustered =

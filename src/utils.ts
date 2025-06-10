@@ -4,19 +4,6 @@ export function toModelScale(number: number) {
   return number / 200_000;
 }
 
-export function formatBodyType(bodyType: BodyTypeOptions) {
-  switch (bodyType) {
-    case 'Planeta':
-      return 'planet';
-    case 'Satélite Natural':
-      return 'moon';
-    case 'Planeta-anão':
-      return 'dwarfPlanet';
-    default:
-      return 'planet';
-  }
-}
-
 export function mapBodyToNavItem(body: BodyType): NavItem {
   return {
     id: body.id,
@@ -103,21 +90,21 @@ export function getHitboxCullingPoints(
   const radius = toModelScale(meanRadius);
 
   switch (bodyType) {
-    case 'Planeta':
+    case 'planet':
       return {
         farStart: declustered ? 60000 : undefined,
         farEnd: declustered ? 15000 : undefined,
         nearStart: radius * 300,
         nearEnd: radius * 200,
       };
-    case 'Satélite Natural':
+    case 'moon':
       return {
         farStart: declustered ? 30 : 1000,
         farEnd: declustered ? 0.5 : 60,
         nearStart: Math.max(radius * 150, 0.01),
         nearEnd: Math.max(radius * 100, 0.005),
       };
-    case 'Planeta-anão':
+    case 'dwarf-planet':
       return {
         farStart: id === 'ceres' ? 30000 : 150000,
         farEnd: id === 'ceres' ? 10000 : 50000,
@@ -137,19 +124,19 @@ export function getOrbitCullingPoints(
   const radius = toModelScale(meanRadius);
 
   switch (bodyType) {
-    case 'Planeta':
+    case 'planet':
       return {
         nearStart: radius * 150,
         nearEnd: radius * 100,
       };
-    case 'Satélite Natural':
+    case 'moon':
       return {
         farStart: declustered ? 30 : 500,
         farEnd: declustered ? 0.5 : 10,
         nearStart: Math.max(radius * 100, 0.1),
         nearEnd: Math.max(radius * 50, 0.05),
       };
-    case 'Planeta-anão':
+    case 'dwarf-planet':
       return {
         farStart: id === 'ceres' ? 30000 : 150000,
         farEnd: id === 'ceres' ? 10000 : 50000,

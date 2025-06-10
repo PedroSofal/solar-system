@@ -156,6 +156,23 @@ function constructOrbitInfo(body: BodyType) {
   ].filter((info) => info !== null);
 }
 
+function formatBodyType(bodyType: BodyTypeOptions) {
+  switch (bodyType) {
+    case 'planet':
+      return 'Planeta';
+    case 'moon':
+      return 'Satélite Natural';
+    case 'dwarf-planet':
+      return 'Planeta-anão';
+    case 'asteroid':
+      return 'Asteróide';
+    case 'comet':
+      return 'Cometa';
+    case 'star':
+      return 'Estrela';
+  }
+}
+
 export default function BodyInfo({
   selectedBody,
   setSelectedBody,
@@ -200,7 +217,7 @@ export default function BodyInfo({
         <div className="contents" style={{ direction: 'ltr' }}>
           <div>
             <div className="mb-1 font-semibold text-emerald-400">
-              {body.bodyType}
+              {formatBodyType(body.bodyType)}
             </div>
             <h1 className="flex items-end gap-2">
               <div className="title border-bottom gradient-bg w-fit px-4 py-2">

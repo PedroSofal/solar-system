@@ -17,7 +17,7 @@ const layerOptions: LayerOption[] = [
       },
       {
         label: 'Planetas-anões',
-        id: 'label-dwarfPlanet',
+        id: 'label-dwarf-planet',
         value: true,
       },
     ],
@@ -38,7 +38,7 @@ const layerOptions: LayerOption[] = [
       },
       {
         label: 'Planetas-anões',
-        id: 'hitbox-dwarfPlanet',
+        id: 'hitbox-dwarf-planet',
         value: true,
       },
     ],
@@ -59,7 +59,7 @@ const layerOptions: LayerOption[] = [
       },
       {
         label: 'Planetas-anões',
-        id: 'orbit-dwarfPlanet',
+        id: 'orbit-dwarf-planet',
         value: false,
       },
     ],
@@ -79,7 +79,7 @@ const layerOptions: LayerOption[] = [
 const LayerContext = createContext<{
   layers: LayerOption[];
   setLayers: (obj: LayerOption[]) => void;
-  getLayer: (parentId: LayerId, childId?: string) => LayerOption | undefined;
+  getLayer: (parentId: LayerId, childId?: ChildId) => LayerOption | undefined;
 }>({
   layers: layerOptions,
   setLayers: () => {},
@@ -89,7 +89,7 @@ const LayerContext = createContext<{
 export function LayerProvider({ children }: { children: React.ReactNode }) {
   const [layers, setLayers] = useState<LayerOption[]>(layerOptions);
 
-  function getLayer(parentId: LayerId, childId?: string) {
+  function getLayer(parentId: LayerId, childId?: ChildId) {
     const parentLayer = layers.find((layer) => layer.id === parentId);
     if (!childId) return parentLayer;
 

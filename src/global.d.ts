@@ -33,12 +33,12 @@ interface Moon {
 }
 
 type BodyTypeOptions =
-  | 'Estrela'
-  | 'Planeta'
-  | 'Satélite Natural'
-  | 'Planeta-anão'
-  | 'Asteróide'
-  | 'Cometa';
+  | 'star'
+  | 'planet'
+  | 'moon'
+  | 'dwarf-planet'
+  | 'asteroid'
+  | 'comet';
 
 interface Parent {
   name: string;
@@ -113,6 +113,7 @@ interface LayerOption {
 }
 
 type LayerId = 'label' | 'hitbox' | 'orbit' | 'ambient-light' | 'all-moons';
+type ChildId = BodyTypeOptions;
 
 interface NavItem {
   label: string;
