@@ -2,7 +2,7 @@ import { useFrame } from '@react-three/fiber';
 import Node from './Node';
 import { getBodyMeshFromGroup } from '../utils';
 import { DirectionalLight, Group, Mesh, Vector3 } from 'three';
-import { lazy, memo, Suspense, useRef, useState } from 'react';
+import { lazy, memo, Suspense, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const LazySaturnRings = lazy(() => import('./SaturnRings'));
@@ -53,6 +53,7 @@ const Planet = memo(function ({
   const backdropRef = useRef<Mesh>(null);
 
   const [loadedRings, setLoadedRings] = useState(false);
+  const [isShadowSourceVisible, setIsShadowSourceVisible] = useState(false);
 
   const shadowSourceFrustumFace = meanRadius * 0.000008;
   const shadowSourceFrustumHeight = meanRadius >= 24622 ? 1000 : 100; // Ref: Netuno
@@ -87,6 +88,17 @@ const Planet = memo(function ({
     }
   });
 
+  // Atrasa a troca de visibilidade para dar tempo gsap animar a câmera
+  useEffect(() => {
+    setTimeout(() => {
+      if (isSystemFocused) {
+        setIsShadowSourceVisible(true);
+      } else {
+        setIsShadowSourceVisible(false);
+      }
+    }, 1000);
+  }, [isSystemFocused]);
+
   return (
     <>
       <Node bodyData={bodyData} bodyRef={bodyRef}>
@@ -101,10 +113,10 @@ const Planet = memo(function ({
       </Node>
       <directionalLight
         ref={shadowSourceRef}
-        visible={isSystemFocused}
+        visible={isShadowSourceVisible}
         castShadow
         color={'white'}
-        intensity={isSystemFocused ? shadowSourceIntensity : 0}
+        intensity={shadowSourceIntensity}
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
         shadow-camera-near={1}

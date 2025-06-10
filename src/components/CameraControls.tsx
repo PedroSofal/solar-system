@@ -1,38 +1,26 @@
 import { OrbitControls, TrackballControls } from '@react-three/drei';
 import { useContext, useEffect } from 'react';
 import CameraContext from '../contexts/CameraContext';
-import { useFrame, useThree } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import { Group, Vector3 } from 'three';
 import gsap from 'gsap';
 import { useLocation } from 'react-router-dom';
 import { getBodyMeshFromGroup } from '../utils';
+import SceneContext from '../contexts/SceneContext';
 
 export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
-  const {
-    orbitControlsRef,
-    trackballControlsRef,
-    targetRef,
-    isFollowing,
-    resetTrigger,
-    setResetTrigger,
-  } = useContext(CameraContext);
+  const { orbitControlsRef, trackballControlsRef, targetRef, isFollowing } =
+    useContext(CameraContext);
+  const scene = useContext(SceneContext);
 
-  const { scene } = useThree();
   const { pathname } = useLocation();
 
+  // animação inicial e reset de câmera
   useEffect(() => {
-    // Se o app é iniciado pela rota principal, executa um zoom inicial
     if (pathname === '/' && isLoaded) initialZoom();
   }, [pathname, isLoaded]);
 
-  useEffect(() => {
-    // Executa somente a partir do clique do usuário para resetar a câmera
-    if (resetTrigger) {
-      resetCamera();
-      setResetTrigger(false);
-    }
-  }, [resetTrigger]);
-
+  // Acompanhamento automático do movimento orbital
   useFrame(() => {
     if (isFollowing && targetRef.current && orbitControlsRef.current) {
       targetRef.current.updateMatrixWorld(true);
@@ -72,8 +60,12 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
 
   function initialZoom() {
     if (!orbitControlsRef.current) return;
-
     const orbitControls = orbitControlsRef.current;
+
+    const sceneSun = scene.current.getObjectByName('sun');
+    if (sceneSun) targetRef.current = sceneSun as Group;
+
+    orbitControls.object.position.set(0, 50000, 18000);
 
     gsap.to(orbitControls.object.position, {
       x: -3000,
@@ -86,17 +78,6 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         orbitControls.update();
       },
     });
-  }
-
-  function resetCamera() {
-    if (!orbitControlsRef.current) return;
-    const orbitControls = orbitControlsRef.current;
-
-    const sceneSun = scene.getObjectByName('sun');
-    if (sceneSun) targetRef.current = sceneSun as Group;
-
-    orbitControls.object.position.set(0, 50000, 18000);
-    initialZoom();
   }
 
   return (

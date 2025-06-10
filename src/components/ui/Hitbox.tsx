@@ -6,7 +6,6 @@ import { Text, TextProps, Line } from '@react-three/drei';
 import gsap from 'gsap';
 import useStickySize from '../../hooks/useStickySize';
 import useDistanceCulling from '../../hooks/useDistanceCulling';
-import { useNavigate } from 'react-router-dom';
 import LayerContext from '../../contexts/LayerContext';
 import { getActiveLOD, formatBodyType } from '../../utils';
 import CameraContext from '../../contexts/CameraContext';
@@ -47,10 +46,8 @@ export default function Hitbox({
   const opacityRef = useRef(1);
   const visibilityRef = useRef(true);
 
-  const navigate = useNavigate();
-
   const { getLayer } = useContext(LayerContext);
-  const { setFocusTrigger } = useContext(CameraContext);
+  const { handleFocus } = useContext(CameraContext);
 
   const labelLayer = getLayer('label', formatBodyType(bodyType));
   const circleLayer = getLayer('hitbox', formatBodyType(bodyType));
@@ -106,11 +103,7 @@ export default function Hitbox({
       return;
     }
 
-    navigate(`corpos/${bodyRef.current.name}`);
-    setFocusTrigger((p) => ({
-      trigger: p.trigger + 1,
-      id: bodyRef.current?.name || null,
-    }));
+    handleFocus(bodyRef.current.name);
     setPointerDownElement(undefined);
   }
 

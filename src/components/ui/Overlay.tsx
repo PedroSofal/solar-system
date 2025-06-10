@@ -1,10 +1,9 @@
 import TimeControls from './TimeControls';
 import NavBar from './NavBar';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Layers from './Layers';
 import { HomeIcon } from '@heroicons/react/24/outline';
 import { Link, useMatch } from 'react-router-dom';
-import CameraContext from '../../contexts/CameraContext';
 import {
   GlobeAltIcon as GlobeAltIconOutline,
   Square3Stack3DIcon as Square3Stack3DIconOutline,
@@ -112,8 +111,6 @@ function TopLeftActions({
   setIsNavbarExpanded: React.Dispatch<React.SetStateAction<boolean>>;
   isOverlayHidden: boolean;
 }) {
-  const { setResetTrigger } = useContext(CameraContext);
-
   return (
     <div
       className={`${isOverlayHidden ? '-translate-x-[100%]' : ''} absolute z-10 duration-700`}
@@ -122,7 +119,6 @@ function TopLeftActions({
         <Link to={'/'}>
           <Button
             icon={<HomeIcon className="size-6" />}
-            onClick={() => setResetTrigger(true)}
             className="secondary-btn-clr"
             title="Resetar visualização"
           />

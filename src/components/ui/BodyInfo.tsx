@@ -21,7 +21,6 @@ import Button from './Button';
 import ButtonCheckbox from './CheckboxButton';
 
 import React, { useContext, useEffect, useMemo, useState } from 'react';
-import { Link, useMatch } from 'react-router-dom';
 
 import BodyDataContext from '../../contexts/BodyDataContext';
 import CameraContext from '../../contexts/CameraContext';
@@ -169,10 +168,8 @@ export default function BodyInfo({
   const [body, setBody] = useState<BodyType>();
 
   const { allBodies } = useContext(BodyDataContext);
-  const { isFollowing, setIsFollowing, setFocusTrigger } =
+  const { isFollowing, setIsFollowing, handleFocus } =
     useContext(CameraContext);
-
-  const match = useMatch('/corpos/:id');
 
   useEffect(() => {
     const foundBody = allBodies?.find((body) => body.id === selectedBody);
@@ -183,12 +180,6 @@ export default function BodyInfo({
       setSelectedBody(null);
     }
   }, [selectedBody]);
-
-  useEffect(() => {
-    if (match?.params.id === body?.id) {
-      setIsFollowing(true);
-    }
-  }, [match]);
 
   function goBack() {
     setSelectedBody(undefined);
@@ -215,19 +206,12 @@ export default function BodyInfo({
               <div className="title border-bottom gradient-bg w-fit px-4 py-2">
                 {body.name}
               </div>
-              <Link to={`corpos/${selectedBody}`}>
-                <Button
-                  icon={<RocketLaunchIcon className="size-6" />}
-                  className="secondary-btn-clr"
-                  title={`Navegar até ${body.name}`}
-                  onClick={() =>
-                    setFocusTrigger((p) => ({
-                      trigger: p.trigger + 1,
-                      id: body.id,
-                    }))
-                  }
-                />
-              </Link>
+              <Button
+                icon={<RocketLaunchIcon className="size-6" />}
+                className="secondary-btn-clr"
+                title={`Navegar até ${body.name}`}
+                onClick={() => handleFocus(body.id)}
+              />
               <ButtonCheckbox
                 icon={<ViewfinderCircleIcon className="size-6" />}
                 className="secondary-btn-clr"

@@ -1,5 +1,5 @@
 import { RefObject, useContext, useEffect } from 'react';
-import { useMatch } from 'react-router-dom';
+import { useMatch, useNavigate } from 'react-router-dom';
 import { Group, Sphere, Vector3 } from 'three';
 import { getBodyMeshFromGroup } from '../utils';
 import CameraContext from '../contexts/CameraContext';
@@ -45,26 +45,23 @@ export default function useFocusOnBody(
   bodyRef: RefObject<Group | null>,
 ) {
   const match = useMatch('/corpos/:id');
+  const navigate = useNavigate();
 
   const { timeScale } = useContext(TimeContext);
-  const {
-    targetRef,
-    orbitControlsRef,
-    focusTrigger,
-    isFollowing,
-    setIsFollowing,
-  } = useContext(CameraContext);
+  const { targetRef, orbitControlsRef, focusTrigger, setIsFollowing } =
+    useContext(CameraContext);
 
   useEffect(() => {
-    // Foco em um corpo automaticamente a partir de uma rota específica
+    // Foco em um corpo automaticamente se inicial o app a partir de uma rota específica
     if (match?.params?.id === id && bodyRef.current) {
       focusOnTarget(bodyRef.current);
     }
   }, []);
 
   useEffect(() => {
-    // Foco em um corpo a partir do clique do usuário
+    // Foco em um corpo a partir de um clique do usuário
     if (focusTrigger.id === id && bodyRef.current) {
+      navigate(`corpos/${focusTrigger.id}`);
       focusOnTarget(bodyRef.current);
     }
   }, [focusTrigger.trigger]);
@@ -90,18 +87,16 @@ export default function useFocusOnBody(
     const camTargetOrigin = orbitControls.target;
     const camTargetDestiny = bodyPosition.clone();
 
-    if (isFollowing) {
-      // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
-      setIsFollowing(false);
-      setTimeout(
-        () => {
-          setIsFollowing(true);
-          targetRef.current = bodyRef.current;
-        },
-        // Reinicia o acompanhamento imediatamente, se o tempo está acelerado, para evitar foco no vazio
-        Math.abs(timeScale) > 1 ? 0 : 2500,
-      );
-    }
+    // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
+    setIsFollowing(false);
+    setTimeout(
+      () => {
+        setIsFollowing(true);
+        targetRef.current = bodyRef.current;
+      },
+      // Reinicia o acompanhamento imediatamente, se o tempo está acelerado, para evitar foco no vazio
+      Math.abs(timeScale) > 1 ? 0 : 2500,
+    );
 
     // Animação da posição da câmera
     gsap.to(camPositionOrigin, {
@@ -120,7 +115,7 @@ export default function useFocusOnBody(
       x: camTargetDestiny.x,
       y: camTargetDestiny.y,
       z: camTargetDestiny.z,
-      duration: 2.5,
+      duration: 2,
       ease: 'power4.inOut',
       onUpdate: () => {
         orbitControls.update();
