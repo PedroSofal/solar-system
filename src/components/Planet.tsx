@@ -15,13 +15,17 @@ export default function PlanetSystem({
   const { id: routeId } = useParams();
 
   const semimajorAxes = allPlanets.map((p) => p.semimajorAxis ?? 0);
-  const minIntensity = Math.min(...semimajorAxes);
-  const maxIntensity = Math.max(...semimajorAxes);
+  const min_a = Math.min(...semimajorAxes);
+  const max_a = Math.max(...semimajorAxes);
 
   return allPlanets.map((planet) => {
     const a = planet.semimajorAxis ?? 0;
-    const normalized = (a - minIntensity) / (maxIntensity - minIntensity);
-    const shadowSourceIntensity = 2 + Math.pow(1 - normalized, 2) * 2;
+    const normalized = (a - min_a) / (max_a - min_a);
+    const minIntensity = 1;
+    const maxIntensity = 8;
+    const shadowSourceIntensity =
+      minIntensity +
+      Math.pow(1 - normalized, 20) * (maxIntensity - minIntensity);
 
     return (
       <Planet
