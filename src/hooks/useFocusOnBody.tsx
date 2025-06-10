@@ -80,16 +80,19 @@ export default function useFocusOnBody(
     const orbitControls = orbitControlsRef.current;
     orbitControls.minDistance = Math.max(0.0003, boundingRadius * 1.5);
 
-    const camPositionOrigin = orbitControls.object.position;
-    // Configura a nova posição da câmera com um desvio e a uma certa distância do corpo
     const bodyPosition = body.getWorldPosition(new Vector3());
-    const cameraOffset = getCameraOffsetFromBodyPosition(bodyPosition);
-    const camPositionDestiny = new Vector3()
-      .copy(bodyPosition)
-      .add(cameraOffset.multiplyScalar(boundingRadius * 6));
-
+    const camPositionOrigin = orbitControls.object.position;
     const camTargetOrigin = orbitControls.target;
+    const camPositionDestiny = bodyPosition.clone(); // posição base
     const camTargetDestiny = bodyPosition.clone();
+
+    // Configura a nova posição da câmera com um desvio e a uma certa distância do corpo
+    if (body.name === 'sun') {
+      camPositionDestiny.add(new Vector3(15, 15, 5));
+    } else {
+      const cameraOffset = getCameraOffsetFromBodyPosition(bodyPosition);
+      camPositionDestiny.add(cameraOffset.multiplyScalar(boundingRadius * 6));
+    }
 
     // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
     setIsFollowing(false);
