@@ -24,9 +24,13 @@ Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.on
 
 A cena compreende todos os planetas e planetas-anões, bem como seus respectivos satélites naturais.
 
-Não deixe de visitar Saturno e chegar bem pertinho dos anéis construídos a partir de milhares de partículas otimizadas para performance, e de apreciar o nosso planeta Terra flutuando no espaço com sua camada de atmosfera e efeitos de shaders baseados na luz do Sol.
+Saturno é sempre uma grande atração por causa de seu complexo sistema de anéis. Se você chegar bem pertinho conseguirá ver as milhares de partículas que compõem os anéis do gigante gasoso.
 
-Atualizações futuras incluirão cometas e asteróides, além de anéis de planetas como Urano e Netuno.
+Mas não é só Saturno que possui um sistema de anéis. Urano e Netuno são outros grandes exemplos a ter esse fenômeno. Já os anéis de Júpiter são mais difíceis de ver, mas estão lá, assim como o anel solitário do planeta-anão Haumea!
+
+E, claro, não deixe de apreciar o nosso planeta azul flutuando no espaço com sua camada de atmosfera e efeitos de shaders baseados na luz do Sol. Dependendo da data é possível até observar o eclipse solar com a projeção da sombra da Lua sobre a Terra!
+
+Atualizações futuras incluirão, ainda, cometas e asteróides.
 
 ## Precisão
 
