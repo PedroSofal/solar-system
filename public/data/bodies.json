@@ -10554,7 +10554,44 @@
       "dec": -15.18
     },
     "avgTemp": 76,
-    "ringSystem": null,
+    "ringSystem": {
+      "density": "medium",
+      "innerEdge": 26840,
+      "outerEdge": 103000,
+      "majorGapZones": [
+        { "distance": 39500, "width": 2337 },
+        { "distance": 41839, "width": 395 },
+        { "distance": 42239, "width": 331 },
+        { "distance": 42574, "width": 2144 },
+        { "distance": 44728, "width": 933 },
+        { "distance": 45672, "width": 1503 },
+        { "distance": 47206, "width": 421 },
+        { "distance": 47631, "width": 669 },
+        { "distance": 48306, "width": 1717 },
+        { "distance": 50025, "width": 1124 },
+        { "distance": 51191, "width": 14909 },
+        { "distance": 69900, "width": 16100 }
+      ],
+      "hsl": {
+        "h": 0.5,
+        "s": {
+          "customRanges": [
+            { "from": 0.15, "expansion": 0.3 },
+            { "from": 0.42, "expansion": 0.3 },
+            { "from": 1.5, "expansion": 1 }
+          ],
+          "min": 0.0,
+          "max": 0.5
+        },
+        "l": {
+          "customRanges": [
+            { "from": 0.15, "expansion": 0.06 },
+            { "from": 0.42, "expansion": 0.05 },
+            { "from": 1.5, "expansion": 0.3 }
+          ]
+        }
+      }
+    },
     "mainAnomaly": 142.889,
     "argPeriapsis": 96.589,
     "longAscNode": 74.004,
@@ -11569,7 +11606,27 @@
       "dec": 42.95
     },
     "avgTemp": 55,
-    "ringSystem": null,
+    "ringSystem": {
+      "density": "low",
+      "innerEdge": 40900,
+      "outerEdge": 62972,
+      "majorGapZones": [
+        { "distance": 42900, "width": 10300 },
+        { "distance": 57000, "width": 5632 }
+      ],
+      "hsl": {
+        "h": 0.65,
+        "s": 0.6,
+        "l": {
+          "customRanges": [
+            { "from": -0.16, "expansion": 0.1 },
+            { "from": 1.3, "expansion": 0.3 }
+          ],
+          "min": 0.02,
+          "max": 0.3
+        }
+      }
+    },
     "mainAnomaly": 266.105,
     "argPeriapsis": 267.316,
     "longAscNode": 131.784,
@@ -11719,7 +11776,21 @@
       "dec": -13
     },
     "avgTemp": 50,
-    "ringSystem": null,
+    "ringSystem": {
+      "density": "low",
+      "innerEdge": 2287,
+      "outerEdge": 2357,
+      "majorGapZones": [],
+      "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": {
+          "customRanges": [{ "from": 1.1, "expansion": 0.5 }],
+          "min": 0.02,
+          "max": 0.3
+        }
+      }
+    },
     "mainAnomaly": 189.571,
     "argPeriapsis": 240.611,
     "longAscNode": 121.928,
@@ -12606,7 +12677,21 @@
       "dec": 64.5
     },
     "avgTemp": 165,
-    "ringSystem": null,
+    "ringSystem": {
+      "density": "minimum",
+      "innerEdge": 92000,
+      "outerEdge": 226000,
+      "majorGapZones": [],
+      "hsl": {
+        "h": 0.04,
+        "s": 0.4,
+        "l": {
+          "customRanges": [{ "from": 1, "expansion": 0.3 }],
+          "min": 0.0,
+          "max": 0.05
+        }
+      }
+    },
     "mainAnomaly": 18.816,
     "argPeriapsis": 275.069,
     "longAscNode": 100.491,
@@ -12913,6 +12998,7 @@
     },
     "avgTemp": 134,
     "ringSystem": {
+      "density": "high",
       "innerEdge": 74500,
       "outerEdge": 140220,
       "majorGapZones": [
@@ -12928,17 +13014,17 @@
         "h": 0.09,
         "s": {
           "customRanges": [
-            { "from": 0.3, "value": 0.25 },
-            { "from": 1, "value": 0.25 }
+            { "from": 0.3, "expansion": 0.25 },
+            { "from": 1, "expansion": 0.25 }
           ],
           "min": 0.2,
           "max": 0.4
         },
         "l": {
           "customRanges": [
-            { "from": 0.3, "value": 0.12 },
-            { "from": 0.7, "value": 0.07 },
-            { "from": 1, "value": 0.12 }
+            { "from": 0.3, "expansion": 0.12 },
+            { "from": 0.7, "expansion": 0.07 },
+            { "from": 1, "expansion": 0.12 }
           ],
           "min": 0.06,
           "max": 0.5

@@ -10,7 +10,7 @@ void main() {
   vNormal = normalize(position);  
   vColor = color;
 
-  gl_PointSize = 2.0;
+  gl_PointSize = 1.0;
   gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
 
   #include <logdepthbuf_vertex>

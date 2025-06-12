@@ -50,7 +50,7 @@ const Planet = memo(function ({
   isSystemFocused: boolean;
   shadowSourceIntensity: number;
 }) {
-  const { id, meanRadius } = bodyData;
+  const { ringSystem, meanRadius } = bodyData;
 
   const bodyRef = useRef<Group>(null);
   const shadowSourceRef = useRef<DirectionalLight>(null);
@@ -107,7 +107,7 @@ const Planet = memo(function ({
     <>
       <Node bodyData={bodyData} bodyRef={bodyRef}>
         <Suspense fallback={null}>
-          {id === 'saturn' && loadedRings && (
+          {ringSystem && loadedRings && (
             <RingSystem bodyRef={bodyRef} bodyData={bodyData} />
           )}
         </Suspense>

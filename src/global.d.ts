@@ -65,15 +65,15 @@ interface GapZone {
 }
 
 interface CustomRange {
-  from: number; // entre 0 e 1
-  value: number; // entre 0 e 1
+  from: number;
+  expansion: number;
 }
 
 type StaticValue = number;
 type DynamicValue = {
   customRanges: CustomRange[];
-  min?: number; // entre 0 e 1
-  max?: number; // entre 0 e 1
+  min?: number;
+  max?: number;
 };
 
 type HslValue = StaticValue | DynamicValue;
@@ -85,6 +85,7 @@ interface HslSettings {
 }
 
 interface RingSystem {
+  density: 'high' | 'medium' | 'low' | 'minimum';
   innerEdge: number;
   outerEdge: number;
   majorGapZones: GapZone[];

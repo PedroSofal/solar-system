@@ -15,17 +15,67 @@ import {
   ShaderMaterial,
   Vector3,
 } from 'three';
+import useFallbackData from '../hooks/useFallbackData';
 
 function setHslValue(position: number, settings: HslValue) {
   if (typeof settings === 'object' && 'customRanges' in settings) {
     let hslValue = 0;
-    for (const { from, value } of settings.customRanges) {
-      hslValue += Math.exp(-Math.pow((position - from) / value, 2));
+    for (const { from, expansion } of settings.customRanges) {
+      hslValue += Math.exp(-Math.pow((position - from) / expansion, 2));
     }
     return MathUtils.clamp(hslValue, settings.min ?? 0, settings.max ?? 1);
   } else {
     return settings;
   }
+}
+
+function getValidRanges(gaps: GapZone[], inner: number, outer: number) {
+  const extension = outer - inner;
+
+  const normalizedGaps = gaps
+    .map((gap) => {
+      const start = toModelScale(gap.distance);
+      const end = start + toModelScale(gap.width);
+      const normalizedStart = (start - inner) / extension;
+      const normalizedEnd = (end - inner) / extension;
+      return [normalizedStart, normalizedEnd];
+    })
+    .sort((a, b) => a[0] - b[0]);
+
+  const ranges: [number, number][] = [];
+  let lastEnd = 0;
+
+  for (const [start, end] of normalizedGaps) {
+    if (start > lastEnd) {
+      ranges.push([lastEnd, start]);
+    }
+    lastEnd = Math.max(lastEnd, end);
+  }
+
+  if (lastEnd < 1) {
+    ranges.push([lastEnd, 1]);
+  }
+
+  return ranges;
+}
+
+function getRandomPositionInRanges(ranges: [number, number][]) {
+  const lengths = ranges.map(([start, end]) => end - start);
+  const totalLength = lengths.reduce((sum, len) => sum + len, 0);
+  const r = Math.random() * totalLength;
+
+  let acc = 0;
+  for (let i = 0; i < ranges.length; i++) {
+    if (r < acc + lengths[i]) {
+      const [start, end] = ranges[i];
+      const localR = r - acc;
+      return start + (localR / lengths[i]) * (end - start);
+    }
+    acc += lengths[i];
+  }
+
+  // fallback (nunca deve acontecer)
+  return Math.random();
 }
 
 export default function RingSystem({
@@ -35,8 +85,10 @@ export default function RingSystem({
   bodyRef: React.RefObject<Group | null>;
   bodyData: BodyType;
 }) {
-  const { equaRadius, ringSystem } = bodyData;
-  const { innerEdge, outerEdge, majorGapZones, hsl } = ringSystem as RingSystem;
+  const { equaRadius } = useFallbackData(bodyData);
+  const { ringSystem } = bodyData;
+  const { density, innerEdge, outerEdge, majorGapZones, hsl } =
+    ringSystem as RingSystem;
 
   const particlesRef = useRef<Points | null>(null);
 
@@ -55,29 +107,19 @@ export default function RingSystem({
     const positions = [];
     const colors = [];
 
+    const validRanges = getValidRanges(
+      majorGapZones,
+      scaledInnerEdge,
+      scaledOuterEdge,
+    );
+
     for (let i = 0; i < numParticles; i++) {
-      const position = Math.random();
+      const position = getRandomPositionInRanges(validRanges);
 
-      const inGap = majorGapZones.some((gap) => {
-        const extension = scaledOuterEdge - scaledInnerEdge;
-        const start = toModelScale(gap.distance);
-        const end = start + toModelScale(gap.width);
-        const normalizedStart = (start - scaledInnerEdge) / extension;
-        const normalizedEnd = (end - scaledInnerEdge) / extension;
-
-        return (
-          position >= normalizedStart - 0.005 &&
-          position <= normalizedEnd + 0.005
-        );
-      });
-      if (inGap) continue; // pula a partícula se ela estiver em um gap
-
-      // Convertendo para a escala real do anel
       const radius = MathUtils.lerp(scaledInnerEdge, scaledOuterEdge, position);
-
       const angle = Math.random() * Math.PI * 2;
       const x = Math.cos(angle) * radius;
-      const y = (Math.random() - 0.5) * 0.001;
+      const y = (Math.random() - 0.5) * (equaRadius / 20_000_000);
       const z = Math.sin(angle) * radius;
 
       positions.push(x, y, z);
@@ -95,17 +137,6 @@ export default function RingSystem({
       colors: new Float32Array(colors),
     };
   }
-
-  const uniforms = useMemo(
-    () => ({
-      uTexture: { value: particleTexture },
-      uLightPosition: { value: new Vector3(0, 0, 0) },
-      uBodyPosition: { value: new Vector3() },
-      uBodyRadius: { value: scaledEquaRadius },
-      uAmbientLight: { value: ambientLight.value },
-    }),
-    [],
-  );
 
   useEffect(() => {
     if (!bodyRef.current || !particlesRef.current) return;
@@ -130,12 +161,32 @@ export default function RingSystem({
     activeParticles.rotation.y += 0.00005 * timeScale;
   });
 
+  const uniforms = useMemo(
+    () => ({
+      uTexture: { value: particleTexture },
+      uLightPosition: { value: new Vector3(0, 0, 0) },
+      uBodyPosition: { value: new Vector3() },
+      uBodyRadius: { value: scaledEquaRadius },
+      uAmbientLight: { value: ambientLight.value },
+    }),
+    [],
+  );
+
+  const baseParticles =
+    density === 'high'
+      ? 1_000_000
+      : density === 'medium'
+        ? 500_000
+        : density === 'low'
+          ? 50_000
+          : 5_000;
+
   const detailLevels = useMemo(
     () => [
-      { particles: generateParticles(1_000_000), distance: 0 },
-      { particles: generateParticles(200_000), distance: 20 },
-      { particles: generateParticles(5_000), distance: 100 },
-      { particles: generateParticles(100), distance: 500 },
+      { particles: generateParticles(baseParticles), distance: 0 },
+      { particles: generateParticles(baseParticles / 5), distance: 20 },
+      { particles: generateParticles(baseParticles / 200), distance: 100 },
+      { particles: generateParticles(0), distance: 500 },
     ],
     [],
   );
