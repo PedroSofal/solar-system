@@ -31,7 +31,7 @@ const texturePaths: Record<string, string> = {
   venus: '/textures/planets/2k_venus.jpg',
 
   // Particles
-  saturnRing: '/textures/particles/saturn-ring.png',
+  rocks: '/textures/particles/rocks.png',
 
   // Background
   px: '/textures/cubemap/px.jpg',

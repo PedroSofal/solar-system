@@ -1,11 +1,11 @@
 import { useFrame } from '@react-three/fiber';
 import React, { useContext, useEffect, useMemo, useRef } from 'react';
-import vertexShader from '../shaders/saturn-rings/vertex.glsl';
-import fragmentShader from '../shaders/saturn-rings/fragment.glsl';
+import vertexShader from '../shaders/ring-system/vertex.glsl';
+import fragmentShader from '../shaders/ring-system/fragment.glsl';
 import { Detailed } from '@react-three/drei';
 import TimeContext from '../contexts/TimeContext';
-import TextureContext from '../contexts/TextureContext';
 import LayerContext from '../contexts/LayerContext';
+import TextureContext from '../contexts/TextureContext';
 import { getActiveLOD, toModelScale } from '../utils';
 import {
   Color,
@@ -16,49 +16,65 @@ import {
   Vector3,
 } from 'three';
 
-export default function SaturnRings({
+function setHslValue(position: number, settings: HslValue) {
+  if (typeof settings === 'object' && 'customRanges' in settings) {
+    let hslValue = 0;
+    for (const { from, value } of settings.customRanges) {
+      hslValue += Math.exp(-Math.pow((position - from) / value, 2));
+    }
+    return MathUtils.clamp(hslValue, settings.min ?? 0, settings.max ?? 1);
+  } else {
+    return settings;
+  }
+}
+
+export default function RingSystem({
   bodyRef,
-  saturnEquaRadius,
+  bodyData,
 }: {
   bodyRef: React.RefObject<Group | null>;
-  saturnEquaRadius: number;
+  bodyData: BodyType;
 }) {
+  const { equaRadius, ringSystem } = bodyData;
+  const { innerEdge, outerEdge, majorGapZones, hsl } = ringSystem as RingSystem;
+
   const particlesRef = useRef<Points | null>(null);
 
-  const { getTexture } = useContext(TextureContext);
   const { timeScale } = useContext(TimeContext);
   const { getLayer } = useContext(LayerContext);
+  const { getTexture } = useContext(TextureContext);
 
   const ambientLight = getLayer('ambient-light') as LayerOption;
-  const particleTexture = getTexture('saturnRing');
+  const particleTexture = getTexture('rocks');
 
-  const innerRing = toModelScale(74500);
-  const outerRing = toModelScale(140220);
-
-  const gapZones = [
-    { min: 0.08, max: 0.09 }, // Colombo Gap
-    { min: 0.18, max: 0.2 }, // Maxwell Gap
-    { min: 0.63, max: 0.66 }, // Huygens Gap
-    { min: 0.69, max: 0.697 }, // Cassini Division
-    { min: 0.9, max: 0.91 }, // Encke Gap
-    { min: 0.94, max: 0.945 }, // Keeler Gap
-    { min: 0.95, max: 0.99 }, // Roche Gap
-  ];
+  const scaledEquaRadius = toModelScale(equaRadius as number);
+  const scaledInnerEdge = toModelScale(innerEdge);
+  const scaledOuterEdge = toModelScale(outerEdge);
 
   function generateParticles(numParticles: number) {
     const positions = [];
     const colors = [];
 
     for (let i = 0; i < numParticles; i++) {
-      const normalizedDistance = Math.random();
+      const position = Math.random();
 
-      const inGap = gapZones.some(
-        (gap) => normalizedDistance >= gap.min && normalizedDistance <= gap.max,
-      );
+      const inGap = majorGapZones.some((gap) => {
+        const extension = scaledOuterEdge - scaledInnerEdge;
+        const start = toModelScale(gap.distance);
+        const end = start + toModelScale(gap.width);
+        const normalizedStart = (start - scaledInnerEdge) / extension;
+        const normalizedEnd = (end - scaledInnerEdge) / extension;
+
+        return (
+          position >= normalizedStart - 0.005 &&
+          position <= normalizedEnd + 0.005
+        );
+      });
       if (inGap) continue; // pula a partícula se ela estiver em um gap
 
       // Convertendo para a escala real do anel
-      const radius = MathUtils.lerp(innerRing, outerRing, normalizedDistance);
+      const radius = MathUtils.lerp(scaledInnerEdge, scaledOuterEdge, position);
+
       const angle = Math.random() * Math.PI * 2;
       const x = Math.cos(angle) * radius;
       const y = (Math.random() - 0.5) * 0.001;
@@ -66,20 +82,11 @@ export default function SaturnRings({
 
       positions.push(x, y, z);
 
-      let brightness =
-        Math.exp(-Math.pow((normalizedDistance - 0.3) / 0.12, 2)) +
-        Math.exp(-Math.pow((normalizedDistance - 0.7) / 0.07, 2)) +
-        Math.exp(-Math.pow((normalizedDistance - 1) / 0.12, 2));
+      const h = setHslValue(position, hsl.h);
+      const s = setHslValue(position, hsl.s);
+      const l = setHslValue(position, hsl.l);
 
-      brightness = MathUtils.clamp(brightness, 0.1, 0.5);
-
-      let saturation =
-        Math.exp(-Math.pow((normalizedDistance - 0.3) / 0.25, 2)) +
-        Math.exp(-Math.pow((normalizedDistance - 1) / 0.25, 2));
-
-      saturation = MathUtils.clamp(saturation, 0.2, 0.4);
-
-      const color = new Color().setHSL(0.09, saturation, brightness);
+      const color = new Color().setHSL(h, s, l);
       colors.push(color.r, color.g, color.b);
     }
 
@@ -93,8 +100,8 @@ export default function SaturnRings({
     () => ({
       uTexture: { value: particleTexture },
       uLightPosition: { value: new Vector3(0, 0, 0) },
-      uSaturnPosition: { value: new Vector3() },
-      uSaturnRadius: { value: toModelScale(saturnEquaRadius) },
+      uBodyPosition: { value: new Vector3() },
+      uBodyRadius: { value: scaledEquaRadius },
       uAmbientLight: { value: ambientLight.value },
     }),
     [],
@@ -118,15 +125,15 @@ export default function SaturnRings({
     const activeParticles = getActiveLOD(particlesRef.current);
     const material = activeParticles.material as ShaderMaterial;
 
-    material.uniforms.uSaturnPosition.value.copy(bodyPosition);
-    material.uniforms.uSaturnPosition.value.needsUpdate = true;
+    material.uniforms.uBodyPosition.value.copy(bodyPosition);
+    material.uniforms.uBodyPosition.value.needsUpdate = true;
     activeParticles.rotation.y += 0.00005 * timeScale;
   });
 
   const detailLevels = useMemo(
     () => [
       { particles: generateParticles(1_000_000), distance: 0 },
-      { particles: generateParticles(200_000), distance: 10 },
+      { particles: generateParticles(200_000), distance: 20 },
       { particles: generateParticles(5_000), distance: 100 },
       { particles: generateParticles(100), distance: 500 },
     ],

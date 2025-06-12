@@ -42,6 +42,7 @@
       "dec": 65.64
     },
     "avgTemp": 250,
+    "ringSystem": null,
     "mainAnomaly": 135.27,
     "argPeriapsis": 318.15,
     "longAscNode": 125.08,
@@ -97,6 +98,7 @@
       "dec": null
     },
     "avgTemp": 233,
+    "ringSystem": null,
     "mainAnomaly": 189.891,
     "argPeriapsis": 342.714,
     "longAscNode": 84.815,
@@ -152,6 +154,7 @@
       "dec": null
     },
     "avgTemp": 233,
+    "ringSystem": null,
     "mainAnomaly": 5.377,
     "argPeriapsis": 211.612,
     "longAscNode": 83.663,
@@ -204,6 +207,7 @@
       "dec": null
     },
     "avgTemp": 110,
+    "ringSystem": null,
     "mainAnomaly": 335.153,
     "argPeriapsis": 66.165,
     "longAscNode": 336.852,
@@ -256,6 +260,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 345.411,
     "argPeriapsis": 254.647,
     "longAscNode": 332.629,
@@ -308,6 +313,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 277.049,
     "argPeriapsis": 319.808,
     "longAscNode": 343.173,
@@ -360,6 +366,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 85.119,
     "argPeriapsis": 16.127,
     "longAscNode": 337.943,
@@ -412,6 +419,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 336.266,
     "argPeriapsis": 105.118,
     "longAscNode": 330.411,
@@ -464,6 +472,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 66.5,
     "argPeriapsis": 328.4,
     "longAscNode": 68.2,
@@ -516,6 +525,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 330.7,
     "argPeriapsis": 140.1,
     "longAscNode": 118.1,
@@ -568,6 +578,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 279.224,
     "argPeriapsis": 172.829,
     "longAscNode": 315.749,
@@ -620,6 +631,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 157.451,
     "argPeriapsis": 354.278,
     "longAscNode": 308.022,
@@ -672,6 +684,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 328.469,
     "argPeriapsis": 48.246,
     "longAscNode": 9.24,
@@ -724,6 +737,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 259.477,
     "argPeriapsis": 6.483,
     "longAscNode": 115.499,
@@ -776,6 +790,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 271.82,
     "argPeriapsis": 78.72,
     "longAscNode": 13.693,
@@ -828,6 +843,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 232.608,
     "argPeriapsis": 271.28,
     "longAscNode": 216.876,
@@ -880,6 +896,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 182.493,
     "argPeriapsis": 26.73,
     "longAscNode": 338.095,
@@ -932,6 +949,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 1.111,
     "argPeriapsis": 233.823,
     "longAscNode": 337.741,
@@ -984,6 +1002,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 358.021,
     "argPeriapsis": 188.558,
     "longAscNode": 337.654,
@@ -1036,6 +1055,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 117.903,
     "argPeriapsis": 13.515,
     "longAscNode": 278.186,
@@ -1088,6 +1108,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 289.16,
     "argPeriapsis": 236.283,
     "longAscNode": 202.668,
@@ -1140,6 +1161,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 116.085,
     "argPeriapsis": 309.948,
     "longAscNode": 292.161,
@@ -1192,6 +1214,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 116.47,
     "argPeriapsis": 207.723,
     "longAscNode": 300.783,
@@ -1244,6 +1267,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 275.504,
     "argPeriapsis": 231.478,
     "longAscNode": 134.455,
@@ -1296,6 +1320,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 255.478,
     "argPeriapsis": 104.268,
     "longAscNode": 35.556,
@@ -1348,6 +1373,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 224.984,
     "argPeriapsis": 240.45,
     "longAscNode": 37.708,
@@ -1400,6 +1426,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 182.026,
     "argPeriapsis": 91.388,
     "longAscNode": 268.897,
@@ -1452,6 +1479,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 273.2,
     "argPeriapsis": 359.828,
     "longAscNode": 311.178,
@@ -1504,6 +1532,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 116.35,
     "argPeriapsis": 131.013,
     "longAscNode": 134.071,
@@ -1556,6 +1585,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 127.939,
     "argPeriapsis": 182.551,
     "longAscNode": 281.305,
@@ -1608,6 +1638,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 134.042,
     "argPeriapsis": 61.23,
     "longAscNode": 264.776,
@@ -1660,6 +1691,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 242.579,
     "argPeriapsis": 105.068,
     "longAscNode": 240.774,
@@ -1712,6 +1744,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 158.467,
     "argPeriapsis": 277.266,
     "longAscNode": 330.328,
@@ -1764,6 +1797,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 120.56,
     "argPeriapsis": 72.179,
     "longAscNode": 358.411,
@@ -1816,6 +1850,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 281.808,
     "argPeriapsis": 223.379,
     "longAscNode": 297.691,
@@ -1868,6 +1903,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 353.587,
     "argPeriapsis": 312.35,
     "longAscNode": 265.166,
@@ -1920,6 +1956,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 56.258,
     "argPeriapsis": 109.62,
     "longAscNode": 63.398,
@@ -1972,6 +2009,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 161.143,
     "argPeriapsis": 244.731,
     "longAscNode": 212.353,
@@ -2024,6 +2062,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 177.41,
     "argPeriapsis": 56.626,
     "longAscNode": 109.278,
@@ -2076,6 +2115,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 175.968,
     "argPeriapsis": 69.16,
     "longAscNode": 56.68,
@@ -2128,6 +2168,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 237.721,
     "argPeriapsis": 207.937,
     "longAscNode": 318,
@@ -2180,6 +2221,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 241.147,
     "argPeriapsis": 192.184,
     "longAscNode": 311.462,
@@ -2232,6 +2274,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 236.078,
     "argPeriapsis": 50.118,
     "longAscNode": 0.93,
@@ -2284,6 +2327,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 207.646,
     "argPeriapsis": 43.058,
     "longAscNode": 156.478,
@@ -2336,6 +2380,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 275.153,
     "argPeriapsis": 306.921,
     "longAscNode": 174.921,
@@ -2388,6 +2433,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 33.91,
     "argPeriapsis": 172.584,
     "longAscNode": 333.345,
@@ -2440,6 +2486,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 66.708,
     "argPeriapsis": 352.712,
     "longAscNode": 23.901,
@@ -2492,6 +2539,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 45.698,
     "argPeriapsis": 305.215,
     "longAscNode": 94.566,
@@ -2544,6 +2592,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 336.64,
     "argPeriapsis": 90.479,
     "longAscNode": 52.113,
@@ -2596,6 +2645,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 234.219,
     "argPeriapsis": 290.047,
     "longAscNode": 200.436,
@@ -2648,6 +2698,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 153.234,
     "argPeriapsis": 174.589,
     "longAscNode": 253.637,
@@ -2700,6 +2751,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 40.605,
     "argPeriapsis": 135.327,
     "longAscNode": 324.169,
@@ -2752,6 +2804,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 123.121,
     "argPeriapsis": 344.075,
     "longAscNode": 299.462,
@@ -2804,6 +2857,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 42.176,
     "argPeriapsis": 170.711,
     "longAscNode": 348.39,
@@ -2856,6 +2910,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 339.847,
     "argPeriapsis": 73.551,
     "longAscNode": 227.478,
@@ -2908,6 +2963,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 216.459,
     "argPeriapsis": 208.765,
     "longAscNode": 175.44,
@@ -2960,6 +3016,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 336.736,
     "argPeriapsis": 86.368,
     "longAscNode": 180.031,
@@ -3012,6 +3069,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 359.709,
     "argPeriapsis": 288.439,
     "longAscNode": 46.304,
@@ -3064,6 +3122,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 272.864,
     "argPeriapsis": 187.526,
     "longAscNode": 155.712,
@@ -3116,6 +3175,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 160.66,
     "argPeriapsis": 66.099,
     "longAscNode": 54.114,
@@ -3168,6 +3228,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 88.797,
     "argPeriapsis": 1.016,
     "longAscNode": 234.329,
@@ -3220,6 +3281,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 298.31,
     "argPeriapsis": 55.536,
     "longAscNode": 5.288,
@@ -3272,6 +3334,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 252.68,
     "argPeriapsis": 86.047,
     "longAscNode": 166.752,
@@ -3324,6 +3387,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 196.902,
     "argPeriapsis": 186.795,
     "longAscNode": 21.89,
@@ -3376,6 +3440,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 140.589,
     "argPeriapsis": 256.595,
     "longAscNode": 30.94,
@@ -3428,6 +3493,7 @@
       "dec": null
     },
     "avgTemp": 63.95,
+    "ringSystem": null,
     "mainAnomaly": 37.398,
     "argPeriapsis": 108.725,
     "longAscNode": 172.057,
@@ -3480,6 +3546,7 @@
       "dec": null
     },
     "avgTemp": 75,
+    "ringSystem": null,
     "mainAnomaly": 6.953,
     "argPeriapsis": 135.483,
     "longAscNode": 169.507,
@@ -3532,6 +3599,7 @@
       "dec": null
     },
     "avgTemp": 86,
+    "ringSystem": null,
     "mainAnomaly": 350.383,
     "argPeriapsis": 158.057,
     "longAscNode": 167.998,
@@ -3584,6 +3652,7 @@
       "dec": null
     },
     "avgTemp": 87,
+    "ringSystem": null,
     "mainAnomaly": 332.057,
     "argPeriapsis": 164.935,
     "longAscNode": 169.47,
@@ -3636,6 +3705,7 @@
       "dec": null
     },
     "avgTemp": 76,
+    "ringSystem": null,
     "mainAnomaly": 206.902,
     "argPeriapsis": 165.782,
     "longAscNode": 168.984,
@@ -3688,6 +3758,7 @@
       "dec": null
     },
     "avgTemp": 93.7,
+    "ringSystem": null,
     "mainAnomaly": 163.436,
     "argPeriapsis": 164.409,
     "longAscNode": 169.239,
@@ -3740,6 +3811,7 @@
       "dec": null
     },
     "avgTemp": 93,
+    "ringSystem": null,
     "mainAnomaly": 70.604,
     "argPeriapsis": 236.693,
     "longAscNode": 168.305,
@@ -3792,6 +3864,7 @@
       "dec": null
     },
     "avgTemp": 110,
+    "ringSystem": null,
     "mainAnomaly": 208.018,
     "argPeriapsis": 229.658,
     "longAscNode": 139.692,
@@ -3844,6 +3917,7 @@
       "dec": null
     },
     "avgTemp": 73,
+    "ringSystem": null,
     "mainAnomaly": 58.649,
     "argPeriapsis": 353.73,
     "longAscNode": 263.199,
@@ -3896,6 +3970,7 @@
       "dec": null
     },
     "avgTemp": 76,
+    "ringSystem": null,
     "mainAnomaly": 79.741,
     "argPeriapsis": 163.908,
     "longAscNode": 169.849,
@@ -3948,6 +4023,7 @@
       "dec": null
     },
     "avgTemp": 78,
+    "ringSystem": null,
     "mainAnomaly": 198.165,
     "argPeriapsis": 230.587,
     "longAscNode": 169.874,
@@ -3997,6 +4073,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 19.789,
     "argPeriapsis": 169.398,
     "longAscNode": 169.907,
@@ -4049,6 +4126,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 350.349,
     "argPeriapsis": 216.17,
     "longAscNode": 169.106,
@@ -4101,6 +4179,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 16.454,
     "argPeriapsis": 74.654,
     "longAscNode": 166.357,
@@ -4153,6 +4232,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 347.626,
     "argPeriapsis": 345.419,
     "longAscNode": 169.525,
@@ -4205,6 +4285,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 26.824,
     "argPeriapsis": 28.893,
     "longAscNode": 169.51,
@@ -4257,6 +4338,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 58.812,
     "argPeriapsis": 238.518,
     "longAscNode": 169.63,
@@ -4309,6 +4391,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 359.94,
     "argPeriapsis": 106.686,
     "longAscNode": 169.527,
@@ -4361,6 +4444,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 216.61,
     "argPeriapsis": 45.415,
     "longAscNode": 204.736,
@@ -4413,6 +4497,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 304.92,
     "argPeriapsis": 237.434,
     "longAscNode": 353.202,
@@ -4465,6 +4550,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 255.75,
     "argPeriapsis": 282.965,
     "longAscNode": 95.684,
@@ -4517,6 +4603,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 28.411,
     "argPeriapsis": 68.541,
     "longAscNode": 152.501,
@@ -4569,6 +4656,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 317.772,
     "argPeriapsis": 64.465,
     "longAscNode": 253.176,
@@ -4621,6 +4709,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 168.529,
     "argPeriapsis": 91.815,
     "longAscNode": 352.629,
@@ -4673,6 +4762,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 97.243,
     "argPeriapsis": 305.46,
     "longAscNode": 79.035,
@@ -4725,6 +4815,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 17.214,
     "argPeriapsis": 62.772,
     "longAscNode": 111.109,
@@ -4777,6 +4868,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 117.187,
     "argPeriapsis": 202.604,
     "longAscNode": 284.061,
@@ -4829,6 +4921,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 306.635,
     "argPeriapsis": 279.921,
     "longAscNode": 146.206,
@@ -4881,6 +4974,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 190.715,
     "argPeriapsis": 68.381,
     "longAscNode": 63.964,
@@ -4933,6 +5027,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 350.882,
     "argPeriapsis": 92.036,
     "longAscNode": 247.214,
@@ -4985,6 +5080,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 109.146,
     "argPeriapsis": 178.184,
     "longAscNode": 179.039,
@@ -5037,6 +5133,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 15.899,
     "argPeriapsis": 134.538,
     "longAscNode": 169.49,
@@ -5089,6 +5186,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 1.091,
     "argPeriapsis": 100.403,
     "longAscNode": 169.14,
@@ -5141,6 +5239,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 71.452,
     "argPeriapsis": 341.207,
     "longAscNode": 169.7,
@@ -5193,6 +5292,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 0.117,
     "argPeriapsis": 113.49,
     "longAscNode": 169.531,
@@ -5245,6 +5345,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 27.179,
     "argPeriapsis": 244.897,
     "longAscNode": 182.056,
@@ -5297,6 +5398,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 164.021,
     "argPeriapsis": 4.949,
     "longAscNode": 197.693,
@@ -5349,6 +5451,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 311.007,
     "argPeriapsis": 134.306,
     "longAscNode": 207.797,
@@ -5401,6 +5504,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 239.234,
     "argPeriapsis": 85.499,
     "longAscNode": 282.942,
@@ -5453,6 +5557,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 285.148,
     "argPeriapsis": 343.478,
     "longAscNode": 138.12,
@@ -5505,6 +5610,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 147.612,
     "argPeriapsis": 114.819,
     "longAscNode": 234.721,
@@ -5557,6 +5663,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 232.087,
     "argPeriapsis": 321.992,
     "longAscNode": 269.291,
@@ -5609,6 +5716,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 183.312,
     "argPeriapsis": 10.345,
     "longAscNode": 316.341,
@@ -5661,6 +5769,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 295.111,
     "argPeriapsis": 264.768,
     "longAscNode": 40.151,
@@ -5713,6 +5822,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 299.543,
     "argPeriapsis": 160.198,
     "longAscNode": 288.286,
@@ -5765,6 +5875,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 338.215,
     "argPeriapsis": 20.388,
     "longAscNode": 332.993,
@@ -5817,6 +5928,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 49.13,
     "argPeriapsis": 186.234,
     "longAscNode": 294.029,
@@ -5869,6 +5981,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 160.632,
     "argPeriapsis": 314.235,
     "longAscNode": 255.217,
@@ -5921,6 +6034,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 355.308,
     "argPeriapsis": 240.845,
     "longAscNode": 169.489,
@@ -5973,6 +6087,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 194.045,
     "argPeriapsis": 229.043,
     "longAscNode": 9.183,
@@ -6025,6 +6140,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 307.644,
     "argPeriapsis": 145.863,
     "longAscNode": 335.714,
@@ -6077,6 +6193,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 119.967,
     "argPeriapsis": 71.648,
     "longAscNode": 93.354,
@@ -6129,6 +6246,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 1.913,
     "argPeriapsis": 62.937,
     "longAscNode": 169.528,
@@ -6181,6 +6299,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 117.085,
     "argPeriapsis": 54.809,
     "longAscNode": 323.807,
@@ -6233,6 +6352,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 10.924,
     "argPeriapsis": 87.939,
     "longAscNode": 306.013,
@@ -6285,6 +6405,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 52.195,
     "argPeriapsis": 354.988,
     "longAscNode": 217.692,
@@ -6337,6 +6458,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 228.066,
     "argPeriapsis": 183.946,
     "longAscNode": 12.473,
@@ -6389,6 +6511,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 87.019,
     "argPeriapsis": 159.104,
     "longAscNode": 333.55,
@@ -6441,6 +6564,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 124.934,
     "argPeriapsis": 191.846,
     "longAscNode": 213.365,
@@ -6493,6 +6617,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 9.892,
     "argPeriapsis": 46.364,
     "longAscNode": 107.072,
@@ -6545,6 +6670,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 304.451,
     "argPeriapsis": 323.443,
     "longAscNode": 99.608,
@@ -6597,6 +6723,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 58,
     "argPeriapsis": 90,
     "longAscNode": 169.5,
@@ -6649,6 +6776,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 152.794,
     "argPeriapsis": 45.357,
     "longAscNode": 167.646,
@@ -6701,6 +6829,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 271.223,
     "argPeriapsis": 334.952,
     "longAscNode": 167.639,
@@ -6753,6 +6882,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 74.417,
     "argPeriapsis": 202.117,
     "longAscNode": 167.618,
@@ -6805,6 +6935,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 93.496,
     "argPeriapsis": 254.007,
     "longAscNode": 167.755,
@@ -6857,6 +6988,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 62.062,
     "argPeriapsis": 261.022,
     "longAscNode": 172.088,
@@ -6909,6 +7041,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 355.042,
     "argPeriapsis": 183.498,
     "longAscNode": 167.479,
@@ -6961,6 +7094,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 25.202,
     "argPeriapsis": 259.268,
     "longAscNode": 167.587,
@@ -7013,6 +7147,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 343.128,
     "argPeriapsis": 248.609,
     "longAscNode": 167.609,
@@ -7065,6 +7200,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 344.187,
     "argPeriapsis": 315.851,
     "longAscNode": 167.599,
@@ -7117,6 +7253,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 330.271,
     "argPeriapsis": 301.394,
     "longAscNode": 167.726,
@@ -7169,6 +7306,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 35.506,
     "argPeriapsis": 20.771,
     "longAscNode": 167.627,
@@ -7221,6 +7359,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 340.445,
     "argPeriapsis": 348.937,
     "longAscNode": 167.639,
@@ -7273,6 +7412,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 5.588,
     "argPeriapsis": 31.023,
     "longAscNode": 167.641,
@@ -7325,6 +7465,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 11.744,
     "argPeriapsis": 33.118,
     "longAscNode": 167.658,
@@ -7377,6 +7518,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 1.465,
     "argPeriapsis": 259.692,
     "longAscNode": 167.482,
@@ -7429,6 +7571,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 26.262,
     "argPeriapsis": 339.281,
     "longAscNode": 175.084,
@@ -7481,6 +7624,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 261.599,
     "argPeriapsis": 17.233,
     "longAscNode": 255.595,
@@ -7533,6 +7677,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 247.523,
     "argPeriapsis": 171.389,
     "longAscNode": 320.115,
@@ -7585,6 +7730,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 173.094,
     "argPeriapsis": 3.685,
     "longAscNode": 249.774,
@@ -7637,6 +7783,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 255.496,
     "argPeriapsis": 28.715,
     "longAscNode": 189.456,
@@ -7689,6 +7836,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 187.79,
     "argPeriapsis": 161.529,
     "longAscNode": 198.881,
@@ -7741,6 +7889,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 22.182,
     "argPeriapsis": 123.289,
     "longAscNode": 103.015,
@@ -7793,6 +7942,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 323.848,
     "argPeriapsis": 73.465,
     "longAscNode": 26.3,
@@ -7845,6 +7995,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 21.205,
     "argPeriapsis": 166.935,
     "longAscNode": 223.556,
@@ -7897,6 +8048,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 335.665,
     "argPeriapsis": 285.376,
     "longAscNode": 167.665,
@@ -7949,6 +8101,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 182.998,
     "argPeriapsis": 60.991,
     "longAscNode": 167.643,
@@ -8001,6 +8154,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 70.353,
     "argPeriapsis": 239.058,
     "longAscNode": 167.598,
@@ -8053,6 +8207,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 304.439,
     "argPeriapsis": 160.819,
     "longAscNode": 215.852,
@@ -8105,6 +8260,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 215.626,
     "argPeriapsis": 297.002,
     "longAscNode": 319.59,
@@ -8157,6 +8313,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 359.998,
     "argPeriapsis": 102.156,
     "longAscNode": 51.002,
@@ -8209,6 +8366,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 356.697,
     "argPeriapsis": 272.463,
     "longAscNode": 49.168,
@@ -8261,6 +8419,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 16.192,
     "argPeriapsis": 81.961,
     "longAscNode": 48.921,
@@ -8313,6 +8472,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 6.272,
     "argPeriapsis": 53.551,
     "longAscNode": 48.822,
@@ -8365,6 +8525,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 152.947,
     "argPeriapsis": 185.334,
     "longAscNode": 48.357,
@@ -8417,6 +8578,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 283.67,
     "argPeriapsis": 326.758,
     "longAscNode": 48.279,
@@ -8469,6 +8631,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 229.976,
     "argPeriapsis": 156.895,
     "longAscNode": 217.449,
@@ -8521,6 +8684,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 183.346,
     "argPeriapsis": 128.652,
     "longAscNode": 320.339,
@@ -8573,6 +8737,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 14.046,
     "argPeriapsis": 62.059,
     "longAscNode": 62.167,
@@ -8625,6 +8790,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 154.611,
     "argPeriapsis": 132.856,
     "longAscNode": 52.946,
@@ -8677,6 +8843,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 224.746,
     "argPeriapsis": 67.254,
     "longAscNode": 34.124,
@@ -8732,6 +8899,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 148.665,
     "argPeriapsis": 172.586,
     "longAscNode": 227.392,
@@ -8784,6 +8952,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 154.755,
     "argPeriapsis": 304.79,
     "longAscNode": 227.419,
@@ -8836,6 +9005,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 345.976,
     "argPeriapsis": 283.321,
     "longAscNode": 227.567,
@@ -8888,6 +9058,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 355.951,
     "argPeriapsis": 127.832,
     "longAscNode": 193.685,
@@ -8940,6 +9111,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 303.773,
     "argPeriapsis": 145.728,
     "longAscNode": 207.123,
@@ -8992,6 +9164,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 114.553,
     "argPeriapsis": 155.898,
     "longAscNode": 139.098,
@@ -9044,6 +9217,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 320.927,
     "argPeriapsis": 164.095,
     "longAscNode": 293.916,
@@ -9093,6 +9267,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9142,6 +9317,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9191,6 +9367,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9240,6 +9417,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 183.401,
     "argPeriapsis": 175.598,
     "longAscNode": 284.728,
@@ -9289,6 +9467,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 292.541,
     "argPeriapsis": 28.764,
     "longAscNode": 357.277,
@@ -9341,6 +9520,7 @@
       "dec": 66.76
     },
     "avgTemp": 168,
+    "ringSystem": null,
     "mainAnomaly": 6.177,
     "argPeriapsis": 73.923,
     "longAscNode": 80.494,
@@ -9390,6 +9570,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9436,6 +9617,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9488,6 +9670,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9537,6 +9720,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9586,6 +9770,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 5.122,
     "argPeriapsis": 278.75,
     "longAscNode": 124.3,
@@ -9635,6 +9820,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9681,6 +9867,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 182.24,
     "argPeriapsis": 251.08,
     "longAscNode": 55.366,
@@ -9733,6 +9920,7 @@
       "dec": null
     },
     "avgTemp": 42,
+    "ringSystem": null,
     "mainAnomaly": 194.292,
     "argPeriapsis": 150.844,
     "longAscNode": 36.128,
@@ -9782,6 +9970,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9831,6 +10020,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9880,6 +10070,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 327.23,
     "argPeriapsis": 121.35,
     "longAscNode": 325.59,
@@ -9932,6 +10123,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -9981,6 +10173,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 136.09,
     "argPeriapsis": 185.22,
     "longAscNode": 342.79,
@@ -10030,6 +10223,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10079,6 +10273,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10128,6 +10323,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10177,6 +10373,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10226,6 +10423,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10275,6 +10473,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10355,6 +10554,7 @@
       "dec": -15.18
     },
     "avgTemp": 76,
+    "ringSystem": null,
     "mainAnomaly": 142.889,
     "argPeriapsis": 96.589,
     "longAscNode": 74.004,
@@ -10404,6 +10604,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10453,6 +10654,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10505,6 +10707,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10554,6 +10757,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10600,6 +10804,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10649,6 +10854,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10698,6 +10904,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10747,6 +10954,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10799,6 +11007,7 @@
       "dec": -6.16
     },
     "avgTemp": 44,
+    "ringSystem": null,
     "mainAnomaly": 14.144,
     "argPeriapsis": 115.179,
     "longAscNode": 110.04,
@@ -10845,6 +11054,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10894,6 +11104,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10943,6 +11154,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -10992,6 +11204,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11041,6 +11254,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11090,6 +11304,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11136,6 +11351,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11185,6 +11401,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11234,6 +11451,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11283,6 +11501,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 289.587,
     "argPeriapsis": 298.314,
     "longAscNode": 71.011,
@@ -11350,6 +11569,7 @@
       "dec": 42.95
     },
     "avgTemp": 55,
+    "ringSystem": null,
     "mainAnomaly": 266.105,
     "argPeriapsis": 267.316,
     "longAscNode": 131.784,
@@ -11396,6 +11616,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11445,6 +11666,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 345.43,
     "argPeriapsis": 5.75,
     "longAscNode": 68.87,
@@ -11497,6 +11719,7 @@
       "dec": -13
     },
     "avgTemp": 50,
+    "ringSystem": null,
     "mainAnomaly": 189.571,
     "argPeriapsis": 240.611,
     "longAscNode": 121.928,
@@ -11543,6 +11766,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11592,6 +11816,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11638,6 +11863,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11687,6 +11913,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11733,6 +11960,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11782,6 +12010,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11828,6 +12057,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11877,6 +12107,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11926,6 +12157,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -11975,6 +12207,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12021,6 +12254,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12070,6 +12304,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12119,6 +12354,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12171,6 +12407,7 @@
       "dec": null
     },
     "avgTemp": 32,
+    "ringSystem": null,
     "mainAnomaly": 139.72,
     "argPeriapsis": 296.281,
     "longAscNode": 79.275,
@@ -12220,6 +12457,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12368,6 +12606,7 @@
       "dec": 64.5
     },
     "avgTemp": 165,
+    "ringSystem": null,
     "mainAnomaly": 18.816,
     "argPeriapsis": 275.069,
     "longAscNode": 100.491,
@@ -12420,6 +12659,7 @@
       "dec": 52.89
     },
     "avgTemp": 210,
+    "ringSystem": null,
     "mainAnomaly": 19.356,
     "argPeriapsis": 286.537,
     "longAscNode": 49.562,
@@ -12472,6 +12712,7 @@
       "dec": 61.41
     },
     "avgTemp": 440,
+    "ringSystem": null,
     "mainAnomaly": 174.796,
     "argPeriapsis": 29.124,
     "longAscNode": 48.331,
@@ -12671,6 +12912,39 @@
       "dec": 83.54
     },
     "avgTemp": 134,
+    "ringSystem": {
+      "innerEdge": 74500,
+      "outerEdge": 140220,
+      "majorGapZones": [
+        { "distance": 77870, "width": 150 },
+        { "distance": 87491, "width": 270 },
+        { "distance": 118234, "width": 102 },
+        { "distance": 119967, "width": 238 },
+        { "distance": 133589, "width": 325 },
+        { "distance": 136505, "width": 35 },
+        { "distance": 136775, "width": 2600 }
+      ],
+      "hsl": {
+        "h": 0.09,
+        "s": {
+          "customRanges": [
+            { "from": 0.3, "value": 0.25 },
+            { "from": 1, "value": 0.25 }
+          ],
+          "min": 0.2,
+          "max": 0.4
+        },
+        "l": {
+          "customRanges": [
+            { "from": 0.3, "value": 0.12 },
+            { "from": 0.7, "value": 0.07 },
+            { "from": 1, "value": 0.12 }
+          ],
+          "min": 0.06,
+          "max": 0.5
+        }
+      }
+    },
     "mainAnomaly": 320.426,
     "argPeriapsis": 335.866,
     "longAscNode": 113.67,
@@ -12723,6 +12997,7 @@
       "dec": 63.87
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -12775,6 +13050,7 @@
       "dec": 90
     },
     "avgTemp": 288,
+    "ringSystem": null,
     "mainAnomaly": 358.617,
     "argPeriapsis": 326.728,
     "longAscNode": 135.08,
@@ -12827,6 +13103,7 @@
       "dec": 67.16
     },
     "avgTemp": 737,
+    "ringSystem": null,
     "mainAnomaly": 50.115,
     "argPeriapsis": 55.186,
     "longAscNode": 76.678,
@@ -12879,6 +13156,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 356.989,
     "argPeriapsis": 298.721,
     "longAscNode": 227.241,
@@ -12928,6 +13206,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 225.443,
     "argPeriapsis": 50.339,
     "longAscNode": 253.538,
@@ -12977,6 +13256,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 297.573,
     "argPeriapsis": 262.933,
     "longAscNode": 24.858,
@@ -13029,6 +13309,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 285.846,
     "argPeriapsis": 296.278,
     "longAscNode": 227.342,
@@ -13081,6 +13362,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 307.344,
     "argPeriapsis": 299.394,
     "longAscNode": 48.588,
@@ -13130,6 +13412,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -13179,6 +13462,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 250.072,
     "argPeriapsis": 74.658,
     "longAscNode": 251.839,
@@ -13228,6 +13512,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 215.339,
     "argPeriapsis": 298.455,
     "longAscNode": 247.74,
@@ -13277,6 +13562,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 90.441,
     "argPeriapsis": 316.372,
     "longAscNode": 291.215,
@@ -13326,6 +13612,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 278.161,
     "argPeriapsis": 152.982,
     "longAscNode": 359.445,
@@ -13375,6 +13662,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 235.405,
     "argPeriapsis": 105.675,
     "longAscNode": 27.923,
@@ -13424,6 +13712,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 158.486,
     "argPeriapsis": 188.683,
     "longAscNode": 249.785,
@@ -13473,6 +13762,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 69.213,
     "argPeriapsis": 292.531,
     "longAscNode": 42.344,
@@ -13522,6 +13812,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 146.041,
     "argPeriapsis": 15.502,
     "longAscNode": 312.752,
@@ -13571,6 +13862,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 352.943,
     "argPeriapsis": 288.701,
     "longAscNode": 264.921,
@@ -13620,6 +13912,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 349.398,
     "argPeriapsis": 330.519,
     "longAscNode": 97.286,
@@ -13669,6 +13962,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 243.261,
     "argPeriapsis": 276.388,
     "longAscNode": 245.316,
@@ -13718,6 +14012,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 270.84,
     "argPeriapsis": 300.637,
     "longAscNode": 113.732,
@@ -13764,6 +14059,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -13810,6 +14106,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -13859,6 +14156,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 101.429,
     "argPeriapsis": 104.488,
     "longAscNode": 279.542,
@@ -13908,6 +14206,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 198.754,
     "argPeriapsis": 174.859,
     "longAscNode": 112.328,
@@ -13957,6 +14256,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 137.992,
     "argPeriapsis": 271.906,
     "longAscNode": 330.788,
@@ -14006,6 +14306,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 64.184,
     "argPeriapsis": 68.448,
     "longAscNode": 177.872,
@@ -14055,6 +14356,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 121.345,
     "argPeriapsis": 339.126,
     "longAscNode": 354.082,
@@ -14104,6 +14406,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 210.302,
     "argPeriapsis": 307.027,
     "longAscNode": 260.205,
@@ -14153,6 +14456,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 131.678,
     "argPeriapsis": 148.142,
     "longAscNode": 328.907,
@@ -14202,6 +14506,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 280.824,
     "argPeriapsis": 129.945,
     "longAscNode": 84.404,
@@ -14251,6 +14556,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 95.909,
     "argPeriapsis": 191.851,
     "longAscNode": 128.928,
@@ -14300,6 +14606,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 199.842,
     "argPeriapsis": 309.548,
     "longAscNode": 157.886,
@@ -14349,6 +14656,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 348.936,
     "argPeriapsis": 263.842,
     "longAscNode": 258.756,
@@ -14398,6 +14706,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 261.667,
     "argPeriapsis": 253.929,
     "longAscNode": 82.46,
@@ -14447,6 +14756,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 178.318,
     "argPeriapsis": 24.543,
     "longAscNode": 293.334,
@@ -14496,6 +14806,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 120.775,
     "argPeriapsis": 303.131,
     "longAscNode": 72.892,
@@ -14545,6 +14856,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 25.03,
     "argPeriapsis": 354.507,
     "longAscNode": 292.562,
@@ -14594,6 +14906,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 321.791,
     "argPeriapsis": 187.984,
     "longAscNode": 321.618,
@@ -14643,6 +14956,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 131.665,
     "argPeriapsis": 213.487,
     "longAscNode": 212.714,
@@ -14692,6 +15006,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 187.461,
     "argPeriapsis": 72.581,
     "longAscNode": 135.472,
@@ -14741,6 +15056,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 98.014,
     "argPeriapsis": 349.568,
     "longAscNode": 127.83,
@@ -14790,6 +15106,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 83.775,
     "argPeriapsis": 223.35,
     "longAscNode": 168.997,
@@ -14836,6 +15153,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": null,
     "argPeriapsis": null,
     "longAscNode": null,
@@ -14885,6 +15203,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 343.518,
     "argPeriapsis": 232.59,
     "longAscNode": 43.654,
@@ -14934,6 +15253,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 121.626,
     "argPeriapsis": 84.129,
     "longAscNode": 208.682,
@@ -14983,6 +15303,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 291.718,
     "argPeriapsis": 127.17,
     "longAscNode": 37.862,
@@ -15032,6 +15353,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 325.808,
     "argPeriapsis": 106.539,
     "longAscNode": 3.861,
@@ -15081,6 +15403,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 14.387,
     "argPeriapsis": 234.143,
     "longAscNode": 192.061,
@@ -15130,6 +15453,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 293.756,
     "argPeriapsis": 175.338,
     "longAscNode": 39.36,
@@ -15179,6 +15503,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 75.666,
     "argPeriapsis": 350.581,
     "longAscNode": 305.975,
@@ -15228,6 +15553,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 209.111,
     "argPeriapsis": 297.932,
     "longAscNode": 280.82,
@@ -15277,6 +15603,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 24.948,
     "argPeriapsis": 295.62,
     "longAscNode": 294.817,
@@ -15326,6 +15653,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 195.233,
     "argPeriapsis": 286.407,
     "longAscNode": 194.517,
@@ -15375,6 +15703,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 19.007,
     "argPeriapsis": 199.275,
     "longAscNode": 221.235,
@@ -15424,6 +15753,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 71.406,
     "argPeriapsis": 197.901,
     "longAscNode": 176,
@@ -15473,6 +15803,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 85.812,
     "argPeriapsis": 72.74,
     "longAscNode": 293.684,
@@ -15522,6 +15853,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 333.317,
     "argPeriapsis": 292.401,
     "longAscNode": 204.754,
@@ -15571,6 +15903,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 37.184,
     "argPeriapsis": 284.338,
     "longAscNode": 215.718,
@@ -15620,6 +15953,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 247.496,
     "argPeriapsis": 106.724,
     "longAscNode": 169.394,
@@ -15669,6 +16003,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 9.921,
     "argPeriapsis": 284.614,
     "longAscNode": 84.771,
@@ -15718,6 +16053,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 173.765,
     "argPeriapsis": 79.501,
     "longAscNode": 350.862,
@@ -15767,6 +16103,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 352.866,
     "argPeriapsis": 160.089,
     "longAscNode": 254.375,
@@ -15816,6 +16153,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 249.767,
     "argPeriapsis": 78.042,
     "longAscNode": 155.156,
@@ -15865,6 +16203,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 248.544,
     "argPeriapsis": 254.467,
     "longAscNode": 44.325,
@@ -15914,6 +16253,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 265.163,
     "argPeriapsis": 135.529,
     "longAscNode": 274.399,
@@ -15963,6 +16303,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 313.492,
     "argPeriapsis": 224.787,
     "longAscNode": 12.17,
@@ -16012,6 +16353,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 62.883,
     "argPeriapsis": 282.495,
     "longAscNode": 165.352,
@@ -16061,6 +16403,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 206.57,
     "argPeriapsis": 149.417,
     "longAscNode": 274.121,
@@ -16110,6 +16453,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 14.181,
     "argPeriapsis": 62.734,
     "longAscNode": 47.439,
@@ -16159,6 +16503,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 196.126,
     "argPeriapsis": 19.23,
     "longAscNode": 281.171,
@@ -16208,6 +16553,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 152.924,
     "argPeriapsis": 77.64,
     "longAscNode": 61.151,
@@ -16257,6 +16603,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 22.965,
     "argPeriapsis": 44.624,
     "longAscNode": 128.774,
@@ -16306,6 +16653,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 347.959,
     "argPeriapsis": 18.995,
     "longAscNode": 324.117,
@@ -16355,6 +16703,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 63.72,
     "argPeriapsis": 149.269,
     "longAscNode": 3.893,
@@ -16404,6 +16753,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 6.242,
     "argPeriapsis": 258.777,
     "longAscNode": 202.202,
@@ -16453,6 +16803,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 240.32,
     "argPeriapsis": 125.234,
     "longAscNode": 269.401,
@@ -16502,6 +16853,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 36.615,
     "argPeriapsis": 86.59,
     "longAscNode": 185.572,
@@ -16551,6 +16903,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 149.609,
     "argPeriapsis": 352.72,
     "longAscNode": 274.727,
@@ -16600,6 +16953,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 190.634,
     "argPeriapsis": 28.13,
     "longAscNode": 327.591,
@@ -16649,6 +17003,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 220.907,
     "argPeriapsis": 240.168,
     "longAscNode": 324.686,
@@ -16698,6 +17053,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 138.322,
     "argPeriapsis": 219.631,
     "longAscNode": 302.125,
@@ -16747,6 +17103,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 240.33,
     "argPeriapsis": 303.778,
     "longAscNode": 149.572,
@@ -16796,6 +17153,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 302.816,
     "argPeriapsis": 18.103,
     "longAscNode": 22.004,
@@ -16845,6 +17203,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 351.889,
     "argPeriapsis": 280.596,
     "longAscNode": 206.761,
@@ -16894,6 +17253,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 40.522,
     "argPeriapsis": 316.896,
     "longAscNode": 125.201,
@@ -16943,6 +17303,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 340.582,
     "argPeriapsis": 304.46,
     "longAscNode": 230.582,
@@ -16992,6 +17353,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 336.024,
     "argPeriapsis": 305.715,
     "longAscNode": 248.291,
@@ -17041,6 +17403,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 184.928,
     "argPeriapsis": 103.706,
     "longAscNode": 95.703,
@@ -17090,6 +17453,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 281.055,
     "argPeriapsis": 198.65,
     "longAscNode": 176.488,
@@ -17139,6 +17503,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 346.552,
     "argPeriapsis": 16.612,
     "longAscNode": 342.766,
@@ -17188,6 +17553,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 150.098,
     "argPeriapsis": 129.417,
     "longAscNode": 244.023,
@@ -17237,6 +17603,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 217.579,
     "argPeriapsis": 247.018,
     "longAscNode": 301.353,
@@ -17286,6 +17653,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 59.289,
     "argPeriapsis": 321.51,
     "longAscNode": 271.094,
@@ -17335,6 +17703,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 185.212,
     "argPeriapsis": 287.304,
     "longAscNode": 154.181,
@@ -17384,6 +17753,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 336.358,
     "argPeriapsis": 6.005,
     "longAscNode": 226.663,
@@ -17433,6 +17803,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 31.502,
     "argPeriapsis": 144.999,
     "longAscNode": 168.68,
@@ -17482,6 +17853,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 244.724,
     "argPeriapsis": 316.279,
     "longAscNode": 114.15,
@@ -17531,6 +17903,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 2.08,
     "argPeriapsis": 73.134,
     "longAscNode": 161.697,
@@ -17580,6 +17953,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 158.286,
     "argPeriapsis": 213.791,
     "longAscNode": 243.619,
@@ -17629,6 +18003,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 19.05,
     "argPeriapsis": 130.76,
     "longAscNode": 96.145,
@@ -17678,6 +18053,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 136.727,
     "argPeriapsis": 316.67,
     "longAscNode": 216.819,
@@ -17727,6 +18103,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 178.9,
     "argPeriapsis": 157.598,
     "longAscNode": 67.821,
@@ -17776,6 +18153,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 231.957,
     "argPeriapsis": 285.846,
     "longAscNode": 214.907,
@@ -17825,6 +18203,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 271.201,
     "argPeriapsis": 28.027,
     "longAscNode": 7.119,
@@ -17874,6 +18253,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 216.006,
     "argPeriapsis": 298.538,
     "longAscNode": 175.607,
@@ -17923,6 +18303,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 180.999,
     "argPeriapsis": 45.158,
     "longAscNode": 41.854,
@@ -17972,6 +18353,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 46.585,
     "argPeriapsis": 170.872,
     "longAscNode": 15.031,
@@ -18021,6 +18403,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 64.786,
     "argPeriapsis": 342.205,
     "longAscNode": 35.857,
@@ -18070,6 +18453,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 359.371,
     "argPeriapsis": 134.72,
     "longAscNode": 123.269,
@@ -18119,6 +18503,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 59.014,
     "argPeriapsis": 94.737,
     "longAscNode": 36.797,
@@ -18168,6 +18553,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 217.565,
     "argPeriapsis": 249.353,
     "longAscNode": 203.191,
@@ -18217,6 +18603,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 115.431,
     "argPeriapsis": 288.668,
     "longAscNode": 91.763,
@@ -18266,6 +18653,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 278.983,
     "argPeriapsis": 177.477,
     "longAscNode": 135.732,
@@ -18315,6 +18703,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 138.151,
     "argPeriapsis": 285.08,
     "longAscNode": 52.13,
@@ -18364,6 +18753,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 129.023,
     "argPeriapsis": 20.677,
     "longAscNode": 241.107,
@@ -18413,6 +18803,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 110.76,
     "argPeriapsis": 25.968,
     "longAscNode": 269.467,
@@ -18462,6 +18853,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 167.853,
     "argPeriapsis": 218.562,
     "longAscNode": 141.741,
@@ -18511,6 +18903,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 218.924,
     "argPeriapsis": 140.501,
     "longAscNode": 129.865,
@@ -18560,6 +18953,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 236.577,
     "argPeriapsis": 273.323,
     "longAscNode": 154.401,
@@ -18609,6 +19003,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 208.48,
     "argPeriapsis": 146.144,
     "longAscNode": 87.242,
@@ -18658,6 +19053,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 42.02,
     "argPeriapsis": 232.494,
     "longAscNode": 310.944,
@@ -18707,6 +19103,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 98.845,
     "argPeriapsis": 357.041,
     "longAscNode": 47.725,
@@ -18756,6 +19153,7 @@
       "dec": null
     },
     "avgTemp": null,
+    "ringSystem": null,
     "mainAnomaly": 271.892,
     "argPeriapsis": 351.455,
     "longAscNode": 233.079,

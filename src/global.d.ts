@@ -59,6 +59,38 @@ interface Obliquity {
   dec: number;
 }
 
+interface GapZone {
+  distance: number;
+  width: number;
+}
+
+interface CustomRange {
+  from: number; // entre 0 e 1
+  value: number; // entre 0 e 1
+}
+
+type StaticValue = number;
+type DynamicValue = {
+  customRanges: CustomRange[];
+  min?: number; // entre 0 e 1
+  max?: number; // entre 0 e 1
+};
+
+type HslValue = StaticValue | DynamicValue;
+
+interface HslSettings {
+  h: HslValue;
+  s: HslValue;
+  l: HslValue;
+}
+
+interface RingSystem {
+  innerEdge: number;
+  outerEdge: number;
+  majorGapZones: GapZone[];
+  hsl: HslSettings;
+}
+
 interface BodyType {
   id: string;
   name: string;
@@ -89,6 +121,7 @@ interface BodyType {
   alternativeName: string;
   obliquity: Obliquity;
   avgTemp: number | null;
+  ringSystem: RingSystem | null;
   mainAnomaly: number | null;
   argPeriapsis: number | null;
   longAscNode: number | null;

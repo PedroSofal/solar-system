@@ -5,7 +5,7 @@ import { DirectionalLight, Group, Mesh, Vector3 } from 'three';
 import { lazy, memo, Suspense, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const LazySaturnRings = lazy(() => import('./SaturnRings'));
+const RingSystem = lazy(() => import('./RingSystem'));
 
 export default function PlanetSystem({
   allPlanets,
@@ -92,7 +92,7 @@ const Planet = memo(function ({
     }
   });
 
-  // Atrasa a troca de visibilidade para dar tempo gsap animar a câmera
+  // Atrasa a troca de visibilidade para dar tempo do gsap animar a câmera
   useEffect(() => {
     setTimeout(() => {
       if (isSystemFocused) {
@@ -108,10 +108,7 @@ const Planet = memo(function ({
       <Node bodyData={bodyData} bodyRef={bodyRef}>
         <Suspense fallback={null}>
           {id === 'saturn' && loadedRings && (
-            <LazySaturnRings
-              bodyRef={bodyRef}
-              saturnEquaRadius={bodyData.equaRadius as number}
-            />
+            <RingSystem bodyRef={bodyRef} bodyData={bodyData} />
           )}
         </Suspense>
       </Node>
