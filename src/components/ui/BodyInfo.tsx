@@ -24,6 +24,7 @@ import React, { useContext, useEffect, useMemo, useState } from 'react';
 
 import BodyDataContext from '../../contexts/BodyDataContext';
 import CameraContext from '../../contexts/CameraContext';
+import { Description } from './Description';
 
 interface InfoItemType {
   icon: React.ReactNode;
@@ -238,9 +239,7 @@ export default function BodyInfo({
               />
             </h1>
           </div>
-          {body.description && (
-            <p className="text-emerald-400">{body.description}</p>
-          )}
+          {body.description && <Description>{body.description}</Description>}
         </div>
 
         <InfoTable body={body} setSelectedBody={setSelectedBody} />

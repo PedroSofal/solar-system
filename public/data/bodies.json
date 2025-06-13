@@ -13154,7 +13154,7 @@
     "name": "Vênus",
     "frenchName": "Vénus",
     "englishName": "Venus",
-    "description": "Frequentemente observado no céu e referido como Estrela D'alva, Vênus é o planeta mais quente do Sistema Solar, possuindo uma atmosfera densa de CO₂; e tempestades corrosivas com ventos de até 400 km/h. Devido à sua inclinação de quase 180 graus, é comum dizer que Vênus orbita o Sol de cabeça para baixo, o que significa que seu movimento de rotação é invertido em relação aos outros planetas. Além disso, sua rotação é tão lenta, que faz com o dia seja maior do que o ano.",
+    "description": "Frequentemente observado no céu e referido como Estrela D'alva, Vênus é o planeta mais quente do Sistema Solar, possuindo uma atmosfera densa de CO₂ e tempestades corrosivas com ventos de até 400 km/h. Devido à sua inclinação de quase 180 graus, é comum dizer que Vênus orbita o Sol de cabeça para baixo, o que significa que seu movimento de rotação é invertido em relação aos outros planetas. Além disso, sua rotação é tão lenta, que faz com o dia seja maior do que o ano.",
     "isPlanet": true,
     "moons": null,
     "semimajorAxis": 108208475,
