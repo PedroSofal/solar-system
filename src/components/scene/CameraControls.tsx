@@ -1,12 +1,13 @@
+import { Group, Vector3 } from 'three';
+import { useFrame } from '@react-three/fiber';
 import { OrbitControls, TrackballControls } from '@react-three/drei';
 import { useContext, useEffect } from 'react';
-import CameraContext from '../contexts/CameraContext';
-import { useFrame } from '@react-three/fiber';
-import { Group, Vector3 } from 'three';
-import gsap from 'gsap';
 import { useLocation } from 'react-router-dom';
-import { getBodyMeshFromGroup } from '../utils';
-import SceneContext from '../contexts/SceneContext';
+import gsap from 'gsap';
+
+import CameraContext from '../../contexts/CameraContext';
+import SceneContext from '../../contexts/SceneContext';
+import { getBodyMeshFromGroup } from '../../utils/scene';
 
 export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   const { orbitControlsRef, trackballControlsRef, targetRef, isFollowing } =

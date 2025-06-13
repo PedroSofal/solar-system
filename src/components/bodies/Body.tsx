@@ -1,9 +1,9 @@
-import { useMemo } from 'react';
 import { Group } from 'three';
 import { Detailed } from '@react-three/drei';
-import { toModelScale } from '../utils';
+import { useMemo } from 'react';
 import IrregularBody from './IrregularBody';
-import useFocusOnBody from '../hooks/useFocusOnBody';
+import useFocusOnBody from '../../hooks/useFocusOnBody';
+import { toModelScale } from '../../utils/scene';
 
 export default function Body({
   bodyRef,

@@ -1,9 +1,9 @@
-import { useFrame } from '@react-three/fiber';
-import Node from './Node';
-import { getBodyMeshFromGroup } from '../utils';
 import { DirectionalLight, Group, Mesh, Vector3 } from 'three';
+import { useFrame } from '@react-three/fiber';
 import { lazy, memo, Suspense, useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Node from './Node';
+import { getBodyMeshFromGroup } from '../../utils/scene';
 
 const RingSystem = lazy(() => import('./RingSystem'));
 

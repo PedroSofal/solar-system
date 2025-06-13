@@ -1,11 +1,11 @@
 import { Group, Quaternion, Vector3 } from 'three';
-import { memo, useContext, useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import LayerContext from '../contexts/LayerContext';
-import SceneContext from '../contexts/SceneContext';
-import Node from './Node';
-import { getReferencePlaneQuaternionFromPole } from '../getQuaternionFromPole';
+import { memo, useContext, useEffect, useMemo, useRef } from 'react';
 import { useParams } from 'react-router-dom';
+import LayerContext from '../../contexts/LayerContext';
+import SceneContext from '../../contexts/SceneContext';
+import Node from './Node';
+import { getReferencePlaneQuaternionFromPole } from '../../utils/astrophysics';
 
 function getSizeThreshold(parentId: string) {
   switch (parentId) {

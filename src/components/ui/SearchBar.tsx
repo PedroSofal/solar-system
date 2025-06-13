@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import BodyDataContext from '../../contexts/BodyDataContext';
-import { mapBodyToNavItem } from '../../utils';
+import { mapBodyToNavItem } from '../../utils/ui';
 
 function rankResult(searchTerm: string, bodies: BodyType[]): BodyType[] {
   const nameMatches_strong = [];

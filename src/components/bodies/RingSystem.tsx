@@ -1,12 +1,3 @@
-import { useFrame } from '@react-three/fiber';
-import React, { useContext, useEffect, useMemo, useRef } from 'react';
-import vertexShader from '../shaders/ring-system/vertex.glsl';
-import fragmentShader from '../shaders/ring-system/fragment.glsl';
-import { Detailed } from '@react-three/drei';
-import TimeContext from '../contexts/TimeContext';
-import LayerContext from '../contexts/LayerContext';
-import TextureContext from '../contexts/TextureContext';
-import { getActiveLOD, toModelScale } from '../utils';
 import {
   Color,
   MathUtils,
@@ -15,7 +6,18 @@ import {
   ShaderMaterial,
   Vector3,
 } from 'three';
-import useFallbackData from '../hooks/useFallbackData';
+
+import { useFrame } from '@react-three/fiber';
+import { Detailed } from '@react-three/drei';
+import React, { useContext, useEffect, useMemo, useRef } from 'react';
+
+import vertexShader from '../../shaders/ring-system/vertex.glsl';
+import fragmentShader from '../../shaders/ring-system/fragment.glsl';
+import TimeContext from '../../contexts/TimeContext';
+import LayerContext from '../../contexts/LayerContext';
+import TextureContext from '../../contexts/TextureContext';
+import useFallbackData from '../../hooks/useFallbackData';
+import { getActiveLOD, toModelScale } from '../../utils/scene';
 
 function setHslValue(position: number, settings: HslValue) {
   if (typeof settings === 'object' && 'customRanges' in settings) {

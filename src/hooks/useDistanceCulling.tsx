@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber';
 import { Object3D, Vector3 } from 'three';
-import { getActiveLOD } from '../utils';
+import { getActiveLOD } from '../utils/scene';
 
 function calculateCulling(
   currentDistance: number,

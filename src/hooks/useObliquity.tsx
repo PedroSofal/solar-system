@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { MathUtils, Quaternion, Vector3 } from 'three';
-import { getBodyTiltQuaternionFromPole } from '../getQuaternionFromPole';
+import { getBodyTiltQuaternionFromPole } from '../utils/astrophysics';
 
 export default function useObliquity(
   obliquity: Obliquity,

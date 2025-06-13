@@ -1,12 +1,12 @@
+import { EllipseCurve, MathUtils, Group, Quaternion, Vector3 } from 'three';
+import { Line2, LineSegments2 } from 'three-stdlib';
+import { useFrame } from '@react-three/fiber';
 import { Detailed, Line } from '@react-three/drei';
 import { useContext, useMemo, useRef } from 'react';
-import { EllipseCurve, MathUtils, Group, Quaternion, Vector3 } from 'three';
-import { toModelScale } from '../../utils';
-import { Line2, LineSegments2 } from 'three-stdlib';
 import LayerContext from '../../contexts/LayerContext';
-import useDistanceCulling from '../../hooks/useDistanceCulling';
-import { useFrame } from '@react-three/fiber';
 import TimeStaticContext from '../../contexts/TimeStaticContext';
+import useDistanceCulling from '../../hooks/useDistanceCulling';
+import { toModelScale } from '../../utils/scene';
 
 export default function OrbitLine({
   orbitRef,

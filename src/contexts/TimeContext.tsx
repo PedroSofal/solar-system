@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useRef, useState } from 'react';
-import { toJulianDate } from '../utils';
+import { toJulianDate } from '../utils/time';
 
 const timeMachineMap = {
   0: { scale: 1, label: 'Velocidade normal' },

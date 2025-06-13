@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import TextureContext from '../contexts/TextureContext';
+import TextureContext from '../../contexts/TextureContext';
 
 export default function MoonMaterial({
   id,

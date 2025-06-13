@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from './ui/Button';
+import Button from '../ui/Button';
 
 export default function Error404() {
   const [countdown, setCountdown] = useState(10);

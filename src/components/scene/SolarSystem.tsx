@@ -1,12 +1,12 @@
-import { memo, useContext, useMemo } from 'react';
-import TimeTicker from './TimeTicker';
-import BodyDataContext from '../contexts/BodyDataContext';
-import LayerContext from '../contexts/LayerContext';
-import Sun from './Sun';
-import Background from './Background';
 import { useGLTF } from '@react-three/drei';
-import MoonsContainer from './Moon';
-import PlanetSystem from './Planet';
+import { memo, useContext, useMemo } from 'react';
+import BodyDataContext from '../../contexts/BodyDataContext';
+import LayerContext from '../../contexts/LayerContext';
+import Background from './Background';
+import Sun from '../bodies/Sun';
+import MoonsContainer from '../bodies/Moon';
+import PlanetSystem from '../bodies/Planet';
+import TimeTicker from './TimeTicker';
 
 export default memo(function SolarSystem() {
   const { sun, planets, dwarfPlanets, loading } = useContext(BodyDataContext);

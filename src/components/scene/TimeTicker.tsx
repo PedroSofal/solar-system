@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber';
 import { useContext } from 'react';
-import TimeContext from '../contexts/TimeContext';
+import TimeContext from '../../contexts/TimeContext';
 
 export default function TimeTicker() {
   const { tick } = useContext(TimeContext);

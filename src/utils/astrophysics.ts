@@ -4,18 +4,19 @@ const OBLIQUITY_J2000 = MathUtils.degToRad(23.4392811);
 const cosObl = Math.cos(OBLIQUITY_J2000);
 const sinObl = Math.sin(OBLIQUITY_J2000);
 
-/**
- * Calcula um Quaternion que orienta o eixo Y local de um corpo (0,1,0)
- * para a direção definida pelo seu polo rotacional (RA/DEC) no sistema Eclíptico J2000.
- * @param poleRA Ascensão Reta do polo (graus)
- * @param poleDEC Declinação do polo (graus)
- * @returns Quaternion de orientação ou Quaternion identidade se os dados forem inválidos.
- */
 function getQuaternionFromPole(
   poleRA: number | undefined | null,
   poleDEC: number | undefined | null,
   up: Vector3,
 ): Quaternion {
+  /**
+   * Calcula um Quaternion que orienta o eixo Y local de um corpo (0,1,0)
+   * para a direção definida pelo seu polo rotacional (RA/DEC) no sistema Eclíptico J2000.
+   * @param poleRA Ascensão Reta do polo (graus)
+   * @param poleDEC Declinação do polo (graus)
+   * @returns Quaternion de orientação ou Quaternion identidade se os dados forem inválidos.
+   */
+
   const q = new Quaternion();
   if (
     poleRA === undefined ||

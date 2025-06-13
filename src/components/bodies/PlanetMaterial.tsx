@@ -1,11 +1,11 @@
-import { useContext, useRef } from 'react';
 import { MeshStandardMaterial } from 'three';
-import commonVert from '../shaders/earth/common.vert';
-import worldpos from '../shaders/earth/worldPos.vert';
-import commonFrag from '../shaders/earth/common.frag';
-import roughnessMap from '../shaders/earth/roughnessMap.frag';
-import emissiveMap from '../shaders/earth/emissiveMap.frag';
-import TextureContext from '../contexts/TextureContext';
+import { useContext, useRef } from 'react';
+import commonVert from '../../shaders/earth/common.vert';
+import worldpos from '../../shaders/earth/worldPos.vert';
+import commonFrag from '../../shaders/earth/common.frag';
+import roughnessMap from '../../shaders/earth/roughnessMap.frag';
+import emissiveMap from '../../shaders/earth/emissiveMap.frag';
+import TextureContext from '../../contexts/TextureContext';
 
 export default function PlanetMaterial({ id }: { id: string }) {
   const isEarth = id === 'earth';

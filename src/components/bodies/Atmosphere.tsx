@@ -1,6 +1,6 @@
 import { AdditiveBlending, BackSide, Color } from 'three';
-import vertexShader from '../shaders/atmosphere/vertex.glsl';
-import fragmentShader from '../shaders/atmosphere/fragment.glsl';
+import vertexShader from '../../shaders/atmosphere/vertex.glsl';
+import fragmentShader from '../../shaders/atmosphere/fragment.glsl';
 
 export default function Atmosphere({
   bodyRadius,

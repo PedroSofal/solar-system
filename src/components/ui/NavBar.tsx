@@ -2,7 +2,7 @@ import { useContext, useEffect, useMemo, useState } from 'react';
 import BodyDataContext from '../../contexts/BodyDataContext';
 import SearchBar from './SearchBar';
 import Nav from './Nav';
-import { mapBodyToNavItem } from '../../utils';
+import { mapBodyToNavItem } from '../../utils/ui';
 
 export default function NavBar({
   isExpanded,

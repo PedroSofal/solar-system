@@ -1,15 +1,16 @@
 import { Vector3, Group } from 'three';
-import { useContext, useMemo, useRef, useState } from 'react';
-import { ThreeEvent, useFrame } from '@react-three/fiber';
 import { Line2, LineSegments2 } from 'three/examples/jsm/Addons.js';
+import { ThreeEvent, useFrame } from '@react-three/fiber';
 import { Text, TextProps, Line } from '@react-three/drei';
+import { useContext, useMemo, useRef, useState } from 'react';
 import gsap from 'gsap';
+
 import useStickySize from '../../hooks/useStickySize';
 import useDistanceCulling from '../../hooks/useDistanceCulling';
 import LayerContext from '../../contexts/LayerContext';
-import { getActiveLOD } from '../../utils';
 import CameraContext from '../../contexts/CameraContext';
-import CustomBillboard from '../CustomBillboard';
+import CustomBillboard from './CustomBillboard';
+import { getActiveLOD } from '../../utils/scene';
 
 const FIXED_RADIUS = 3;
 

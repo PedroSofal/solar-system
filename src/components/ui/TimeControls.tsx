@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import TimeContext from '../../contexts/TimeContext';
 import Button from './Button';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
-import { fromJulianDate, toJulianDate } from '../../utils';
+import { fromJulianDate, toJulianDate } from '../../utils/time';
 
 export default function TimeControls({
   isExpanded,

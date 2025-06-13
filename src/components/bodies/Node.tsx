@@ -1,23 +1,26 @@
-import { useRef } from 'react';
-import useFallbackData from '../hooks/useFallbackData';
-import { Line2, LineSegments2 } from 'three/examples/jsm/Addons.js';
 import { Color, Group } from 'three';
+import { Line2, LineSegments2 } from 'three/examples/jsm/Addons.js';
+import { useRef } from 'react';
+
 import Body from './Body';
-import Hitbox from './ui/Hitbox';
 import Atmosphere from './Atmosphere';
 import PlanetMaterial from './PlanetMaterial';
 import MoonMaterial from './MoonMaterial';
-import useDistanceCulling from '../hooks/useDistanceCulling';
+import Hitbox from '../scene/Hitbox';
+import OrbitLine from '../scene/OrbitLine';
+
+import useFallbackData from '../../hooks/useFallbackData';
+import useDistanceCulling from '../../hooks/useDistanceCulling';
+import useSiderealRotation from '../../hooks/useSiderealRotation';
+import useOrbitalElements from '../../hooks/useOrbitalElements';
+import useObliquity from '../../hooks/useObliquity';
+
+import { toModelScale } from '../../utils/scene';
+import { getNodeColor } from '../../utils/ui';
 import {
   getHitboxCullingPoints,
   getOrbitCullingPoints,
-  toModelScale,
-  getNodeColor,
-} from '../utils';
-import useSiderealRotation from '../hooks/useSiderealRotation';
-import useOrbitalElements from '../hooks/useOrbitalElements';
-import OrbitLine from './ui/OrbitLine';
-import useObliquity from '../hooks/useObliquity';
+} from '../../utils/performance';
 
 export default function Node({
   bodyData,

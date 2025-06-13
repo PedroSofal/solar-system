@@ -1,15 +1,14 @@
-import Body from './Body';
-import { useMemo, useRef } from 'react';
+import { Group, Mesh, TextureLoader, AdditiveBlending, BackSide } from 'three';
 import { useLoader } from '@react-three/fiber';
-import { Group, Mesh, TextureLoader } from 'three';
-import vertexShader from '../shaders/sun/vertex.glsl';
-import fragmentShader from '../shaders/sun/fragment.glsl';
-import useStickySize from '../hooks/useStickySize';
-import { AdditiveBlending } from 'three';
-import { BackSide } from 'three';
-import { toModelScale } from '../utils';
-import { getBodyTiltQuaternionFromPole } from '../getQuaternionFromPole';
+import { useMemo, useRef } from 'react';
 import { useMatch } from 'react-router-dom';
+
+import vertexShader from '../../shaders/sun/vertex.glsl';
+import fragmentShader from '../../shaders/sun/fragment.glsl';
+import Body from './Body';
+import useStickySize from '../../hooks/useStickySize';
+import { getBodyTiltQuaternionFromPole } from '../../utils/astrophysics';
+import { toModelScale } from '../../utils/scene';
 
 export default function Sun({ bodyData }: { bodyData: BodyType }) {
   const planetSystemMatch = useMatch('/corpos/:id');

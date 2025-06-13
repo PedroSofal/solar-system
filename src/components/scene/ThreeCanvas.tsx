@@ -1,11 +1,11 @@
-import { Canvas, useThree } from '@react-three/fiber';
-import CameraControls from './CameraControls';
 import { PerspectiveCamera } from 'three';
-import { Suspense, useEffect } from 'react';
-import SolarSystem from './SolarSystem';
-import { useProgress } from '@react-three/drei';
-import { SceneProvider } from '../contexts/SceneContext';
+import { Canvas, useThree } from '@react-three/fiber';
 // import { Perf } from 'r3f-perf';
+import { useProgress } from '@react-three/drei';
+import { Suspense, useEffect } from 'react';
+import { SceneProvider } from '../../contexts/SceneContext';
+import CameraControls from './CameraControls';
+import SolarSystem from './SolarSystem';
 
 export default function ThreeCanvas({
   isLoaded,

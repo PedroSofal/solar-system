@@ -1,6 +1,6 @@
 import LoadingScreen from './LoadingScreen';
-import ThreeCanvas from './ThreeCanvas';
-import Overlay from './ui/Overlay';
+import ThreeCanvas from '../scene/ThreeCanvas';
+import Overlay from '../ui/Overlay';
 import { useState } from 'react';
 
 export default function Home() {

@@ -1,7 +1,7 @@
 import { RefObject, useContext, useEffect } from 'react';
 import { useMatch, useNavigate } from 'react-router-dom';
 import { Group, Sphere, Vector3 } from 'three';
-import { getBodyMeshFromGroup } from '../utils';
+import { getBodyMeshFromGroup } from '../utils/scene';
 import CameraContext from '../contexts/CameraContext';
 import gsap from 'gsap';
 import TimeContext from '../contexts/TimeContext';

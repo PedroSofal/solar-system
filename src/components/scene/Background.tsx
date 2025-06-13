@@ -1,7 +1,7 @@
 import { useThree, useFrame } from '@react-three/fiber';
 import { CubeTextureLoader, Scene, PerspectiveCamera } from 'three';
 import { useContext, useEffect, useRef } from 'react';
-import TextureContext from '../contexts/TextureContext';
+import TextureContext from '../../contexts/TextureContext';
 
 export default function Background() {
   const { gl, camera, size } = useThree();

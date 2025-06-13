@@ -1,6 +1,6 @@
+import { FrontSide, Mesh } from 'three';
 import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef } from 'react';
-import { FrontSide, Mesh } from 'three';
 
 export default function IrregularBody({
   geometryInfo,
