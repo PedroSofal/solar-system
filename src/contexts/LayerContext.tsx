@@ -20,6 +20,11 @@ const layerOptions: LayerOption[] = [
         id: 'label-dwarf-planet',
         value: true,
       },
+      {
+        label: 'Corpos menores',
+        id: 'label-minor-body',
+        value: true,
+      },
     ],
   },
   {
@@ -39,6 +44,11 @@ const layerOptions: LayerOption[] = [
       {
         label: 'Planetas-anões',
         id: 'hitbox-dwarf-planet',
+        value: true,
+      },
+      {
+        label: 'Corpos menores',
+        id: 'hitbox-minor-body',
         value: true,
       },
     ],
@@ -62,6 +72,11 @@ const layerOptions: LayerOption[] = [
         id: 'orbit-dwarf-planet',
         value: false,
       },
+      {
+        label: 'Corpos menores',
+        id: 'orbit-minor-body',
+        value: false,
+      },
     ],
   },
   {
@@ -74,12 +89,25 @@ const layerOptions: LayerOption[] = [
     id: 'all-moons',
     value: false,
   },
+  {
+    label: 'Todos os asteróides',
+    id: 'all-asteroids',
+    value: false,
+  },
+  {
+    label: 'Todos os cometas',
+    id: 'all-comets',
+    value: false,
+  },
 ];
 
 const LayerContext = createContext<{
   layers: LayerOption[];
   setLayers: (obj: LayerOption[]) => void;
-  getLayer: (parentId: LayerId, childId?: ChildId) => LayerOption | undefined;
+  getLayer: (
+    parentId: LayerId,
+    childId?: BodyTypeOptions,
+  ) => LayerOption | undefined;
 }>({
   layers: layerOptions,
   setLayers: () => {},
@@ -89,12 +117,20 @@ const LayerContext = createContext<{
 export function LayerProvider({ children }: { children: React.ReactNode }) {
   const [layers, setLayers] = useState<LayerOption[]>(layerOptions);
 
-  function getLayer(parentId: LayerId, childId?: ChildId) {
+  function getLayer(parentId: LayerId, childId?: BodyTypeOptions) {
     const parentLayer = layers.find((layer) => layer.id === parentId);
+
     if (!childId) return parentLayer;
 
+    let resolvedChildId: ChildId;
+    if (childId === 'asteroid' || childId === 'comet') {
+      resolvedChildId = 'minor-body';
+    } else {
+      resolvedChildId = childId;
+    }
+
     const subItem = parentLayer?.subItems?.find((item) => {
-      return item.id === `${parentId}-${childId}`;
+      return item.id === `${parentId}-${resolvedChildId}`;
     });
 
     return subItem;

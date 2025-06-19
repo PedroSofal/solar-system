@@ -5,16 +5,22 @@ import LayerContext from '../../contexts/LayerContext';
 import Background from './Background';
 import Sun from '../bodies/Sun';
 import MoonsContainer from '../bodies/Moon';
-import PlanetSystem from '../bodies/Planet';
 import TimeTicker from './TimeTicker';
+import HeliocentricBodies from '../bodies/HeliocentricBodies';
 
 export default memo(function SolarSystem() {
-  const { sun, planets, dwarfPlanets, loading } = useContext(BodyDataContext);
+  const { sun, planets, dwarfPlanets, asteroids, comets, loading } =
+    useContext(BodyDataContext);
   const { getLayer } = useContext(LayerContext);
   const ambientLightLayer = getLayer('ambient-light');
 
-  const allPlanets = useMemo(() => {
-    return [...(planets || []), ...(dwarfPlanets || [])];
+  const heliocentricBodies = useMemo(() => {
+    return [
+      ...(planets || []),
+      ...(dwarfPlanets || []),
+      ...(asteroids || []),
+      ...(comets || []),
+    ];
   }, [planets, dwarfPlanets]);
 
   useGLTF.preload('/models/generic-moon/scene.gltf');
@@ -26,8 +32,8 @@ export default memo(function SolarSystem() {
       <Background />
 
       {<Sun bodyData={sun as BodyType} />}
-      <PlanetSystem allPlanets={allPlanets} />
-      <MoonsContainer allPlanets={allPlanets} />
+      <HeliocentricBodies bodyGroup={heliocentricBodies} />
+      <MoonsContainer heliocentricBodies={heliocentricBodies} />
 
       <TimeTicker />
 

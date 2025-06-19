@@ -141,8 +141,16 @@ interface LayerOption {
   value?: boolean;
 }
 
-type LayerId = 'label' | 'hitbox' | 'orbit' | 'ambient-light' | 'all-moons';
-type ChildId = BodyTypeOptions;
+type LayerId =
+  | 'label'
+  | 'hitbox'
+  | 'orbit'
+  | 'ambient-light'
+  | 'all-moons'
+  | 'all-asteroids'
+  | 'all-comets';
+
+type ChildId = 'star' | 'planet' | 'moon' | 'dwarf-planet' | 'minor-body';
 
 interface NavItem {
   label: string;

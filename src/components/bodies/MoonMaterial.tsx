@@ -8,7 +8,7 @@ export default function MoonMaterial({
   id: string;
   meanRadius: number;
 }) {
-  const isMoon = id === 'moon';
+  const isEarthsMoon = id === 'moon';
   const isSmall = meanRadius < 600;
 
   const { getTexture } = useContext(TextureContext);
@@ -21,7 +21,7 @@ export default function MoonMaterial({
   const height = getTexture('lunarRock2_height');
   const normal = getTexture('lunarRock2_normal');
 
-  if (isMoon) {
+  if (isEarthsMoon) {
     return <meshStandardMaterial map={moonTexture} roughness={1} />;
   } else {
     return (

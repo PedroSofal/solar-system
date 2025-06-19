@@ -57,7 +57,7 @@ export default function Body({
 
   return (
     <group ref={bodyRef} name={id}>
-      {meanRadius < 150 ? (
+      {meanRadius < 170 ? (
         <IrregularBody geometryInfo={geometryInfo} />
       ) : (
         <Detailed distances={detailLevels.map((level) => level.distance)}>

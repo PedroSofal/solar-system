@@ -69,7 +69,8 @@ export default function Node({
   const scaledSemimajorAxis = toModelScale(semimajorAxis);
 
   const isMoon = bodyType === 'moon';
-  const color = getNodeColor(parent?.name || id, isMoon);
+  const isMinorBody = bodyType === 'comet' || bodyType === 'asteroid';
+  const color = getNodeColor(parent?.name || id, bodyType);
   const needsPrecessionCorrection = id === 'moon';
   const declustered =
     id === 'mercury' ||
@@ -117,7 +118,7 @@ export default function Node({
               scaledPolarRadius={scaledPolarRadius}
               dimension={dimension}
               material={
-                isMoon ? (
+                isMoon || isMinorBody ? (
                   <MoonMaterial id={id} meanRadius={meanRadius} />
                 ) : (
                   <PlanetMaterial id={id} />

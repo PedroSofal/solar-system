@@ -13,8 +13,6 @@ function rankResult(searchTerm: string, bodies: BodyType[]): BodyType[] {
   const term = searchTerm.toLowerCase();
 
   for (const body of bodies) {
-    if (body.parent?.type === 'asteroid') continue;
-
     if (body.name.toLowerCase().startsWith(term)) {
       nameMatches_strong.push(body);
     } else if (body.name.toLowerCase().includes(term)) {

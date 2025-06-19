@@ -29,6 +29,14 @@ export function getHitboxCullingPoints(
         nearStart: radius * 200,
         nearEnd: radius * 150,
       };
+    case 'asteroid':
+    case 'comet':
+      return {
+        farStart: 80000,
+        farEnd: 30000,
+        nearStart: radius * 200,
+        nearEnd: radius * 150,
+      };
     default:
       return {};
   }
@@ -58,6 +66,14 @@ export function getOrbitCullingPoints(
       return {
         farStart: id === 'ceres' ? 30000 : 150000,
         farEnd: id === 'ceres' ? 10000 : 50000,
+        nearStart: radius * 5000,
+        nearEnd: radius * 3000,
+      };
+    case 'asteroid':
+    case 'comet':
+      return {
+        farStart: 80000,
+        farEnd: 30000,
         nearStart: radius * 5000,
         nearEnd: radius * 3000,
       };

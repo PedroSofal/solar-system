@@ -7,7 +7,17 @@ export function mapBodyToNavItem(body: BodyType): NavItem {
   };
 }
 
-export function getNodeColor(id: string, isMoon = false) {
+export function getNodeColor(id: string, bodyType: BodyTypeOptions) {
+  if (bodyType === 'dwarf-planet') {
+    return '#aaaaaa';
+  }
+
+  if (bodyType === 'comet') {
+    return '#63d3ff';
+  }
+
+  const isMoon = bodyType === 'moon';
+
   switch (id) {
     case 'mercury':
       return '#b970f5';

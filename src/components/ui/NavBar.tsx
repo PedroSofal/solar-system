@@ -15,7 +15,7 @@ export default function NavBar({
     React.SetStateAction<string | null | undefined>
   >;
 }) {
-  const { sun, planets, moons, dwarfPlanets, loading } =
+  const { sun, planets, moons, dwarfPlanets, asteroids, comets, loading } =
     useContext(BodyDataContext);
 
   const navTree = useMemo(() => {
@@ -40,6 +40,18 @@ export default function NavBar({
           ?.sort((a, b) => {
             return a.mass && b.mass ? a.mass.massValue - b.mass.massValue : 0;
           })
+          .map(mapBodyToNavItem),
+      },
+      {
+        label: 'Asteróides',
+        subItems: asteroids
+          ?.sort((a, b) => a.semimajorAxis - b.semimajorAxis)
+          .map(mapBodyToNavItem),
+      },
+      {
+        label: 'Cometas',
+        subItems: comets
+          ?.sort((a, b) => a.semimajorAxis - b.semimajorAxis)
           .map(mapBodyToNavItem),
       },
     ];

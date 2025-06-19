@@ -56,6 +56,7 @@ export default function Hitbox({
   const [pointerDownElement, setPointerDownElement] = useState<string>();
 
   const isMoon = bodyType === 'moon';
+  const isAsteroid = bodyType === 'asteroid';
 
   useDistanceCulling({
     farStart,
@@ -175,6 +176,7 @@ export default function Hitbox({
       onPointerUp={handlePointerUp}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
+      name="hitbox"
     >
       <group ref={circleRef}>
         <Line
@@ -199,8 +201,8 @@ export default function Hitbox({
           <Text
             ref={labelRef}
             position={[0, FIXED_RADIUS + 1, 0]}
-            fontWeight={isMoon ? 600 : 800}
-            fontSize={4.5}
+            fontWeight={isAsteroid ? 400 : isMoon ? 600 : 800}
+            fontSize={isAsteroid ? 3.5 : 4.5}
             letterSpacing={isMoon ? 0 : 0.2}
             color={labelColor}
             anchorX="left"
