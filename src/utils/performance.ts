@@ -9,6 +9,7 @@ export function getHitboxCullingPoints(
 
   switch (bodyType) {
     case 'planet':
+    case 'comet':
       return {
         farStart: declustered ? 60000 : undefined,
         farEnd: declustered ? 15000 : undefined,
@@ -30,7 +31,6 @@ export function getHitboxCullingPoints(
         nearEnd: radius * 150,
       };
     case 'asteroid':
-    case 'comet':
       return {
         farStart: 80000,
         farEnd: 30000,
@@ -51,6 +51,7 @@ export function getOrbitCullingPoints(
 
   switch (bodyType) {
     case 'planet':
+    case 'comet':
       return {
         nearStart: radius * 150,
         nearEnd: radius * 100,
@@ -70,7 +71,6 @@ export function getOrbitCullingPoints(
         nearEnd: radius * 3000,
       };
     case 'asteroid':
-    case 'comet':
       return {
         farStart: 80000,
         farEnd: 30000,

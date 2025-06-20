@@ -25,7 +25,7 @@ export default function ThreeCanvas({
         up: [0, 0, 1],
         fov: 30,
         near: 0.00001,
-        far: 200000,
+        far: 4000000,
       }}
     >
       <Suspense fallback={<LoadingProgress setIsLoaded={setIsLoaded} />}>

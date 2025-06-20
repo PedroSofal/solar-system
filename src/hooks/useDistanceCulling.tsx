@@ -25,7 +25,7 @@ function calculateCulling(
 }
 
 export default function useDistanceCulling({
-  farStart = 200000,
+  farStart = 20000000,
   farEnd = farStart,
   nearStart = 0,
   nearEnd = nearStart,
@@ -44,7 +44,8 @@ export default function useDistanceCulling({
   visibilityRef?: React.RefObject<boolean>;
 }) {
   useFrame(({ camera }) => {
-    if (!reference.current || (farStart === 200000 && nearStart === 0)) return;
+    if (!reference.current || (farStart === 20000000 && nearStart === 0))
+      return;
 
     const activeReference = getActiveLOD(reference.current) as Object3D;
     const bodyPosition = activeReference.getWorldPosition(new Vector3());
