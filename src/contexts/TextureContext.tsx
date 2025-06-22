@@ -4,15 +4,28 @@ import { Texture, TextureLoader } from 'three';
 
 //prettier-ignore
 const texturePaths: Record<string, string> = {
+  // Sun
+  sun: '/textures/sun/sun.jpg',
+
   // Dwarf Planets
-  ceres: '/textures/dwarf-planets/2k_ceres.jpg',
-  eris: '/textures/dwarf-planets/2k_eris.jpg',
-  haumea: '/textures/dwarf-planets/2k_haumea.jpg',
-  makemake: '/textures/dwarf-planets/2k_makemake.jpg',
-  pluto: '/textures/dwarf-planets/2k_pluto.jpg',
+  ceres: '/textures/dwarf-planets/ceres.jpg',
+  eris: '/textures/dwarf-planets/eris.jpg',
+  gonggong: '/textures/dwarf-planets/gonggong.jpg',
+  haumea: '/textures/dwarf-planets/haumea.jpg',
+  makemake: '/textures/dwarf-planets/makemake.jpg',
+  pluto: '/textures/dwarf-planets/pluto.jpg',
+  sedna: '/textures/dwarf-planets/sedna.jpg',
 
   // Moons
-  moon: '/textures/moons/2k_moon.jpg',
+  callisto: '/textures/moons/callisto.jpg',
+  enceladus: '/textures/moons/enceladus.jpg',
+  europa: '/textures/moons/europa.jpg',
+  ganymede: '/textures/moons/ganymede.jpg',
+  iapetus: '/textures/moons/iapetus.jpg',
+  io: '/textures/moons/io.jpg',
+  moon: '/textures/moons/moon.jpg',
+  tethys: '/textures/moons/tethys.jpg',
+  titan: '/textures/moons/titan.jpg',
   lunarRock2_albedo: '/textures/moons/lunar-rock2-bl/lunar-rock2_albedo.jpg',
   lunarRock2_height: '/textures/moons/lunar-rock2-bl/lunar-rock2_height.jpg',
   lunarRock2_normal: '/textures/moons/lunar-rock2-bl/lunar-rock2_normal.jpg',
@@ -22,24 +35,24 @@ const texturePaths: Record<string, string> = {
   earth_day: '/textures/planets/earth/8k_earth_daymap.jpg',
   earth_night: '/textures/planets/earth/8k_earth_nightmap.jpg',
   earth_specular: '/textures/planets/earth/8k_earth_specular_map.jpg',
-  jupiter: '/textures/planets/2k_jupiter.jpg',
-  mars: '/textures/planets/2k_mars.jpg',
-  mercury: '/textures/planets/2k_mercury.jpg',
-  neptune: '/textures/planets/2k_neptune.jpg',
-  saturn: '/textures/planets/2k_saturn.jpg',
-  uranus: '/textures/planets/2k_uranus.jpg',
-  venus: '/textures/planets/2k_venus.jpg',
+  jupiter: '/textures/planets/jupiter.jpg',
+  mars: '/textures/planets/mars.jpg',
+  mercury: '/textures/planets/mercury.jpg',
+  neptune: '/textures/planets/neptune.jpg',
+  saturn: '/textures/planets/saturn.jpg',
+  uranus: '/textures/planets/uranus.jpg',
+  venus: '/textures/planets/venus.jpg',
 
   // Particles
   rocks: '/textures/particles/rocks.png',
 
   // Background
-  px: '/textures/cubemap/px.jpg',
-  nx: '/textures/cubemap/nx.jpg',
-  py: '/textures/cubemap/py.jpg',
-  ny: '/textures/cubemap/ny.jpg',
-  pz: '/textures/cubemap/pz.jpg',
-  nz: '/textures/cubemap/nz.jpg',
+  px: '/textures/cubemap/px.webp',
+  nx: '/textures/cubemap/nx.webp',
+  py: '/textures/cubemap/py.webp',
+  ny: '/textures/cubemap/ny.webp',
+  pz: '/textures/cubemap/pz.webp',
+  nz: '/textures/cubemap/nz.webp',
 };
 
 const TextureContext = createContext<{

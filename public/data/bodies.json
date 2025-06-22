@@ -10454,7 +10454,7 @@
       "ra": null,
       "dec": null
     },
-    "bodyType": "asteroid"
+    "bodyType": "dwarf-planet"
   },
   {
     "id": "chariklo",
@@ -18732,6 +18732,104 @@
     "longAscNode": 233.079,
     "apsidalPeriod": 142.778,
     "nodalPeriod": 130,
+    "referencePlane": {
+      "ref": "ecliptic",
+      "ra": null,
+      "dec": null
+    },
+    "bodyType": "moon"
+  },
+  {
+    "id": "gonggong",
+    "name": "Gonggong",
+    "frenchName": "Gonggong",
+    "englishName": "Gonggong",
+    "description": "",
+    "moons": ["Xiangliu"],
+    "semimajorAxis": 10021576000,
+    "perihelion": 4944254506,
+    "aphelion": 15098898130,
+    "eccentricity": 0.50198,
+    "inclination": 30.82477,
+    "mass": {
+      "massValue": 1.75,
+      "massExponent": 21
+    },
+    "vol": null,
+    "density": 1.74,
+    "gravity": 0.31,
+    "escape": 0.62,
+    "meanRadius": 615,
+    "equaRadius": null,
+    "polarRadius": null,
+    "dimension": "",
+    "sideralOrbit": 200876.655,
+    "sideralRotation": 22.4,
+    "parent": null,
+    "discoveredBy": "Caltech (California Institute of Technology)",
+    "discoveryDate": "17/07/2007",
+    "alternativeName": "225088 Gonggong (2007 OR10)",
+    "obliquity": {
+      "axialTilt": 0,
+      "ra": null,
+      "dec": null
+    },
+    "avgTemp": null,
+    "ringSystem": null,
+    "mainAnomaly": 94.202,
+    "argPeriapsis": 206.941,
+    "longAscNode": 336.875,
+    "apsidalPeriod": null,
+    "nodalPeriod": null,
+    "referencePlane": {
+      "ref": "ecliptic",
+      "ra": null,
+      "dec": null
+    },
+    "bodyType": "dwarf-planet"
+  },
+  {
+    "id": "xiangliu",
+    "name": "Xiangliu",
+    "frenchName": "Xiangliu",
+    "englishName": "Xiangliu",
+    "description": "",
+    "moons": null,
+    "semimajorAxis": 24021,
+    "perihelion": null,
+    "aphelion": null,
+    "eccentricity": 0.2908,
+    "inclination": 83.08,
+    "mass": null,
+    "vol": null,
+    "density": null,
+    "gravity": null,
+    "escape": null,
+    "meanRadius": 50,
+    "equaRadius": null,
+    "polarRadius": null,
+    "dimension": "",
+    "sideralOrbit": 25.22073,
+    "sideralRotation": null,
+    "parent": {
+      "name": "gonggong",
+      "type": "dwarf-planet"
+    },
+    "discoveredBy": "Csaba Kiss, Gábor Marton, Thomas Müller",
+    "discoveryDate": "18/09/2010",
+    "alternativeName": "S/2010 (225088) 1",
+    "obliquity": {
+      "axialTilt": 0,
+      "ra": null,
+      "dec": null
+    },
+    "avgTemp": null,
+    "ringSystem": null,
+    "mainAnomaly": null,
+    "argPeriapsis": null,
+    "longAscNode": null,
+    "apsidalPeriod": null,
+    "nodalPeriod": null,
     "referencePlane": {
       "ref": "ecliptic",
       "ra": null,

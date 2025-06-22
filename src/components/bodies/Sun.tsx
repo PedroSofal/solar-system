@@ -1,6 +1,5 @@
-import { Group, Mesh, TextureLoader, AdditiveBlending, BackSide } from 'three';
-import { useLoader } from '@react-three/fiber';
-import { useMemo, useRef } from 'react';
+import { Group, Mesh, AdditiveBlending, BackSide } from 'three';
+import { useContext, useMemo, useRef } from 'react';
 import { useMatch } from 'react-router-dom';
 
 import vertexShader from '../../shaders/sun/vertex.glsl';
@@ -9,12 +8,16 @@ import Body from './Body';
 import useStickySize from '../../hooks/useStickySize';
 import { getBodyTiltQuaternionFromPole } from '../../utils/astrophysics';
 import { toModelScale } from '../../utils/scene';
+import TextureContext from '../../contexts/TextureContext';
 
 export default function Sun({ bodyData }: { bodyData: BodyType }) {
   const planetSystemMatch = useMatch('/corpos/:id');
 
   const sunRef = useRef<Group>(null);
   const sunshineRef = useRef<Mesh>(null);
+
+  const { getTexture } = useContext(TextureContext);
+  const texture = getTexture('sun');
 
   const { id, meanRadius, obliquity } = bodyData;
 
@@ -25,8 +28,6 @@ export default function Sun({ bodyData }: { bodyData: BodyType }) {
     const dec = obliquity.dec as number;
     return getBodyTiltQuaternionFromPole(ra, dec);
   }, []);
-
-  const texture = useLoader(TextureLoader, '/textures/sun/2k_sun.jpg');
 
   useStickySize(sunshineRef, sunRef, 3, 1);
 
