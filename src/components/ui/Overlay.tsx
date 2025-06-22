@@ -59,40 +59,53 @@ export default function Overlay() {
   }, []);
 
   return (
-    <div
-      className={`${isOverlayHidden ? 'pointer-events-none opacity-0' : 'pointer-events-auto opacity-100'} duration-300`}
-    >
-      {/* sombra esquerda */}
+    <>
       <div
-        className={`pointer-events-none absolute inset-0 z-10 w-[40rem] bg-linear-to-r from-black via-black/80 to-transparent duration-700 ${selectedBody && isNavbarExpanded ? '' : 'opacity-0'}`}
-      />
+        className={`${isOverlayHidden ? 'pointer-events-none opacity-0' : 'pointer-events-auto opacity-100'} duration-300`}
+      >
+        {/* sombra esquerda */}
+        <div
+          className={`pointer-events-none absolute inset-0 z-10 w-[40rem] bg-linear-to-r from-black via-black/80 to-transparent duration-700 ${selectedBody && isNavbarExpanded ? '' : 'opacity-0'}`}
+        />
 
-      {/* sombra baixo */}
-      <div
-        className={`pointer-events-none absolute bottom-0 h-60 w-full bg-linear-to-t from-black via-black/70 to-transparent duration-300 ${isTimeControlsExpanded ? '' : 'opacity-0'}`}
-      />
+        {/* sombra baixo */}
+        <div
+          className={`pointer-events-none absolute bottom-0 h-60 w-full bg-linear-to-t from-black via-black/70 to-transparent duration-300 ${isTimeControlsExpanded ? '' : 'opacity-0'}`}
+        />
 
-      <div className="pointer-events-none relative top-6 left-6 h-[calc(100vh-3rem)] w-[calc(100vw-3rem)]">
-        <div className="pointer-events-auto">
-          <TopLeftActions
-            selectedBody={selectedBody}
-            setSelectedBody={setSelectedBody}
-            isNavbarExpanded={isNavbarExpanded}
-            setIsNavbarExpanded={setIsNavbarExpanded}
-            isOverlayHidden={isOverlayHidden}
-          />
-          <TopRightAction
-            isOverlayHidden={isOverlayHidden}
-            setIsOverlayHidden={setIsOverlayHidden}
-          />
-          <TimeControls
-            isExpanded={isTimeControlsExpanded}
-            setIsExpanded={setIsTimeControlsExpanded}
-            isOverlayHidden={isOverlayHidden}
-          />
+        <div className="pointer-events-none relative top-6 left-6 h-[calc(100vh-3rem)] w-[calc(100vw-3rem)]">
+          <div className="pointer-events-auto">
+            <TopLeftActions
+              selectedBody={selectedBody}
+              setSelectedBody={setSelectedBody}
+              isNavbarExpanded={isNavbarExpanded}
+              setIsNavbarExpanded={setIsNavbarExpanded}
+              isOverlayHidden={isOverlayHidden}
+            />
+            <TopRightAction
+              isOverlayHidden={isOverlayHidden}
+              setIsOverlayHidden={setIsOverlayHidden}
+            />
+            <TimeControls
+              isExpanded={isTimeControlsExpanded}
+              setIsExpanded={setIsTimeControlsExpanded}
+              isOverlayHidden={isOverlayHidden}
+            />
+          </div>
         </div>
       </div>
-    </div>
+
+      {isOverlayHidden && (
+        <div className="animate-fadeTip fixed top-6 left-1/2 z-50 -translate-x-1/2 rounded-md bg-black/80 px-4 py-2 text-sm text-white shadow-lg backdrop-blur-sm">
+          Pressione{' '}
+          <kbd className="mx-1 font-mono text-base">
+            <span className="text-emerald-400">Shift</span> +{' '}
+            <span className="text-emerald-400">F</span>
+          </kbd>{' '}
+          para restaurar a interface
+        </div>
+      )}
+    </>
   );
 }
 

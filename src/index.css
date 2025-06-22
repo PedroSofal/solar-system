@@ -1,18 +1,30 @@
 @import 'tailwindcss';
 
 @theme {
-  --animate-fadeCycle: fade infinite;
+  --animate-fadeCycle: fadeIn infinite;
+  --animate-fadeTip: fadeInOut 4s ease forwards;
 
-  @keyframes fade {
-    0% {
+  @keyframes fadeIn {
+    0%,
+    40% {
       opacity: 0;
     }
     20% {
       opacity: 1;
     }
-    40% {
-      opacity: 0;
-    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
