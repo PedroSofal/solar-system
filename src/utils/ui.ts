@@ -13,7 +13,7 @@ export function getNodeColor(id: string, bodyType: BodyTypeOptions) {
   }
 
   if (bodyType === 'comet') {
-    return '#63d3ff';
+    return '#80c1ff';
   }
 
   const isMoon = bodyType === 'moon';

@@ -51,7 +51,6 @@ export function getOrbitCullingPoints(
 
   switch (bodyType) {
     case 'planet':
-    case 'comet':
       return {
         nearStart: radius * 150,
         nearEnd: radius * 100,
@@ -76,6 +75,11 @@ export function getOrbitCullingPoints(
         farEnd: 30000,
         nearStart: radius * 5000,
         nearEnd: radius * 3000,
+      };
+    case 'comet':
+      return {
+        nearStart: radius * 250000,
+        nearEnd: radius * 200000,
       };
     default:
       return {};

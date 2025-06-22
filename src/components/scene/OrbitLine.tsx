@@ -107,7 +107,11 @@ export default function OrbitLine({
       ];
     } else if (semimajorAxis > 4_498_396_441) {
       // usa mais pontos nas órbitas maiores que a de Netuno
-      return [{ points: getOrbitPoints(4000), distance: 0 }];
+      return [
+        { points: getOrbitPoints(10000), distance: 0 },
+        { points: getOrbitPoints(4000), distance: 200000 },
+        { points: getOrbitPoints(1000), distance: 500000 },
+      ];
     } else {
       return [{ points: getOrbitPoints(1500), distance: 0 }];
     }
