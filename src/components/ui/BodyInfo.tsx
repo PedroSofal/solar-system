@@ -243,6 +243,14 @@ export default function BodyInfo({
         </div>
 
         <InfoTable body={body} setSelectedBody={setSelectedBody} />
+
+        <div className="contents" style={{ direction: 'ltr' }}>
+          {body.discoveredBy && body.discoveryDate && (
+            <p className="text-sm text-white">
+              Descoberto por {body.discoveredBy} em {body.discoveryDate}.
+            </p>
+          )}
+        </div>
       </div>
     </>
   );
