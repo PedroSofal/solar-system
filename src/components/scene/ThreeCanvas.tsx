@@ -6,6 +6,7 @@ import { Suspense, useEffect } from 'react';
 import { SceneProvider } from '../../contexts/SceneContext';
 import CameraControls from './CameraControls';
 import SolarSystem from './SolarSystem';
+import { cameraConfig } from '../../constants/camera';
 
 export default function ThreeCanvas({
   isLoaded,
@@ -21,11 +22,11 @@ export default function ThreeCanvas({
       gl={{ logarithmicDepthBuffer: true }}
       shadows
       camera={{
-        position: [0, 50000, 18000],
+        position: cameraConfig.INITIAL_POS,
         up: [0, 0, 1],
-        fov: 30,
-        near: 0.00001,
-        far: 4000000,
+        fov: cameraConfig.MIN_FOV,
+        near: cameraConfig.NEAR,
+        far: cameraConfig.FAR,
       }}
     >
       <Suspense fallback={<LoadingProgress setIsLoaded={setIsLoaded} />}>
@@ -61,9 +62,9 @@ function ResponsiveFOV() {
   const size = useThree((state) => state.size);
 
   useEffect(() => {
-    const baseFov = 30;
-    const minFov = 30;
-    const maxFov = 90;
+    const baseFov = cameraConfig.MIN_FOV;
+    const minFov = cameraConfig.MIN_FOV;
+    const maxFov = cameraConfig.MAX_FOV;
 
     const adjustedFov = baseFov + (1400 - size.width) * 0.06;
 

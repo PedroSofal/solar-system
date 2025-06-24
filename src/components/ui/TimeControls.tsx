@@ -3,6 +3,7 @@ import TimeContext from '../../contexts/TimeContext';
 import Button from './Button';
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { fromJulianDate, toJulianDate } from '../../utils/time';
+import { timeConfig } from '../../constants/time';
 
 export default function TimeControls({
   isExpanded,
@@ -41,8 +42,8 @@ export default function TimeControls({
         <div className="pointer-events-auto relative w-full max-w-96 pb-8">
           <input
             type="range"
-            min={-11}
-            max={11}
+            min={-timeConfig.STEPS}
+            max={timeConfig.STEPS}
             step={1}
             value={modifier}
             onChange={handleChange}

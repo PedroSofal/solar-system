@@ -8,8 +8,6 @@ export default function MoonMaterial({
   id: string;
   meanRadius: number;
 }) {
-  const isSmall = meanRadius < 600;
-
   const { getTexture } = useContext(TextureContext);
 
   // MOONS WITH SPECIFIC TEXTURES -----------------
@@ -26,7 +24,7 @@ export default function MoonMaterial({
     <meshLambertMaterial
       map={albedo}
       normalMap={normal}
-      normalScale={isSmall ? 0.5 : 0.2}
+      normalScale={meanRadius < 600 ? 0.5 : 0.2}
       displacementMap={height}
       displacementScale={meanRadius * 0.0000002}
     />

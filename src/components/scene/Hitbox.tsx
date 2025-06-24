@@ -11,8 +11,7 @@ import LayerContext from '../../contexts/LayerContext';
 import CameraContext from '../../contexts/CameraContext';
 import CustomBillboard from './CustomBillboard';
 import { getActiveLOD } from '../../utils/scene';
-
-const FIXED_RADIUS = 3;
+import { hitboxConfig } from '../../constants/ui';
 
 export default function Hitbox({
   bodyRef,
@@ -55,9 +54,6 @@ export default function Hitbox({
 
   const [pointerDownElement, setPointerDownElement] = useState<string>();
 
-  const isMoon = bodyType === 'moon';
-  const isAsteroid = bodyType === 'asteroid';
-
   useDistanceCulling({
     farStart,
     farEnd,
@@ -75,7 +71,7 @@ export default function Hitbox({
     }
   }, -2);
 
-  useStickySize(hitboxRef, bodyRef, FIXED_RADIUS, bodyRadius);
+  useStickySize(hitboxRef, bodyRef, hitboxConfig.RADIUS, bodyRadius);
 
   const circlePoints = useMemo(() => {
     const points = [];
@@ -83,13 +79,13 @@ export default function Hitbox({
 
     for (let i = 0; i <= segments; i++) {
       const angle = (i / segments) * 2 * Math.PI;
-      const x = FIXED_RADIUS * Math.cos(angle);
-      const y = FIXED_RADIUS * Math.sin(angle);
+      const x = hitboxConfig.RADIUS * Math.cos(angle);
+      const y = hitboxConfig.RADIUS * Math.sin(angle);
       points.push(new Vector3(x, y, 0));
     }
 
     return points;
-  }, [FIXED_RADIUS]);
+  }, [hitboxConfig.RADIUS]);
 
   function handlePointerDown(e: ThreeEvent<PointerEvent>) {
     setPointerDownElement(e.object.uuid);
@@ -191,7 +187,7 @@ export default function Hitbox({
         />
 
         <mesh>
-          <circleGeometry args={[FIXED_RADIUS, 16]} />
+          <circleGeometry args={[hitboxConfig.RADIUS, 16]} />
           <meshBasicMaterial transparent opacity={0} depthWrite={false} />
         </mesh>
       </group>
@@ -200,16 +196,16 @@ export default function Hitbox({
         <CustomBillboard priority={-2} visible={labelLayer?.value}>
           <Text
             ref={labelRef}
-            position={[0, FIXED_RADIUS + 1, 0]}
-            fontWeight={isAsteroid ? 400 : isMoon ? 600 : 800}
-            fontSize={isAsteroid ? 3.5 : 4.5}
-            letterSpacing={isMoon ? 0 : 0.2}
+            position={[0, hitboxConfig.RADIUS + 1, 0]}
+            fontWeight={hitboxConfig.FONT_WEIGHT[bodyType]}
+            fontSize={hitboxConfig.FONT_SIZE[bodyType]}
+            letterSpacing={hitboxConfig.LETTER_SPACING[bodyType]}
             color={labelColor}
             anchorX="left"
             anchorY="bottom"
             textAlign="left"
           >
-            {isMoon ? labelTitle : labelTitle.toUpperCase()}
+            {bodyType === 'moon' ? labelTitle : labelTitle.toUpperCase()}
           </Text>
         </CustomBillboard>
       )}

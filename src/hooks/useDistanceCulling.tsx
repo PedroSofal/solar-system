@@ -1,6 +1,7 @@
 import { useFrame } from '@react-three/fiber';
 import { Object3D, Vector3 } from 'three';
 import { getActiveLOD } from '../utils/scene';
+import { cameraConfig } from '../constants/camera';
 
 function calculateCulling(
   currentDistance: number,
@@ -25,7 +26,7 @@ function calculateCulling(
 }
 
 export default function useDistanceCulling({
-  farStart = 20000000,
+  farStart = cameraConfig.FAR,
   farEnd = farStart,
   nearStart = 0,
   nearEnd = nearStart,
@@ -44,7 +45,10 @@ export default function useDistanceCulling({
   visibilityRef?: React.RefObject<boolean>;
 }) {
   useFrame(({ camera }) => {
-    if (!reference.current || (farStart === 20000000 && nearStart === 0))
+    if (
+      !reference.current ||
+      (farStart === cameraConfig.FAR && nearStart === 0)
+    )
       return;
 
     const activeReference = getActiveLOD(reference.current) as Object3D;

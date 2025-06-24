@@ -35,6 +35,16 @@ type BodyTypeOptions =
   | 'asteroid'
   | 'comet';
 
+type PlanetId =
+  | 'mercury'
+  | 'venus'
+  | 'earth'
+  | 'mars'
+  | 'jupiter'
+  | 'saturn'
+  | 'uranus'
+  | 'neptune';
+
 interface Parent {
   name: string;
   type: BodyTypeOptions;

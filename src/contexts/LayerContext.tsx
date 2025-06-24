@@ -1,105 +1,5 @@
 import React, { createContext, useState } from 'react';
-
-const layerOptions: LayerOption[] = [
-  {
-    label: 'Rótulos',
-    id: 'label',
-    subItems: [
-      {
-        label: 'Planetas',
-        id: 'label-planet',
-        value: true,
-      },
-      {
-        label: 'Satélites naturais',
-        id: 'label-moon',
-        value: true,
-      },
-      {
-        label: 'Planetas-anões',
-        id: 'label-dwarf-planet',
-        value: true,
-      },
-      {
-        label: 'Corpos menores',
-        id: 'label-minor-body',
-        value: true,
-      },
-    ],
-  },
-  {
-    label: 'Hitboxes',
-    id: 'hitbox',
-    subItems: [
-      {
-        label: 'Planetas',
-        id: 'hitbox-planet',
-        value: true,
-      },
-      {
-        label: 'Satélites naturais',
-        id: 'hitbox-moon',
-        value: true,
-      },
-      {
-        label: 'Planetas-anões',
-        id: 'hitbox-dwarf-planet',
-        value: true,
-      },
-      {
-        label: 'Corpos menores',
-        id: 'hitbox-minor-body',
-        value: true,
-      },
-    ],
-  },
-  {
-    label: 'Órbitas',
-    id: 'orbit',
-    subItems: [
-      {
-        label: 'Planetas',
-        id: 'orbit-planet',
-        value: true,
-      },
-      {
-        label: 'Satélites naturais',
-        id: 'orbit-moon',
-        value: true,
-      },
-      {
-        label: 'Planetas-anões',
-        id: 'orbit-dwarf-planet',
-        value: false,
-      },
-      {
-        label: 'Corpos menores',
-        id: 'orbit-minor-body',
-        value: false,
-      },
-    ],
-  },
-  {
-    label: 'Luz ambiente',
-    id: 'ambient-light',
-    value: false,
-  },
-  {
-    label: 'Todas as luas',
-    id: 'all-moons',
-    value: false,
-  },
-  {
-    label: 'Todos os asteróides',
-    id: 'all-asteroids',
-    value: false,
-  },
-  {
-    label: 'Todos os cometas',
-    id: 'all-comets',
-    value: false,
-  },
-];
+import { DEFAULT_LAYER_CONFIG } from '../constants/layers';
 
 const LayerContext = createContext<{
   layers: LayerOption[];
@@ -109,13 +9,13 @@ const LayerContext = createContext<{
     childId?: BodyTypeOptions,
   ) => LayerOption | undefined;
 }>({
-  layers: layerOptions,
+  layers: DEFAULT_LAYER_CONFIG,
   setLayers: () => {},
   getLayer: () => undefined,
 });
 
 export function LayerProvider({ children }: { children: React.ReactNode }) {
-  const [layers, setLayers] = useState<LayerOption[]>(layerOptions);
+  const [layers, setLayers] = useState<LayerOption[]>(DEFAULT_LAYER_CONFIG);
 
   function getLayer(parentId: LayerId, childId?: BodyTypeOptions) {
     const parentLayer = layers.find((layer) => layer.id === parentId);

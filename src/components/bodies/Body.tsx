@@ -28,11 +28,13 @@ export default function Body({
 }) {
   useFocusOnBody(id, bodyRef);
 
+  const isIrregular = meanRadius < 170;
+
   const geometryInfo = useMemo(() => {
     let initialRadius: number;
     let deformation: [x: number, y: number, z: number];
 
-    if (dimension && (!meanRadius || meanRadius < 150)) {
+    if (dimension && isIrregular) {
       const xyz = dimension.split('x').map(Number);
       initialRadius = 1;
       deformation = [
@@ -57,7 +59,7 @@ export default function Body({
 
   return (
     <group ref={bodyRef} name={id}>
-      {meanRadius < 170 ? (
+      {isIrregular ? (
         <IrregularBody geometryInfo={geometryInfo} />
       ) : (
         <Detailed distances={detailLevels.map((level) => level.distance)}>

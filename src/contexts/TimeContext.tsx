@@ -1,20 +1,6 @@
 import React, { createContext, useCallback, useRef, useState } from 'react';
 import { toJulianDate } from '../utils/time';
-
-const timeMachineMap = {
-  0: { scale: 1, label: 'Velocidade normal' },
-  1: { scale: 10, label: '10 segundos/s' },
-  2: { scale: 60, label: '1 minuto/s' },
-  3: { scale: 30 * 60, label: '30 minutos/s' },
-  4: { scale: 60 * 60, label: '1 hora/s' },
-  5: { scale: 12 * 60 * 60, label: '12 horas/s' },
-  6: { scale: 24 * 60 * 60, label: '1 dia/s' },
-  7: { scale: 7 * 24 * 60 * 60, label: '1 semana/s' },
-  8: { scale: 30 * 24 * 60 * 60, label: '1 mês/s' },
-  9: { scale: 180 * 24 * 60 * 60, label: '6 meses/s' },
-  10: { scale: 365 * 24 * 60 * 60, label: '1 ano/s' },
-  11: { scale: 2 * 365 * 24 * 60 * 60, label: '2 anos/s' },
-} as Record<number, { scale: number; label: string }>;
+import { timeConfig } from '../constants/time';
 
 const TimeContext = createContext<{
   timerRef: React.RefObject<number>;
@@ -78,7 +64,7 @@ export function TimeProvider({ children }: { children: React.ReactNode }) {
   function play(newModifier = modifier) {
     const absoluteModifier = Math.abs(newModifier);
     const sign = newModifier === 0 ? 1 : Math.sign(newModifier);
-    const { scale, label } = timeMachineMap[absoluteModifier];
+    const { scale, label } = timeConfig.TIME_MACHINE_MAP[absoluteModifier];
 
     setModifier(newModifier);
     setTimeScale(scale * sign);

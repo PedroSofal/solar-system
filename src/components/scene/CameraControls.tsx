@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import CameraContext from '../../contexts/CameraContext';
 import SceneContext from '../../contexts/SceneContext';
 import { getBodyMeshFromGroup } from '../../utils/scene';
+import { cameraConfig } from '../../constants/camera';
 
 export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   const { orbitControlsRef, trackballControlsRef, targetRef, isFollowing } =
@@ -66,12 +67,12 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     const sceneSun = scene.current.getObjectByName('sun');
     if (sceneSun) targetRef.current = sceneSun as Group;
 
-    orbitControls.object.position.set(0, 50000, 18000);
+    orbitControls.object.position.copy(cameraConfig.INITIAL_POS);
 
     gsap.to(orbitControls.object.position, {
-      x: -3000,
-      y: 4000,
-      z: 2000,
+      x: cameraConfig.INTRO_POS.x,
+      y: cameraConfig.INTRO_POS.y,
+      z: cameraConfig.INTRO_POS.z,
       ease: 'power4.out',
       duration: 2.5,
       onUpdate: () => {
@@ -85,8 +86,8 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
     <>
       <OrbitControls
         ref={orbitControlsRef}
-        maxDistance={120000}
-        minDistance={0.00005}
+        maxDistance={cameraConfig.MAX_DISTANCE}
+        minDistance={cameraConfig.MIN_DISTANCE}
         enableZoom={false}
       />
 
@@ -94,8 +95,8 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
         ref={trackballControlsRef}
         noPan
         noRotate
-        zoomSpeed={0.5}
-        dynamicDampingFactor={0.05}
+        zoomSpeed={cameraConfig.ZOOM_SPEED}
+        dynamicDampingFactor={cameraConfig.DAMPING_FACTOR}
       />
     </>
   );

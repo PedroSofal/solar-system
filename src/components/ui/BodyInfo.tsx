@@ -101,7 +101,7 @@ function constructBodyInfo(body: BodyType) {
       ? {
           icon: <AvgTempIcon />,
           label: 'Temperatura',
-          value: `${(body.avgTemp - 273.1).toLocaleString()} °C`,
+          value: `${(body.avgTemp - 273).toLocaleString()} °C`,
           tooltip: 'Temperatura média medida na superfície.',
         }
       : null,
