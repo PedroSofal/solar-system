@@ -15,10 +15,6 @@ export default function HeliocentricBodies({
 }) {
   const { id: routeId } = useParams();
 
-  const semimajorAxes = bodyGroup.map((p) => p.semimajorAxis ?? 0);
-  const min_a = Math.min(...semimajorAxes);
-  const max_a = Math.max(...semimajorAxes);
-
   return bodyGroup.map((body) => (
     <HeliocentricBody
       key={body.id}
@@ -27,8 +23,6 @@ export default function HeliocentricBodies({
         body.id === routeId ||
           body.moonBodies?.find((moon) => moon.id === routeId),
       )}
-      min_a={min_a}
-      max_a={max_a}
     />
   ));
 }
@@ -36,15 +30,11 @@ export default function HeliocentricBodies({
 const HeliocentricBody = memo(function ({
   bodyData,
   isSystemFocused,
-  min_a,
-  max_a,
 }: {
   bodyData: BodyType;
   isSystemFocused: boolean;
-  min_a: number;
-  max_a: number;
 }) {
-  const { ringSystem, meanRadius, semimajorAxis, bodyType } = bodyData;
+  const { ringSystem, meanRadius, bodyType } = bodyData;
 
   const heliocentricContainerRef = useRef<Group>(null);
   const bodyRef = useRef<Group>(null);
@@ -65,9 +55,6 @@ const HeliocentricBody = memo(function ({
       <ShadowSource
         bodyRef={bodyRef}
         meanRadius={meanRadius}
-        semimajorAxis={semimajorAxis}
-        min_a={min_a}
-        max_a={max_a}
         isSystemFocused={isSystemFocused}
       />
     </group>

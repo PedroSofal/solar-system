@@ -3,19 +3,19 @@ import { useEffect, useRef, useState } from 'react';
 import { DirectionalLight, Group, Vector3 } from 'three';
 import { getBodyMeshFromGroup } from '../../utils/scene';
 
+function getLightIntensity(distance: number) {
+  const clamped = Math.max(distance * 0.0005, 0.1); // evita divisão por zero
+  const decayed = 4 / clamped ** 1.1;
+  return Math.max(decayed, 0.2);
+}
+
 export default function ShadowSource({
   bodyRef,
   meanRadius,
-  semimajorAxis,
-  min_a,
-  max_a,
   isSystemFocused,
 }: {
   bodyRef: React.RefObject<Group | null>;
   meanRadius: number;
-  semimajorAxis: number;
-  min_a: number;
-  max_a: number;
   isSystemFocused: boolean;
 }) {
   const shadowSourceRef = useRef<DirectionalLight>(null);
@@ -25,12 +25,6 @@ export default function ShadowSource({
 
   const shadowSourceFrustumFace = meanRadius * 0.000008;
   const shadowSourceFrustumHeight = meanRadius >= 24622 ? 1000 : 100; // Ref: Netuno
-  const a = semimajorAxis ?? 0;
-  const normalized = (a - min_a) / (max_a - min_a);
-  const minIntensity = 1;
-  const maxIntensity = 8;
-  const shadowSourceIntensity =
-    minIntensity + Math.pow(1 - normalized, 20) * (maxIntensity - minIntensity);
 
   // Atrasa a troca de visibilidade para dar tempo do gsap animar a câmera
   useEffect(() => {
@@ -44,7 +38,9 @@ export default function ShadowSource({
   }, [isSystemFocused]);
 
   useFrame(() => {
-    if (!bodyRef.current || !shadowSourceRef.current) return;
+    if (!bodyRef.current || !shadowSourceRef.current || !isSystemFocused) {
+      return;
+    }
 
     const activeReference = getBodyMeshFromGroup(bodyRef.current);
     const bodyPosition = activeReference.getWorldPosition(new Vector3());
@@ -55,8 +51,12 @@ export default function ShadowSource({
       .copy(bodyPosition)
       .add(toCenter.multiplyScalar(shadowSourceFrustumHeight / 2));
 
+    const distanceToSun = bodyPosition.distanceTo(center);
+    const intensity = getLightIntensity(distanceToSun);
+
     shadowSourceRef.current.position.copy(shadowSourcePosition);
     shadowSourceRef.current.target = bodyRef.current;
+    shadowSourceRef.current.intensity = intensity;
 
     // if (backdropRef.current) {
     //   const toCenter2 = new Vector3()
@@ -75,7 +75,6 @@ export default function ShadowSource({
         visible={isShadowSourceVisible}
         castShadow
         color={'white'}
-        intensity={shadowSourceIntensity}
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
         shadow-camera-near={1}
