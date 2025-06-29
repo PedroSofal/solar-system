@@ -20,4 +20,5 @@ export const cometTrailConfig = {
 export const ringSystemConfig = {
   SPIN_SPEED: 0.000008,
   HEIGHT_MULTIPLIER: 0.01,
+  PARTICLE_BASE_SIZE: 0.00068,
 };

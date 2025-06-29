@@ -2,6 +2,8 @@ varying vec3 vWorldPosition;
 varying vec3 vNormal;
 varying vec3 vColor;
 
+uniform float uParticleSize;
+
 #include <common>
 #include <logdepthbuf_pars_vertex>
 
@@ -11,7 +13,7 @@ void main() {
   vColor = color;
 
   vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-  gl_PointSize = 0.0002 * (1000.0 / -mvPosition.z);
+  gl_PointSize = uParticleSize * (1000.0 / -mvPosition.z);
   // gl_PointSize = 1.0;
   gl_Position = projectionMatrix * mvPosition;
 

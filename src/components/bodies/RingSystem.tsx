@@ -20,7 +20,7 @@ import useFallbackData from '../../hooks/useFallbackData';
 import { getActiveLOD, toModelScale } from '../../utils/scene';
 import { ringSystemConfig } from '../../constants/scene';
 
-const { SPIN_SPEED, HEIGHT_MULTIPLIER } = ringSystemConfig;
+const { SPIN_SPEED, HEIGHT_MULTIPLIER, PARTICLE_BASE_SIZE } = ringSystemConfig;
 
 function setHslValue(position: number, settings: HslValue) {
   if (typeof settings === 'object' && 'customRanges' in settings) {
@@ -172,6 +172,7 @@ export default function RingSystem({
       uLightPosition: { value: new Vector3(0, 0, 0) },
       uBodyPosition: { value: new Vector3() },
       uBodyRadius: { value: scaledEquaRadius },
+      uParticleSize: { value: scaledEquaRadius * PARTICLE_BASE_SIZE },
       uAmbientLight: { value: ambientLight.value },
     }),
     [],
