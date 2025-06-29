@@ -25,11 +25,13 @@ import {
 export default function Node({
   bodyData,
   bodyRef,
-  children,
+  ringSystem,
+  trail,
 }: {
   bodyData: BodyType;
   bodyRef: React.RefObject<Group | null>;
-  children?: React.ReactNode;
+  ringSystem?: React.ReactNode;
+  trail?: React.ReactNode;
 }) {
   const {
     bodyType,
@@ -150,8 +152,9 @@ export default function Node({
               {...hitboxCulling}
             />
           </group>
-          <group>{children}</group>
+          {ringSystem && <group>{ringSystem}</group>}
         </group>
+        {trail && <group>{trail}</group>}
       </group>
       <OrbitLine
         orbitRef={orbitRef}

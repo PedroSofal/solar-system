@@ -201,16 +201,10 @@ export default function RingSystem({
             <bufferGeometry>
               <bufferAttribute
                 attach="attributes-position"
-                array={particles.positions}
-                itemSize={3}
-                count={particles.positions.length / 3}
                 args={[particles.positions, 3]}
               />
               <bufferAttribute
                 attach="attributes-color"
-                array={particles.colors}
-                itemSize={3}
-                count={particles.colors.length / 3}
                 args={[particles.colors, 3]}
               />
             </bufferGeometry>

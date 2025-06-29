@@ -7,6 +7,7 @@ import useProximityLoad from '../../hooks/useProximityLoad';
 import useBodyVisibility from '../../hooks/useBodyVisibility';
 
 const RingSystem = lazy(() => import('./RingSystem'));
+const CometTrail = lazy(() => import('./CometTrail'));
 
 export default function HeliocentricBodies({
   bodyGroup,
@@ -40,17 +41,30 @@ const HeliocentricBody = memo(function ({
   const bodyRef = useRef<Group>(null);
 
   const isRingSystemLoaded = useProximityLoad(bodyRef, 2000);
+  const isCometTrailLoaded = useProximityLoad(bodyRef, 2000);
+
   useBodyVisibility(heliocentricContainerRef, bodyType, isSystemFocused);
 
   return (
     <group ref={heliocentricContainerRef} name="corpo heliocêntrico">
-      <Node bodyData={bodyData} bodyRef={bodyRef}>
-        <Suspense fallback={null}>
-          {ringSystem && isRingSystemLoaded && (
-            <RingSystem bodyRef={bodyRef} bodyData={bodyData} />
-          )}
-        </Suspense>
-      </Node>
+      <Node
+        bodyData={bodyData}
+        bodyRef={bodyRef}
+        ringSystem={
+          <Suspense fallback={null}>
+            {ringSystem && isRingSystemLoaded && (
+              <RingSystem bodyRef={bodyRef} bodyData={bodyData} />
+            )}
+          </Suspense>
+        }
+        trail={
+          <Suspense fallback={null}>
+            {bodyType === 'comet' && isCometTrailLoaded && (
+              <CometTrail bodyRef={bodyRef} bodyData={bodyData} />
+            )}
+          </Suspense>
+        }
+      />
 
       <ShadowSource
         bodyRef={bodyRef}

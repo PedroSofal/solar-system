@@ -177,3 +177,13 @@ interface CullingPoints {
   nearStart?: number;
   nearEnd?: number;
 }
+
+interface Particle {
+  position: Vector3;
+  velocity: Vector3;
+  size: number;
+  age: number;
+  _maxAge: number;
+  color: Color;
+  isActive: boolean;
+}

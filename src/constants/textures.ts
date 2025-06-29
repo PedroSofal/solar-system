@@ -41,6 +41,7 @@ export const TEXTURE_PATHS: Record<string, string> = {
 
   // Particles
   rocks: '/textures/particles/rocks.png',
+  cometTrail: '/textures/particles/comet-trail.png',
 
   // Background
   px: '/textures/cubemap/px.webp',
