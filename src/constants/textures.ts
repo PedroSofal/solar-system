@@ -40,7 +40,7 @@ export const TEXTURE_PATHS: Record<string, string> = {
   venus: '/textures/planets/venus.jpg',
 
   // Particles
-  rocks: '/textures/particles/rocks.png',
+  ringParticle: '/textures/particles/ring-particle.png',
   cometTrail: '/textures/particles/comet-trail.png',
 
   // Background

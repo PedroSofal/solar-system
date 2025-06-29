@@ -18,6 +18,9 @@ import LayerContext from '../../contexts/LayerContext';
 import TextureContext from '../../contexts/TextureContext';
 import useFallbackData from '../../hooks/useFallbackData';
 import { getActiveLOD, toModelScale } from '../../utils/scene';
+import { ringSystemConfig } from '../../constants/scene';
+
+const { SPIN_SPEED, HEIGHT_MULTIPLIER } = ringSystemConfig;
 
 function setHslValue(position: number, settings: HslValue) {
   if (typeof settings === 'object' && 'customRanges' in settings) {
@@ -99,7 +102,7 @@ export default function RingSystem({
   const { getTexture } = useContext(TextureContext);
 
   const ambientLight = getLayer('ambient-light') as LayerOption;
-  const particleTexture = getTexture('rocks');
+  const particleTexture = getTexture('ringParticle');
 
   const scaledEquaRadius = toModelScale(equaRadius as number);
   const scaledInnerEdge = toModelScale(innerEdge);
@@ -121,7 +124,7 @@ export default function RingSystem({
       const radius = MathUtils.lerp(scaledInnerEdge, scaledOuterEdge, position);
       const angle = Math.random() * Math.PI * 2;
       const x = Math.cos(angle) * radius;
-      const y = (Math.random() - 0.5) * (equaRadius / 20_000_000);
+      const y = (Math.random() - 0.5) * (scaledEquaRadius * HEIGHT_MULTIPLIER);
       const z = Math.sin(angle) * radius;
 
       positions.push(x, y, z);
@@ -160,7 +163,7 @@ export default function RingSystem({
 
     material.uniforms.uBodyPosition.value.copy(bodyPosition);
     material.uniforms.uBodyPosition.value.needsUpdate = true;
-    activeParticles.rotation.y += 0.00005 * timeScale;
+    activeParticles.rotation.y += SPIN_SPEED * timeScale;
   });
 
   const uniforms = useMemo(
@@ -192,7 +195,7 @@ export default function RingSystem({
     ],
     [],
   );
-
+  // if (true) return null;
   return (
     <group ref={particlesRef}>
       <Detailed distances={detailLevels.map((level) => level.distance)}>
