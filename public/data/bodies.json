@@ -10489,7 +10489,21 @@
       "dec": null
     },
     "avgTemp": null,
-    "ringSystem": null,
+    "ringSystem": {
+      "density": "high",
+      "innerEdge": 390.6,
+      "outerEdge": 408.8,
+      "majorGapZones": [{ "distance": 397.77, "width": 8.7 }],
+      "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": {
+          "customRanges": [{ "from": 0.2, "expansion": 0.5 }],
+          "min": 0.02,
+          "max": 0.3
+        }
+      }
+    },
     "mainAnomaly": 337.237,
     "argPeriapsis": 241.603,
     "longAscNode": 300.442,
