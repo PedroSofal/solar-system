@@ -22,15 +22,15 @@ Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.on
 
 ## Pontos de interesse
 
-A cena compreende todos os planetas e planetas-anões, bem como seus respectivos satélites naturais.
+A cena compreende todos os planetas e planetas-anões, bem como seus respectivos satélites naturais, além de dezenas de asteróides e os principais cometas.
 
 Saturno é sempre uma grande atração por causa de seu complexo sistema de anéis. Se você chegar bem pertinho conseguirá ver as milhares de partículas que compõem os anéis do gigante gasoso.
 
-Mas não é só Saturno que possui um sistema de anéis. Urano e Netuno são outros grandes exemplos a ter esse fenômeno. Já os anéis de Júpiter são mais difíceis de ver, mas estão lá, assim como o anel solitário do planeta-anão Haumea!
+Urano, Netuno e Júpiter são outros planetas que exibem um sistema de anéis, mas você sabia que o planeta-anão Haumea também possui um anel solitário?
 
-E, claro, não deixe de apreciar o nosso planeta azul flutuando no espaço com sua camada de atmosfera e efeitos de shaders baseados na luz do Sol. Dependendo da data é possível até observar o eclipse solar com a projeção da sombra da Lua sobre a Terra!
+Outro evento empolgante que acontece no Sistema Solar é a liberação de gases por cometas ativos quando se aproximam do Sol, devido à radiação e aos ventos solares, o que lhes confere uma coma em torno do núcleo e uma cauda formada por gás e poeira. Use a máquina do tempo para posicionar um cometa antes da órbita de Júpiter para conferir o fenômeno em ação.
 
-Atualizações futuras incluirão, ainda, cometas e asteróides.
+E, claro, não deixe de apreciar o nosso planeta azul flutuando no espaço com sua camada de atmosfera e efeitos de shaders baseados na luz do Sol. Dependendo da data é possível até observar o eclipse solar com a projeção da sombra da Lua sobre a Terra, ou até a passagem de um cometa como o Halley.
 
 ## Precisão
 
