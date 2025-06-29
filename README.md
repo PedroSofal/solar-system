@@ -26,7 +26,7 @@ A cena compreende todos os planetas e planetas-anões, bem como seus respectivos
 
 Saturno é sempre uma grande atração por causa de seu complexo sistema de anéis. Se você chegar bem pertinho conseguirá ver as milhares de partículas que compõem os anéis do gigante gasoso.
 
-Urano, Netuno e Júpiter são outros planetas que exibem um sistema de anéis, mas você sabia que o planeta-anão Haumea e o centauro Cariclo também possuem um anéis?
+Urano, Netuno e Júpiter são outros planetas que exibem um sistema de anéis, mas você sabia que o planeta-anão Haumea e o centauro Cáriclo também possuem um anéis?
 
 Outro evento empolgante que acontece no Sistema Solar é a liberação de gases por cometas ativos quando se aproximam do Sol, devido à radiação e aos ventos solares, o que lhes confere uma coma em torno do núcleo e uma cauda formada por gás e poeira. Use a máquina do tempo para posicionar um cometa antes da órbita de Júpiter para conferir o fenômeno em ação.
 
