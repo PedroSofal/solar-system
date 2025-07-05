@@ -8,6 +8,8 @@ Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.on
 
 ## Recursos principais
 
+- **Instalável e offline:** o Nova Orbis é um Progressive Web App (PWA), permitindo que você instale o app no seu dispositivo móvel ou desktop, com suporte a navegação offline após um primeiro acesso com internet;
+
 - **Máquina do tempo:** acelere a passagem do tempo, volte ao passado ou digite uma data personalizada para visualizar como era o Sistema Solar no momento exato em que você nasceu;
 
 - **Informações sobre os corpos celestes:** busque por um planeta ou lua e descubra informações como a duração do período orbital, temperatura média, entre muitas outras;
@@ -15,8 +17,6 @@ Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.on
 - **Controle de camadas:** exiba ou oculte camadas como os rótulos e as linhas das órbitas, ou ative a iluminação de ambiente para melhor visualizar regiões inalcançadas pela luz solar;
 
 - **Responsividade:** acesse pelo celular ou reduza a janela para o canto da tela sem perder funcionalidades;
-
-- **Acesso offline:** por não depender de dados em tempo real, você pode continuar usando o app normalmente sem depender de internet, após iniciá-lo;
 
 - **Performance otimizada:** o app utiliza culling, LOD, lazy loading e diversas outras técnicas para garantir a melhor experiência de performance, ao trabalhar com milhares de polígonos;
 
