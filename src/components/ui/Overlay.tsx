@@ -13,6 +13,7 @@ import {
   GlobeAltIcon as GlobeAltIconSolid,
   Square3Stack3DIcon as Square3Stack3DIconSolid,
 } from '@heroicons/react/24/solid';
+import Logo from '../../assets/logo/logo.svg?react';
 import BodyInfo from './BodyInfo';
 import Button from './Button';
 import CheckboxButton from './CheckboxButton';
@@ -75,6 +76,7 @@ export default function Overlay() {
 
         <div className="pointer-events-none relative top-6 left-6 h-[calc(100vh-3rem)] w-[calc(100vw-3rem)]">
           <div className="pointer-events-auto">
+            <LogoContainer isOverlayHidden={isOverlayHidden} />
             <TopLeftActions
               selectedBody={selectedBody}
               setSelectedBody={setSelectedBody}
@@ -202,6 +204,20 @@ function TopRightAction({
         />
       </div>
       <Layers isExpanded={isLayersExpanded} />
+    </div>
+  );
+}
+
+function LogoContainer({ isOverlayHidden }: { isOverlayHidden: boolean }) {
+  return (
+    <div
+      className={`${isOverlayHidden ? '-translate-y-[100%]' : ''} absolute right-0 left-0 z-10 duration-700`}
+    >
+      <nav className="flex justify-center">
+        <Link to={'/'}>
+          <Logo className="animate-logoIn w-30 opacity-0 sm:w-40" />
+        </Link>
+      </nav>
     </div>
   );
 }

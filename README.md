@@ -1,6 +1,6 @@
-# Solar System
+# NOVA ORBIS
 
-Este projeto, ainda sem nome, se trata de um modelo 3D, em escala, do Sistema Solar, construído com Three.js, a partir de dados reais obtidos principalmente do sistema Horizons da NASA.
+NOVA ORBIS é um modelo 3D, em escala, do Sistema Solar, construído com Three.js, a partir de dados reais obtidos principalmente do sistema Horizons da NASA.
 
 ## Versão online
 

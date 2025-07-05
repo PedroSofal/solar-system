@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../ui/Button';
+import Logo from '../../assets/logo/logo.svg?react';
+import Tagline from '../../assets/logo/tagline.svg?react';
 
 export default function Error404() {
   const [countdown, setCountdown] = useState(10);
@@ -21,14 +23,18 @@ export default function Error404() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-black to-slate-900 px-4 text-center text-white">
-      <h1 className="text-3xl font-bold md:text-4xl">
+      <div className="flex flex-col items-center gap-4">
+        <Logo className="w-[22rem]" />
+        <Tagline className="w-[16rem]" />
+      </div>
+      <h1 className="mt-20 text-3xl font-bold md:text-4xl">
         Rota não encontrada no universo!
       </h1>
       <p className="mt-4 max-w-xl text-lg">
         Parece que você se perdeu no espaço sideral. Vamos traçar um curso de
         volta para o Sistema Solar ☀🌍🪐
       </p>
-      <p className="mt-12 text-base">
+      <p className="mt-20 text-base">
         Redirecionando em <span className="font-semibold">{countdown}</span>{' '}
         segundos...
       </p>

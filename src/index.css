@@ -3,6 +3,7 @@
 @theme {
   --animate-fadeCycle: fadeIn infinite;
   --animate-fadeTip: fadeInOut 4s ease forwards;
+  --animate-logoIn: slideUpIn 1s ease forwards;
 
   @keyframes fadeIn {
     0%,
@@ -13,18 +14,29 @@
       opacity: 1;
     }
   }
-}
 
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    20%,
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
-  20%,
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
+
+  @keyframes slideUpIn {
+    0% {
+      opacity: 0;
+      transform: translateY(4rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
