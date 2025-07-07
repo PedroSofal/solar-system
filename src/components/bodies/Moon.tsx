@@ -31,17 +31,27 @@ export default function MoonsContainer({
 
   return heliocentricBodies.map((body) =>
     body.moonBodies?.map((moon) => (
-      <Moon key={moon.id} bodyData={moon} isFocused={routeId === moon.id} />
+      <Moon
+        key={moon.id}
+        bodyData={moon}
+        isBodyFocused={routeId === moon.id}
+        isSystemFocused={Boolean(
+          body.id === routeId ||
+            body.moonBodies?.find((moon) => moon.id === routeId),
+        )}
+      />
     )),
   );
 }
 
 const Moon = memo(function ({
   bodyData,
-  isFocused,
+  isBodyFocused,
+  isSystemFocused,
 }: {
   bodyData: BodyType;
-  isFocused: boolean;
+  isBodyFocused: boolean;
+  isSystemFocused: boolean;
 }) {
   const { parent, referencePlane, meanRadius, id } = bodyData;
 
@@ -54,7 +64,13 @@ const Moon = memo(function ({
   const parentId = (parent as Parent).name;
   const isMajorMoon = meanRadius >= getSizeThreshold(parentId);
 
-  useBodyVisibility(moonGroupRef, 'moon', isFocused, isMajorMoon);
+  useBodyVisibility(
+    moonGroupRef,
+    'moon',
+    isSystemFocused,
+    isBodyFocused,
+    isMajorMoon,
+  );
 
   useEffect(() => {
     parentRef.current = sceneRef.current.getObjectByName(parentId) as Group;

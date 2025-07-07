@@ -5,7 +5,8 @@ import { Group } from 'three';
 export default function useBodyVisibility(
   containerRef: React.RefObject<Group | null>,
   bodyType: BodyTypeOptions,
-  isFocused: boolean,
+  isSystemFocused: boolean,
+  isBodyFocused?: boolean,
   isMajorMoon?: boolean,
 ) {
   const { getLayer } = useContext(LayerContext);
@@ -15,12 +16,13 @@ export default function useBodyVisibility(
   useEffect(() => {
     let isVisible;
 
-    if (
-      bodyType === 'asteroid' ||
-      bodyType === 'comet' ||
-      bodyType === 'moon'
-    ) {
-      isVisible = areAllSimilarBodiesVisible || isFocused || isMajorMoon;
+    if (bodyType === 'asteroid' || bodyType === 'comet') {
+      isVisible = areAllSimilarBodiesVisible || isSystemFocused;
+    } else if (bodyType === 'moon') {
+      isVisible =
+        areAllSimilarBodiesVisible ||
+        isBodyFocused ||
+        (isMajorMoon && isSystemFocused);
     } else {
       isVisible = true;
     }
@@ -34,7 +36,8 @@ export default function useBodyVisibility(
   }, [
     containerRef.current,
     areAllSimilarBodiesVisible,
-    isFocused,
+    isSystemFocused,
+    isBodyFocused,
     isMajorMoon,
   ]);
 

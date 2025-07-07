@@ -62,6 +62,6 @@ export default defineConfig(({ mode }) => ({
     },
   },
   server: {
-    host: mode === 'lan' ? '192.168.15.8' : 'localhost',
+    host: mode === 'lan' ? '192.168.1.7' : 'localhost',
   },
 }));
