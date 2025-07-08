@@ -64,7 +64,7 @@ const Moon = memo(function ({
   const parentId = (parent as Parent).name;
   const isMajorMoon = meanRadius >= getSizeThreshold(parentId);
 
-  useBodyVisibility(
+  const isActive = useBodyVisibility(
     moonGroupRef,
     'moon',
     isSystemFocused,
@@ -77,7 +77,7 @@ const Moon = memo(function ({
   }, [parentId]);
 
   useFrame(() => {
-    if (!parentRef.current || !moonGroupRef.current) return;
+    if (!parentRef.current || !moonGroupRef.current || !isActive) return;
     const parentPosition = parentRef.current.getWorldPosition(new Vector3());
     moonGroupRef.current.position.copy(parentPosition);
   }, -1);
@@ -96,10 +96,12 @@ const Moon = memo(function ({
   }, [referencePlane, id, parentId]);
 
   return (
-    <group ref={moonGroupRef} name="ancoragem do satélite">
-      <group quaternion={refPlaneQuaternion} name="reference plane">
-        <Node bodyData={bodyData} bodyRef={bodyRef} />
+    isActive && (
+      <group ref={moonGroupRef} name="ancoragem do satélite">
+        <group quaternion={refPlaneQuaternion} name="reference plane">
+          <Node bodyData={bodyData} bodyRef={bodyRef} />
+        </group>
       </group>
-    </group>
+    )
   );
 });

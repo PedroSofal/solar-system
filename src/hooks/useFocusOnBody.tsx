@@ -1,5 +1,5 @@
 import { RefObject, useContext, useEffect } from 'react';
-import { useMatch, useNavigate } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 import { Group, Sphere, Vector3 } from 'three';
 import { getBodyMeshFromGroup } from '../utils/scene';
 import CameraContext from '../contexts/CameraContext';
@@ -45,7 +45,6 @@ export default function useFocusOnBody(
   bodyRef: RefObject<Group | null>,
 ) {
   const match = useMatch('/corpos/:id');
-  const navigate = useNavigate();
 
   const { timeScale } = useContext(TimeContext);
   const { targetRef, orbitControlsRef, focusTrigger, setIsFollowing } =
@@ -65,7 +64,6 @@ export default function useFocusOnBody(
   useEffect(() => {
     // Foco em um corpo a partir de um clique do usuário
     if (focusTrigger.id === id && bodyRef.current) {
-      navigate(`corpos/${focusTrigger.id}`);
       focusOnTarget(bodyRef.current);
     }
   }, [focusTrigger.trigger]);

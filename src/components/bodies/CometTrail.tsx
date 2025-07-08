@@ -92,9 +92,11 @@ function createParticlesPool(
 export default function CometTrail({
   bodyRef,
   bodyData,
+  isActive,
 }: {
   bodyRef: React.RefObject<Group | null>;
   bodyData: BodyType;
+  isActive: boolean;
 }) {
   const { id, meanRadius } = bodyData;
 
@@ -104,16 +106,19 @@ export default function CometTrail({
   return (
     <group name="comet-trail">
       <Head
+        isActive={isActive}
         bodyRef={bodyRef}
         color={trailColor}
         scaledMeanRadius={scaledMeanRadius}
       />
       <Tail
+        isActive={isActive}
         bodyRef={bodyRef}
         color={trailColor}
         scaledMeanRadius={scaledMeanRadius}
       />
       <Tail
+        isActive={isActive}
         bodyRef={bodyRef}
         color={trailColor}
         scaledMeanRadius={scaledMeanRadius}
@@ -124,10 +129,12 @@ export default function CometTrail({
 }
 
 function Head({
+  isActive,
   bodyRef,
   color,
   scaledMeanRadius,
 }: {
+  isActive: boolean;
   bodyRef: React.RefObject<Group | null>;
   color: Color;
   scaledMeanRadius: number;
@@ -135,7 +142,7 @@ function Head({
   const headRef = useRef<Mesh | null>(null);
 
   useFrame(() => {
-    if (!bodyRef.current || !headRef.current) return;
+    if (!bodyRef.current || !headRef.current || !isActive) return;
     const bodyPosition = new Vector3();
     bodyRef.current.getWorldPosition(bodyPosition);
     const opacity = getCometTrailIntensity(bodyPosition);
@@ -171,11 +178,13 @@ function Head({
 }
 
 function Tail({
+  isActive,
   bodyRef,
   color,
   scaledMeanRadius,
   disperse,
 }: {
+  isActive: boolean;
   bodyRef: React.RefObject<Group | null>;
   color: Color;
   scaledMeanRadius: number;
@@ -205,7 +214,7 @@ function Tail({
   const dispersedVelocity = new Vector3();
 
   useFrame(() => {
-    if (!bodyRef.current || !tailRef.current) return;
+    if (!bodyRef.current || !tailRef.current || !isActive) return;
 
     bodyRef.current.getWorldPosition(bodyPosition);
     const emissionRate = getCometTrailIntensity(bodyPosition);

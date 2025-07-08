@@ -43,28 +43,46 @@ const HeliocentricBody = memo(function ({
   const isRingSystemLoaded = useProximityLoad(bodyRef, 2000);
   const isCometTrailLoaded = useProximityLoad(bodyRef, 2000);
 
-  useBodyVisibility(heliocentricContainerRef, bodyType, isSystemFocused);
+  const isActive = useBodyVisibility(
+    heliocentricContainerRef,
+    bodyType,
+    isSystemFocused,
+  );
 
   return (
-    <group ref={heliocentricContainerRef} name="corpo heliocêntrico">
-      <Node
-        bodyData={bodyData}
-        bodyRef={bodyRef}
-        ringSystem={
-          <Suspense fallback={null}>
-            {ringSystem && isRingSystemLoaded && (
-              <RingSystem bodyRef={bodyRef} bodyData={bodyData} />
-            )}
-          </Suspense>
-        }
-        trail={
-          <Suspense fallback={null}>
-            {bodyType === 'comet' && isCometTrailLoaded && (
-              <CometTrail bodyRef={bodyRef} bodyData={bodyData} />
-            )}
-          </Suspense>
-        }
-      />
+    <group
+      ref={heliocentricContainerRef}
+      name="corpo heliocêntrico"
+      visible={isActive}
+    >
+      {isActive && (
+        <Node
+          bodyData={bodyData}
+          bodyRef={bodyRef}
+          ringSystem={
+            <Suspense fallback={null}>
+              {ringSystem && isRingSystemLoaded && (
+                <RingSystem
+                  bodyRef={bodyRef}
+                  bodyData={bodyData}
+                  isActive={isActive}
+                />
+              )}
+            </Suspense>
+          }
+          trail={
+            <Suspense fallback={null}>
+              {bodyType === 'comet' && isCometTrailLoaded && (
+                <CometTrail
+                  bodyRef={bodyRef}
+                  bodyData={bodyData}
+                  isActive={isActive}
+                />
+              )}
+            </Suspense>
+          }
+        />
+      )}
 
       <ShadowSource
         bodyRef={bodyRef}

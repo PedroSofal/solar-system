@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import LayerContext from '../contexts/LayerContext';
 import { Group } from 'three';
 
@@ -13,25 +13,32 @@ export default function useBodyVisibility(
   const layerAccess = `all-${bodyType}s` as LayerId;
   const areAllSimilarBodiesVisible = getLayer(layerAccess)?.value;
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    let isVisible;
+    let isCurrentVisible = false;
 
     if (bodyType === 'asteroid' || bodyType === 'comet') {
-      isVisible = areAllSimilarBodiesVisible || isSystemFocused;
+      isCurrentVisible = areAllSimilarBodiesVisible || isSystemFocused;
     } else if (bodyType === 'moon') {
-      isVisible =
+      isCurrentVisible = Boolean(
         areAllSimilarBodiesVisible ||
-        isBodyFocused ||
-        (isMajorMoon && isSystemFocused);
+          isBodyFocused ||
+          (isMajorMoon && isSystemFocused),
+      );
     } else {
-      isVisible = true;
+      isCurrentVisible = true;
     }
 
-    if (containerRef.current) {
-      containerRef.current.visible = !!isVisible;
-      containerRef.current.traverse((obj) => {
-        if (obj.name === 'hitbox') obj.visible = !!isVisible;
-      });
+    // if (containerRef.current) {
+    //   containerRef.current.visible = isCurrentVisible;
+    //   containerRef.current.traverse((obj) => {
+    //     if (obj.name === 'hitbox') obj.visible = isCurrentVisible;
+    //   });
+    // }
+
+    if (isVisible !== isCurrentVisible) {
+      setIsVisible(isCurrentVisible);
     }
   }, [
     containerRef.current,
@@ -41,5 +48,5 @@ export default function useBodyVisibility(
     isMajorMoon,
   ]);
 
-  return null;
+  return isVisible;
 }

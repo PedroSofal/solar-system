@@ -12,6 +12,7 @@ import CameraContext from '../../contexts/CameraContext';
 import CustomBillboard from './CustomBillboard';
 import { getActiveLOD } from '../../utils/scene';
 import { hitboxConfig } from '../../constants/ui';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hitbox({
   bodyRef,
@@ -48,6 +49,8 @@ export default function Hitbox({
 
   const { getLayer } = useContext(LayerContext);
   const { handleFocus } = useContext(CameraContext);
+
+  const navigate = useNavigate();
 
   const labelLayer = getLayer('label', bodyType);
   const circleLayer = getLayer('hitbox', bodyType);
@@ -101,6 +104,7 @@ export default function Hitbox({
       return;
     }
 
+    navigate(`corpos/${bodyRef.current.name}`);
     handleFocus(bodyRef.current.name);
     setPointerDownElement(undefined);
   }

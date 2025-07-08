@@ -1,6 +1,6 @@
 import { PerspectiveCamera } from 'three';
 import { Canvas, useThree } from '@react-three/fiber';
-// import { Perf } from 'r3f-perf';
+import { Perf } from 'r3f-perf';
 import { useProgress } from '@react-three/drei';
 import { Suspense, useEffect } from 'react';
 import { SceneProvider } from '../../contexts/SceneContext';
@@ -34,7 +34,7 @@ export default function ThreeCanvas({
           <SolarSystem />
           <CameraControls isLoaded={isLoaded} />
           <ResponsiveFOV />
-          {/* <Perf className="left-[50%] w-fit -translate-x-[50%]" /> */}
+          <Perf className="left-[50%] w-fit -translate-x-[50%]" />
         </SceneProvider>
       </Suspense>
     </Canvas>

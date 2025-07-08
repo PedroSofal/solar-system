@@ -20,11 +20,12 @@ import {
 import Button from './Button';
 import ButtonCheckbox from './CheckboxButton';
 
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 
 import BodyDataContext from '../../contexts/BodyDataContext';
 import CameraContext from '../../contexts/CameraContext';
 import { Description } from './Description';
+import { Link } from 'react-router-dom';
 
 interface InfoItemType {
   icon: React.ReactNode;
@@ -224,12 +225,16 @@ export default function BodyInfo({
               <div className="title border-bottom gradient-bg w-fit px-4 py-2">
                 {body.name}
               </div>
-              <Button
-                icon={<RocketLaunchIcon className="size-6" />}
-                className="secondary-btn-clr"
-                title={`Navegar até ${body.name}`}
-                onClick={() => handleFocus(body.id)}
-              />
+              <nav>
+                <Link to={`corpos/${body.id}`}>
+                  <Button
+                    icon={<RocketLaunchIcon className="size-6" />}
+                    className="secondary-btn-clr"
+                    title={`Navegar até ${body.name}`}
+                    onClick={() => handleFocus(body.id)}
+                  />
+                </Link>
+              </nav>
               <ButtonCheckbox
                 icon={<ViewfinderCircleIcon className="size-6" />}
                 className="secondary-btn-clr"

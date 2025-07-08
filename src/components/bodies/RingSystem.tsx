@@ -86,9 +86,11 @@ function getRandomPositionInRanges(ranges: [number, number][]) {
 export default function RingSystem({
   bodyRef,
   bodyData,
+  isActive,
 }: {
   bodyRef: React.RefObject<Group | null>;
   bodyData: BodyType;
+  isActive: boolean;
 }) {
   const { equaRadius } = useFallbackData(bodyData);
   const { ringSystem } = bodyData;
@@ -153,7 +155,7 @@ export default function RingSystem({
   }, [ambientLight.value]);
 
   useFrame(() => {
-    if (!bodyRef.current || !particlesRef.current) return;
+    if (!bodyRef.current || !particlesRef.current || !isActive) return;
 
     const bodyPosition = new Vector3();
     bodyRef.current.getWorldPosition(bodyPosition);
