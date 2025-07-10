@@ -13,10 +13,10 @@ export const UP_FRONT: Record<string, string> = {
   sedna: '/textures/dwarf-planets/sedna.ktx2',
 
   // Planets
-  earth_clouds: '/textures/planets/earth/earth_clouds.ktx2',
-  earth_day: '/textures/planets/earth/earth_daymap.ktx2',
-  earth_night: '/textures/planets/earth/earth_nightmap.ktx2',
-  earth_specular: '/textures/planets/earth/earth_specular_map.ktx2',
+  earth_clouds: '/textures/planets/earth/earth_clouds.jpg',
+  earth_day: '/textures/planets/earth/earth_daymap.jpg',
+  earth_night: '/textures/planets/earth/earth_nightmap.jpg',
+  earth_specular: '/textures/planets/earth/earth_specular_map.jpg',
   jupiter: '/textures/planets/jupiter.ktx2',
   mars: '/textures/planets/mars.ktx2',
   mercury: '/textures/planets/mercury.ktx2',

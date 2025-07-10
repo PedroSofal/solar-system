@@ -10,27 +10,33 @@ export default function Preload() {
   const { textureMap, ktx2Loader } = useContext(TextureContext);
   const { gl } = useThree();
 
-  const tradPaths = [];
-  const ktx2Paths = [];
+  const ktx2Entries: [string, string][] = [];
+  const tradEntries: [string, string][] = [];
 
-  for (const path of Object.values(UP_FRONT)) {
+  for (const [key, path] of Object.entries(UP_FRONT)) {
     if (path.endsWith('.ktx2')) {
-      ktx2Paths.push(path);
+      ktx2Entries.push([key, path]);
     } else {
-      tradPaths.push(path);
+      tradEntries.push([key, path]);
     }
   }
 
-  const ktx2Textures = useKTX2(ktx2Paths);
-  const tradTextures = useTexture(tradPaths);
-  const allTextures = ktx2Textures.concat(tradTextures);
+  const ktx2Textures = useKTX2(ktx2Entries.map(([, path]) => path));
+  const tradTextures = useTexture(tradEntries.map(([, path]) => path));
 
   useEffect(() => {
-    textureMap.current = Object.keys(UP_FRONT).reduce((acc, value, index) => {
-      acc[value] = allTextures[index];
-      return acc;
-    }, {} as TextureMap);
-  }, []);
+    const textureMapResult: TextureMap = {};
+
+    ktx2Entries.forEach(([key], index) => {
+      textureMapResult[key] = ktx2Textures[index];
+    });
+
+    tradEntries.forEach(([key], index) => {
+      textureMapResult[key] = tradTextures[index];
+    });
+
+    textureMap.current = textureMapResult;
+  }, [ktx2Textures, tradTextures]);
 
   useEffect(() => {
     const loader = new KTX2Loader();
