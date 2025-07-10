@@ -1,7 +1,7 @@
 import { useThree, useFrame } from '@react-three/fiber';
 import { CubeTextureLoader, Scene, PerspectiveCamera } from 'three';
-import { useContext, useEffect, useRef } from 'react';
-import TextureContext from '../../contexts/TextureContext';
+import { useEffect, useRef } from 'react';
+import { BG_CUBEMAP } from '../../constants/textures';
 
 export default function Background() {
   const { gl, camera, size } = useThree();
@@ -16,18 +16,9 @@ export default function Background() {
     ),
   );
 
-  const { getTexturePath } = useContext(TextureContext);
-
   useEffect(() => {
     const loader = new CubeTextureLoader();
-    const cubeTexture = loader.load([
-      getTexturePath('px'),
-      getTexturePath('nx'),
-      getTexturePath('py'),
-      getTexturePath('ny'),
-      getTexturePath('pz'),
-      getTexturePath('nz'),
-    ]);
+    const cubeTexture = loader.load(Object.values(BG_CUBEMAP));
 
     bgScene.current.background = cubeTexture;
   }, []);

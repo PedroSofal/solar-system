@@ -7,6 +7,7 @@ import { SceneProvider } from '../../contexts/SceneContext';
 import CameraControls from './CameraControls';
 import SolarSystem from './SolarSystem';
 import { cameraConfig } from '../../constants/camera';
+import Preload from './Preload';
 
 export default function ThreeCanvas({
   isLoaded,
@@ -29,6 +30,7 @@ export default function ThreeCanvas({
         far: cameraConfig.FAR,
       }}
     >
+      <Preload />
       <Suspense fallback={<LoadingProgress setIsLoaded={setIsLoaded} />}>
         <SceneProvider>
           <SolarSystem />

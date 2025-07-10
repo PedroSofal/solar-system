@@ -1,39 +1,29 @@
-import { useLoader } from '@react-three/fiber';
-import React, { createContext, useMemo } from 'react';
-import { Texture, TextureLoader } from 'three';
-import { TEXTURE_PATHS } from '../constants/textures';
+import React, { createContext, createRef, useRef } from 'react';
+import { Texture } from 'three';
+import { KTX2Loader } from 'three/examples/jsm/Addons.js';
 
 const TextureContext = createContext<{
+  textureMap: React.RefObject<TextureMap | null>;
   getTexture: (textureId: string) => Texture;
-  getTexturePath: (textureId: string) => string;
+  ktx2Loader: React.RefObject<KTX2Loader | null>;
 }>({
+  textureMap: createRef(),
   getTexture: (() => {}) as unknown as (textureId: string) => Texture,
-  getTexturePath: () => '',
+  ktx2Loader: createRef(),
 });
 
 export function TextureProvider({ children }: { children: React.ReactNode }) {
-  const textures = useLoader(TextureLoader, Object.values(TEXTURE_PATHS));
-
-  const textureMap = useMemo(() => {
-    return Object.keys(TEXTURE_PATHS).reduce(
-      (acc, planet, index) => {
-        acc[planet] = textures[index];
-        return acc;
-      },
-      {} as Record<string, Texture>,
-    );
-  }, [textures]);
+  const textureMap = useRef<TextureMap>(null);
+  const ktx2Loader = useRef<KTX2Loader>(null);
 
   function getTexture(textureId: string) {
-    return textureMap[textureId];
-  }
-
-  function getTexturePath(textureId: string) {
-    return TEXTURE_PATHS[textureId];
+    if (textureMap.current) {
+      return textureMap.current[textureId];
+    }
   }
 
   return (
-    <TextureContext.Provider value={{ getTexture, getTexturePath }}>
+    <TextureContext.Provider value={{ textureMap, getTexture, ktx2Loader }}>
       {children}
     </TextureContext.Provider>
   );

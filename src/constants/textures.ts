@@ -1,48 +1,52 @@
 //prettier-ignore
-export const TEXTURE_PATHS: Record<string, string> = {
+export const UP_FRONT: Record<string, string> = {
   // Sun
-  sun: '/textures/sun/sun.jpg',
+  sun: '/textures/sun/sun.ktx2',
 
   // Dwarf Planets
-  ceres: '/textures/dwarf-planets/ceres.jpg',
-  eris: '/textures/dwarf-planets/eris.jpg',
-  gonggong: '/textures/dwarf-planets/gonggong.jpg',
-  haumea: '/textures/dwarf-planets/haumea.jpg',
-  makemake: '/textures/dwarf-planets/makemake.jpg',
-  pluto: '/textures/dwarf-planets/pluto.jpg',
-  sedna: '/textures/dwarf-planets/sedna.jpg',
-
-  // Moons
-  callisto: '/textures/moons/callisto.jpg',
-  enceladus: '/textures/moons/enceladus.jpg',
-  europa: '/textures/moons/europa.jpg',
-  ganymede: '/textures/moons/ganymede.jpg',
-  iapetus: '/textures/moons/iapetus.jpg',
-  io: '/textures/moons/io.jpg',
-  moon: '/textures/moons/moon.jpg',
-  tethys: '/textures/moons/tethys.jpg',
-  titan: '/textures/moons/titan.jpg',
-  lunarRock2_albedo: '/textures/moons/lunar-rock2-bl/lunar-rock2_albedo.jpg',
-  lunarRock2_height: '/textures/moons/lunar-rock2-bl/lunar-rock2_height.jpg',
-  lunarRock2_normal: '/textures/moons/lunar-rock2-bl/lunar-rock2_normal.jpg',
+  ceres: '/textures/dwarf-planets/ceres.ktx2',
+  eris: '/textures/dwarf-planets/eris.ktx2',
+  gonggong: '/textures/dwarf-planets/gonggong.ktx2',
+  haumea: '/textures/dwarf-planets/haumea.ktx2',
+  makemake: '/textures/dwarf-planets/makemake.ktx2',
+  pluto: '/textures/dwarf-planets/pluto.ktx2',
+  sedna: '/textures/dwarf-planets/sedna.ktx2',
 
   // Planets
-  earth_clouds: '/textures/planets/earth/8k_earth_clouds.jpg',
-  earth_day: '/textures/planets/earth/8k_earth_daymap.jpg',
-  earth_night: '/textures/planets/earth/8k_earth_nightmap.jpg',
-  earth_specular: '/textures/planets/earth/8k_earth_specular_map.jpg',
-  jupiter: '/textures/planets/jupiter.jpg',
-  mars: '/textures/planets/mars.jpg',
-  mercury: '/textures/planets/mercury.jpg',
-  neptune: '/textures/planets/neptune.jpg',
-  saturn: '/textures/planets/saturn.jpg',
-  uranus: '/textures/planets/uranus.jpg',
-  venus: '/textures/planets/venus.jpg',
+  earth_clouds: '/textures/planets/earth/earth_clouds.ktx2',
+  earth_day: '/textures/planets/earth/earth_daymap.ktx2',
+  earth_night: '/textures/planets/earth/earth_nightmap.ktx2',
+  earth_specular: '/textures/planets/earth/earth_specular_map.ktx2',
+  jupiter: '/textures/planets/jupiter.ktx2',
+  mars: '/textures/planets/mars.ktx2',
+  mercury: '/textures/planets/mercury.ktx2',
+  neptune: '/textures/planets/neptune.ktx2',
+  saturn: '/textures/planets/saturn.ktx2',
+  uranus: '/textures/planets/uranus.ktx2',
+  venus: '/textures/planets/venus.ktx2',
 
   // Particles
   ringParticle: '/textures/particles/ring-particle.png',
   cometTrail: '/textures/particles/comet-trail.png',
+};
 
+export const ON_DEMAND: Record<string, string> = {
+  // Moons
+  callisto: '/textures/moons/callisto.ktx2',
+  enceladus: '/textures/moons/enceladus.ktx2',
+  europa: '/textures/moons/europa.ktx2',
+  ganymede: '/textures/moons/ganymede.ktx2',
+  iapetus: '/textures/moons/iapetus.ktx2',
+  io: '/textures/moons/io.ktx2',
+  moon: '/textures/moons/moon.ktx2',
+  tethys: '/textures/moons/tethys.ktx2',
+  titan: '/textures/moons/titan.ktx2',
+  lunarRock2_albedo: '/textures/moons/lunar-rock2-bl/lunar-rock2_albedo.ktx2',
+  lunarRock2_height: '/textures/moons/lunar-rock2-bl/lunar-rock2_height.ktx2',
+  lunarRock2_normal: '/textures/moons/lunar-rock2-bl/lunar-rock2_normal.ktx2',
+};
+
+export const BG_CUBEMAP: Record<string, string> = {
   // Background
   px: '/textures/cubemap/px.webp',
   nx: '/textures/cubemap/nx.webp',

@@ -1,4 +1,6 @@
-import { useContext } from 'react';
+import { MeshStandardMaterial } from 'three';
+import { ON_DEMAND } from '../../constants/textures';
+import { useContext, useEffect, useRef } from 'react';
 import TextureContext from '../../contexts/TextureContext';
 
 export default function MoonMaterial({
@@ -8,24 +10,52 @@ export default function MoonMaterial({
   id: string;
   meanRadius: number;
 }) {
-  const { getTexture } = useContext(TextureContext);
+  const hasSpecialTexture = ON_DEMAND[id];
 
-  // MOONS WITH SPECIFIC TEXTURES -----------------
-  const specificTexture = getTexture(id);
-
-  // GENERIC MOONS -----------------
-  const albedo = getTexture('lunarRock2_albedo');
-  const height = getTexture('lunarRock2_height');
-  const normal = getTexture('lunarRock2_normal');
-
-  return specificTexture ? (
-    <meshStandardMaterial map={specificTexture} roughness={1} />
+  return hasSpecialTexture ? (
+    <SpecialMaterial id={id} />
   ) : (
+    <GenericMaterial meanRadius={meanRadius} />
+  );
+}
+
+function SpecialMaterial({ id }: { id: string }) {
+  const material = useRef(new MeshStandardMaterial());
+  const { ktx2Loader } = useContext(TextureContext);
+
+  useEffect(() => {
+    if (ktx2Loader.current) {
+      ktx2Loader.current.load(ON_DEMAND[id], (map) => {
+        material.current.map = map;
+        material.current.roughness = 1;
+      });
+    }
+  }, []);
+
+  return <meshStandardMaterial ref={material} />;
+}
+
+function GenericMaterial({ meanRadius }: { meanRadius: number }) {
+  const material = useRef(new MeshStandardMaterial());
+  const { ktx2Loader } = useContext(TextureContext);
+
+  useEffect(() => {
+    if (ktx2Loader.current) {
+      ktx2Loader.current.load(ON_DEMAND.lunarRock2_albedo, (map) => {
+        material.current.map = map;
+      });
+      ktx2Loader.current.load(ON_DEMAND.lunarRock2_height, (map) => {
+        material.current.normalMap = map;
+      });
+      ktx2Loader.current.load(ON_DEMAND.lunarRock2_normal, (map) => {
+        material.current.displacementMap = map;
+      });
+    }
+  }, []);
+
+  return (
     <meshLambertMaterial
-      map={albedo}
-      normalMap={normal}
       normalScale={meanRadius < 600 ? 0.5 : 0.2}
-      displacementMap={height}
       displacementScale={meanRadius * 0.0000002}
     />
   );
