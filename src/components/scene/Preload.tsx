@@ -1,10 +1,11 @@
-import { useThree } from '@react-three/fiber';
+import { useLoader, useThree } from '@react-three/fiber';
 import { KTX2Loader } from 'three/examples/jsm/Addons.js';
-import { useKTX2, useTexture } from '@react-three/drei';
+import { useKTX2 } from '@react-three/drei';
 import { useContext, useEffect } from 'react';
 import TextureContext from '../../contexts/TextureContext';
 import { UP_FRONT } from '../../constants/textures';
 import basisTranscoderURL from '../../libs/basis/basis_transcoder.js?url';
+import { TextureLoader } from 'three';
 
 export default function Preload() {
   const { textureMap, ktx2Loader } = useContext(TextureContext);
@@ -22,7 +23,10 @@ export default function Preload() {
   }
 
   const ktx2Textures = useKTX2(ktx2Entries.map(([, path]) => path));
-  const tradTextures = useTexture(tradEntries.map(([, path]) => path));
+  const tradTextures = useLoader(
+    TextureLoader,
+    tradEntries.map(([, path]) => path),
+  );
 
   useEffect(() => {
     const textureMapResult: TextureMap = {};
@@ -36,7 +40,7 @@ export default function Preload() {
     });
 
     textureMap.current = textureMapResult;
-  }, [ktx2Textures, tradTextures]);
+  }, []);
 
   useEffect(() => {
     const loader = new KTX2Loader();
