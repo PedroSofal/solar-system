@@ -149,6 +149,12 @@ interface BodyType {
   moonBodies?: BodyType[];
 }
 
+interface SettingsOption {
+  label: string;
+  id: 'ring-system-density';
+  value: 'low' | 'medium' | 'full';
+}
+
 interface LayerOption {
   label: string;
   id: LayerId | string;

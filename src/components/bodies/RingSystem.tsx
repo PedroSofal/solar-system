@@ -19,8 +19,19 @@ import TextureContext from '../../contexts/TextureContext';
 import useFallbackData from '../../hooks/useFallbackData';
 import { getActiveLOD, toModelScale } from '../../utils/scene';
 import { ringSystemConfig } from '../../constants/scene';
+import SettingsContext from '../../contexts/SettingsContext';
 
-const { SPIN_SPEED, HEIGHT_MULTIPLIER, PARTICLE_BASE_SIZE } = ringSystemConfig;
+const {
+  SPIN_SPEED,
+  HEIGHT_MULTIPLIER,
+  PARTICLE_BASE_SIZE,
+  DENSITY_HIGH,
+  DENSITY_MEDIUM,
+  DENSITY_LOW,
+  USER_DENSITY_FULL,
+  USER_DENSITY_MEDIUM,
+  USER_DENSITY_LOW,
+} = ringSystemConfig;
 
 function setHslValue(position: number, settings: HslValue) {
   if (typeof settings === 'object' && 'customRanges' in settings) {
@@ -102,9 +113,11 @@ export default function RingSystem({
   const { timeScale } = useContext(TimeContext);
   const { getLayer } = useContext(LayerContext);
   const { getTexture } = useContext(TextureContext);
+  const { getSettings } = useContext(SettingsContext);
 
   const ambientLight = getLayer('ambient-light') as LayerOption;
   const particleTexture = getTexture('ringParticle');
+  const density_USER = getSettings('ring-system-density');
 
   const scaledEquaRadius = toModelScale(equaRadius as number);
   const scaledInnerEdge = toModelScale(innerEdge);
@@ -180,30 +193,34 @@ export default function RingSystem({
     [],
   );
 
-  const baseParticles =
-    density === 'high'
-      ? 1_000_000
-      : density === 'medium'
-        ? 500_000
-        : density === 'low'
-          ? 50_000
-          : 5_000;
+  const detailLevels = useMemo(() => {
+    const modifier =
+      density_USER?.value === 'full'
+        ? USER_DENSITY_FULL
+        : density_USER?.value === 'medium'
+          ? USER_DENSITY_MEDIUM
+          : USER_DENSITY_LOW;
 
-  const detailLevels = useMemo(
-    () => [
+    const baseParticles =
+      density === 'high'
+        ? DENSITY_HIGH * modifier
+        : density === 'medium'
+          ? DENSITY_MEDIUM * modifier
+          : DENSITY_LOW * modifier;
+
+    return [
       { particles: generateParticles(baseParticles), distance: 0 },
       { particles: generateParticles(baseParticles / 5), distance: 20 },
       { particles: generateParticles(baseParticles / 200), distance: 100 },
       { particles: generateParticles(0), distance: 500 },
-    ],
-    [],
-  );
-  // if (true) return null;
+    ];
+  }, [density_USER]);
+
   return (
     <group ref={particlesRef}>
       <Detailed distances={detailLevels.map((level) => level.distance)}>
         {detailLevels.map(({ particles }, index) => (
-          <points key={index} renderOrder={999}>
+          <points key={`${density_USER?.value}-${index}`} renderOrder={999}>
             <bufferGeometry>
               <bufferAttribute
                 attach="attributes-position"

@@ -6,23 +6,26 @@ import { CameraProvider } from './contexts/CameraContext';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import routes from './routes';
 import { LayerProvider } from './contexts/LayerContext';
+import { SettingsProvider } from './contexts/SettingsContext';
 
 const router = createBrowserRouter(routes);
 
 export default function App() {
   return (
-    <TimeProvider>
-      <TimeStaticProvider>
-        <BodyDataProvider>
-          <LayerProvider>
-            <TextureProvider>
-              <CameraProvider>
-                <RouterProvider router={router} />
-              </CameraProvider>
-            </TextureProvider>
-          </LayerProvider>
-        </BodyDataProvider>
-      </TimeStaticProvider>
-    </TimeProvider>
+    <SettingsProvider>
+      <TimeProvider>
+        <TimeStaticProvider>
+          <BodyDataProvider>
+            <LayerProvider>
+              <TextureProvider>
+                <CameraProvider>
+                  <RouterProvider router={router} />
+                </CameraProvider>
+              </TextureProvider>
+            </LayerProvider>
+          </BodyDataProvider>
+        </TimeStaticProvider>
+      </TimeProvider>
+    </SettingsProvider>
   );
 }

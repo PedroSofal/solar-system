@@ -2,16 +2,19 @@ import TimeControls from './TimeControls';
 import NavBar from './NavBar';
 import React, { useEffect, useState } from 'react';
 import Layers from './Layers';
+import Settings from './Settings';
 import { HomeIcon } from '@heroicons/react/24/outline';
 import { Link, useMatch } from 'react-router-dom';
 import {
   GlobeAltIcon as GlobeAltIconOutline,
   Square3Stack3DIcon as Square3Stack3DIconOutline,
+  Cog8ToothIcon as CogIconOutline,
   TvIcon,
 } from '@heroicons/react/24/outline';
 import {
   GlobeAltIcon as GlobeAltIconSolid,
   Square3Stack3DIcon as Square3Stack3DIconSolid,
+  Cog8ToothIcon as CogIconSolid,
 } from '@heroicons/react/24/solid';
 import Logo from '../../assets/logo/logo.svg?react';
 import BodyInfo from './BodyInfo';
@@ -178,6 +181,7 @@ function TopRightAction({
   setIsOverlayHidden: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [isLayersExpanded, setIsLayersExpanded] = useState(false);
+  const [isSettingsExpanded, setIsSettingsExpanded] = useState(false);
 
   return (
     <div
@@ -199,11 +203,34 @@ function TopRightAction({
             )
           }
           checked={isLayersExpanded}
-          onChange={() => setIsLayersExpanded(!isLayersExpanded)}
+          onChange={() => {
+            setIsLayersExpanded(!isLayersExpanded);
+            setIsSettingsExpanded(false);
+          }}
           title={isLayersExpanded ? 'Ocultar camadas' : 'Mostrar camadas'}
+        />
+        <CheckboxButton
+          icon={
+            isSettingsExpanded ? (
+              <CogIconSolid className="size-6" />
+            ) : (
+              <CogIconOutline className="size-6" />
+            )
+          }
+          checked={isSettingsExpanded}
+          onChange={() => {
+            setIsSettingsExpanded(!isSettingsExpanded);
+            setIsLayersExpanded(false);
+          }}
+          title={
+            isSettingsExpanded
+              ? 'Ocultar configurações'
+              : 'Mostrar configurações'
+          }
         />
       </div>
       <Layers isExpanded={isLayersExpanded} />
+      <Settings isExpanded={isSettingsExpanded} />
     </div>
   );
 }
