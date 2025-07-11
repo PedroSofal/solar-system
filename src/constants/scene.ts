@@ -22,3 +22,7 @@ export const ringSystemConfig = {
   HEIGHT_MULTIPLIER: 0.01,
   PARTICLE_BASE_SIZE: 0.00068,
 };
+
+export const bodyConfig = {
+  HYDROSTATIC_THRESHOLD: 170,
+};

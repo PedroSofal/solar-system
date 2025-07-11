@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import IrregularBody from './IrregularBody';
 import useFocusOnBody from '../../hooks/useFocusOnBody';
 import { toModelScale } from '../../utils/scene';
+import { bodyConfig } from '../../constants/scene';
 
 export default function Body({
   bodyRef,
@@ -28,7 +29,7 @@ export default function Body({
 }) {
   useFocusOnBody(id, bodyRef);
 
-  const isIrregular = meanRadius < 170;
+  const isIrregular = meanRadius < bodyConfig.HYDROSTATIC_THRESHOLD;
 
   const geometryInfo = useMemo(() => {
     let initialRadius: number;
