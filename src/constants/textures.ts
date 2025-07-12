@@ -33,11 +33,13 @@ export const UP_FRONT: Record<string, string> = {
 export const ON_DEMAND: Record<string, string> = {
   // Moons
   callisto: '/textures/moons/callisto.ktx2',
+  dione: '/textures/moons/dione.ktx2',
   enceladus: '/textures/moons/enceladus.ktx2',
   europa: '/textures/moons/europa.ktx2',
   ganymede: '/textures/moons/ganymede.ktx2',
   iapetus: '/textures/moons/iapetus.ktx2',
   io: '/textures/moons/io.ktx2',
+  mimas: '/textures/moons/mimas.ktx2',
   moon: '/textures/moons/moon.ktx2',
   tethys: '/textures/moons/tethys.ktx2',
   titan: '/textures/moons/titan.ktx2',
