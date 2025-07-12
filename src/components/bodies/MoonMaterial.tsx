@@ -24,39 +24,46 @@ function SpecialMaterial({ id }: { id: string }) {
   const { ktx2Loader } = useContext(TextureContext);
 
   useEffect(() => {
-    if (ktx2Loader.current) {
-      ktx2Loader.current.load(ON_DEMAND[id], (map) => {
-        material.current.map = map;
-        material.current.roughness = 1;
-      });
-    }
-  }, []);
+    const loader = ktx2Loader.current;
+    if (!loader) return;
 
-  return <meshStandardMaterial ref={material} />;
+    loader.load(ON_DEMAND[id], (map) => {
+      material.current.map = map;
+      material.current.roughness = 1;
+      material.current.needsUpdate = true;
+    });
+  }, [ktx2Loader, id]);
+
+  return <primitive object={material.current} />;
 }
 
 function GenericMaterial({ meanRadius }: { meanRadius: number }) {
   const material = useRef(new MeshStandardMaterial());
   const { ktx2Loader } = useContext(TextureContext);
 
-  useEffect(() => {
-    if (ktx2Loader.current) {
-      ktx2Loader.current.load(ON_DEMAND.lunarRock2_albedo, (map) => {
-        material.current.map = map;
-      });
-      ktx2Loader.current.load(ON_DEMAND.lunarRock2_height, (map) => {
-        material.current.normalMap = map;
-      });
-      ktx2Loader.current.load(ON_DEMAND.lunarRock2_normal, (map) => {
-        material.current.displacementMap = map;
-      });
-    }
-  }, []);
+  const scale = meanRadius < 600 ? 0.5 : 0.2;
 
-  return (
-    <meshLambertMaterial
-      normalScale={meanRadius < 600 ? 0.5 : 0.2}
-      displacementScale={meanRadius * 0.0000002}
-    />
-  );
+  useEffect(() => {
+    const loader = ktx2Loader.current;
+    if (!loader) return;
+
+    loader.load(ON_DEMAND.lunarRock2_albedo, (map) => {
+      material.current.map = map;
+      material.current.needsUpdate = true;
+    });
+
+    loader.load(ON_DEMAND.lunarRock2_normal, (map) => {
+      material.current.normalMap = map;
+      material.current.normalScale.set(scale, scale);
+      material.current.needsUpdate = true;
+    });
+
+    loader.load(ON_DEMAND.lunarRock2_height, (map) => {
+      material.current.displacementMap = map;
+      material.current.displacementScale = meanRadius * 0.0000002;
+      material.current.needsUpdate = true;
+    });
+  }, [ktx2Loader, meanRadius]);
+
+  return <primitive object={material.current} />;
 }
