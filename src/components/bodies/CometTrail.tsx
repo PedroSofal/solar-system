@@ -161,7 +161,7 @@ function Head({
   );
 
   return (
-    <mesh ref={headRef} renderOrder={999}>
+    <mesh ref={headRef} renderOrder={999} name="coma">
       <sphereGeometry args={[scaledMeanRadius * COMA_SCALE, 64, 64]} />
       <shaderMaterial
         vertexShader={headVertexShader}
@@ -308,7 +308,7 @@ function Tail({
   });
 
   return (
-    <points ref={tailRef} renderOrder={999}>
+    <points ref={tailRef} renderOrder={999} name="tail">
       <bufferGeometry attach="geometry">
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         <bufferAttribute attach="attributes-color" args={[colors, 3]} />

@@ -217,7 +217,7 @@ export default function RingSystem({
   }, [density_USER]);
 
   return (
-    <group ref={particlesRef}>
+    <group ref={particlesRef} name="ring-system">
       <Detailed distances={detailLevels.map((level) => level.distance)}>
         {detailLevels.map(({ particles }, index) => (
           <points key={`${density_USER?.value}-${index}`} renderOrder={999}>

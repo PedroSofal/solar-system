@@ -36,6 +36,7 @@ export default function IrregularBody({
 
   return (
     <mesh
+      name="irregular-body-mesh"
       ref={gltfRef}
       geometry={(nodes.Daphne_LP001_1_0 as Mesh).geometry}
       material={materials.material}

@@ -118,7 +118,7 @@ export default function OrbitLine({
   }, [a, e]);
 
   return (
-    <group ref={orbitRef}>
+    <group ref={orbitRef} name="orbit">
       <Detailed distances={detailLevels.map((level) => level.distance)}>
         {detailLevels.map(({ points }, index) => (
           <Line

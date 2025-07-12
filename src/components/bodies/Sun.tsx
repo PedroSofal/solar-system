@@ -32,8 +32,8 @@ export default function Sun({ bodyData }: { bodyData: BodyType }) {
   useStickySize(sunshineRef, sunRef, 3, 1);
 
   return (
-    <group>
-      <group quaternion={tiltQuaternion}>
+    <group name="sun-group">
+      <group quaternion={tiltQuaternion} name="obliquity">
         <Body
           bodyRef={sunRef}
           id={id}
@@ -50,7 +50,7 @@ export default function Sun({ bodyData }: { bodyData: BodyType }) {
             />
           }
           shine={
-            <mesh ref={sunshineRef}>
+            <mesh ref={sunshineRef} name="sunshine">
               <sphereGeometry args={[scaledMeanRadius + 8, 64, 64]} />
               <shaderMaterial
                 vertexShader={vertexShader}

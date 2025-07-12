@@ -109,7 +109,7 @@ export default function Node({
 
   return (
     <group ref={nodeRef} name="node">
-      <group ref={positionRef} name="orbit position">
+      <group ref={positionRef} name="orbit-position">
         <group quaternion={obliquityQuaternion} name="obliquity">
           <group ref={rotationRef} name="rotation">
             <Body
@@ -152,9 +152,9 @@ export default function Node({
               {...hitboxCulling}
             />
           </group>
-          {ringSystem && <group>{ringSystem}</group>}
+          {ringSystem || null}
         </group>
-        {trail && <group>{trail}</group>}
+        {trail || null}
       </group>
       <OrbitLine
         orbitRef={orbitRef}

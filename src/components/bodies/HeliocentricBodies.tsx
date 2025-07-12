@@ -52,7 +52,7 @@ const HeliocentricBody = memo(function ({
   return (
     <group
       ref={heliocentricContainerRef}
-      name="corpo heliocêntrico"
+      name="heliocentric-body-group"
       visible={isActive}
     >
       {isActive && (

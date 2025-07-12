@@ -18,7 +18,7 @@ export default function Atmosphere({
   color: Color;
 }) {
   return (
-    <mesh renderOrder={-1}>
+    <mesh renderOrder={-1} name="atmosphere-layer">
       <sphereGeometry args={[bodyRadius + length, 64, 64]} />
       <shaderMaterial
         vertexShader={vertexShader}

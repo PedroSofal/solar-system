@@ -66,6 +66,7 @@ export default function Body({
         <Detailed distances={detailLevels.map((level) => level.distance)}>
           {detailLevels.map(({ segments }, index) => (
             <mesh
+              name="regular-body-mesh"
               key={index}
               scale={geometryInfo.deformation}
               castShadow

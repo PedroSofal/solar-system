@@ -97,8 +97,8 @@ const Moon = memo(function ({
 
   return (
     isActive && (
-      <group ref={moonGroupRef} name="ancoragem do satélite">
-        <group quaternion={refPlaneQuaternion} name="reference plane">
+      <group ref={moonGroupRef} name="moon-anchor">
+        <group quaternion={refPlaneQuaternion} name="reference-plane">
           <Node bodyData={bodyData} bodyRef={bodyRef} />
         </group>
       </group>
