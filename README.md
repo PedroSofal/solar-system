@@ -18,7 +18,7 @@ Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.on
 
 - **Responsividade:** acesse pelo celular ou reduza a janela para o canto da tela sem perder funcionalidades;
 
-- **Performance otimizada:** o app utiliza culling, LOD, lazy loading e diversas outras técnicas para garantir a melhor experiência de performance, ao trabalhar com milhares de polígonos;
+- **Performance otimizada:** o app utiliza culling, LOD, lazy loading, texturas ktx2 e diversas outras técnicas para garantir a melhor experiência de performance, ao trabalhar com milhares de polígonos;
 
 ## Pontos de interesse
 
@@ -56,8 +56,14 @@ Projeto desenvolvido por Pedro Sofal.
 
 O banco de dados foi construído a partir da API [Le système solaire à portée de votre souris](https://api.le-systeme-solaire.net/), apesar de bastante modificada e atualizada com dados do [Horizons System, do Jet Propulsion Laboratory da NASA](https://ssd.jpl.nasa.gov/).
 
-As texturas dos planetas, planetas-anões, Sol e Lua foram fornecidas pelo [Solar System Scope](https://www.solarsystemscope.com/textures/). Já as demais texturas foram baixadas do site [Free PBR](https://freepbr.com/).
+As texturas dos planetas, planetas-anões, Sol e Lua foram fornecidas pelo [Solar System Scope](https://www.solarsystemscope.com/textures/). Já as demais texturas foram baixadas dos sites [Free PBR](https://freepbr.com/), [Deviant Art](http://deviantart.com/) e [JPL/NASA](https://www.jpl.nasa.gov/).
 
 O modelo usado para representar corpos sem equilíbrio hidrostático foi construído por Pasquill e disponibilizado em [Sketchfab](https://sketchfab.com/3d-models/asteroid-low-poly-9a43ef48a70647188576ccb5987b7e64).
 
 A ideia do projeto nasceu de um curso básico de Three.js do canal [Zero to Mastery](https://www.youtube.com/watch?v=KM64t3pA4fs), no YouTube.
+
+# Agradecimento
+
+Agradeço sempre ao pessoal do [The Odin Project](https://www.theodinproject.com/) que me forneceu toda a base para me tornar um desenvolvedor web.
+
+E ao Jet Propulsion Laboratory da NASA, por disponibilizar gratuitamente os dados orbitais de todos os objetos do Sistema Solar para a população, e ainda responder rapidamente e-mails de suporte técnico.
