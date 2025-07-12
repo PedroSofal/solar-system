@@ -1,6 +1,6 @@
 import { Group, Quaternion, Vector3 } from 'three';
 import { useFrame } from '@react-three/fiber';
-import { memo, useContext, useEffect, useMemo, useRef } from 'react';
+import { memo, useContext, useMemo, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import SceneContext from '../../contexts/SceneContext';
 import Node from './Node';
@@ -72,14 +72,17 @@ const Moon = memo(function ({
     isMajorMoon,
   );
 
-  useEffect(() => {
-    parentRef.current = sceneRef.current.getObjectByName(parentId) as Group;
-  }, [parentId]);
-
   useFrame(() => {
-    if (!parentRef.current || !moonGroupRef.current || !isActive) return;
-    const parentPosition = parentRef.current.getWorldPosition(new Vector3());
-    moonGroupRef.current.position.copy(parentPosition);
+    if (!moonGroupRef.current || !isActive) return;
+
+    if (!parentRef.current) {
+      parentRef.current = sceneRef.current.getObjectByName(parentId) as Group;
+    }
+
+    if (parentRef.current) {
+      const parentPosition = parentRef.current.getWorldPosition(new Vector3());
+      moonGroupRef.current.position.copy(parentPosition);
+    }
   }, -1);
 
   const refPlaneQuaternion = useMemo(() => {
