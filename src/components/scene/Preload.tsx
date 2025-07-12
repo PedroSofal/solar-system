@@ -4,7 +4,6 @@ import { useKTX2 } from '@react-three/drei';
 import { useContext, useEffect } from 'react';
 import TextureContext from '../../contexts/TextureContext';
 import { UP_FRONT } from '../../constants/textures';
-import basisTranscoderURL from '../../libs/basis/basis_transcoder.js?url';
 import { TextureLoader } from 'three';
 
 export default function Preload() {
@@ -44,11 +43,7 @@ export default function Preload() {
 
   useEffect(() => {
     const loader = new KTX2Loader();
-    const basisPath = basisTranscoderURL.substring(
-      0,
-      basisTranscoderURL.lastIndexOf('/') + 1,
-    );
-    loader.setTranscoderPath(basisPath);
+    loader.setTranscoderPath('/basis/');
     loader.detectSupport(gl);
     ktx2Loader.current = loader;
   }, []);
