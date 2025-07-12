@@ -43,8 +43,9 @@ export default function ShadowSource({
     }
 
     const activeReference = getBodyMeshFromGroup(bodyRef.current);
-    const bodyPosition = activeReference.getWorldPosition(new Vector3());
+    if (!activeReference) return;
 
+    const bodyPosition = activeReference.getWorldPosition(new Vector3());
     const center = new Vector3(0, 0, 0);
     const toCenter = new Vector3().subVectors(center, bodyPosition).normalize();
     const shadowSourcePosition = new Vector3()

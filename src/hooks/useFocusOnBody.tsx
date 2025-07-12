@@ -1,6 +1,6 @@
 import { RefObject, useContext, useEffect } from 'react';
 import { useMatch } from 'react-router-dom';
-import { Group, Sphere, Vector3 } from 'three';
+import { Group, Mesh, Sphere, Vector3 } from 'three';
 import { getBodyMeshFromGroup } from '../utils/scene';
 import CameraContext from '../contexts/CameraContext';
 import gsap from 'gsap';
@@ -26,9 +26,7 @@ function getCameraOffsetFromBodyPosition(bodyPosition: Vector3) {
     .normalize();
 }
 
-function getBoundingSphereRadiusFromBody(body: Group) {
-  const mesh = getBodyMeshFromGroup(body);
-
+function getBoundingSphereRadiusFromMesh(mesh: Mesh) {
   if (!mesh.geometry.boundingSphere) {
     mesh.geometry.computeBoundingSphere();
   }
@@ -71,8 +69,11 @@ export default function useFocusOnBody(
   function focusOnTarget(body: Group) {
     if (!orbitControlsRef.current || !body) return;
 
+    const mesh = getBodyMeshFromGroup(body);
+    if (!mesh) return;
+
     // Calcula o raio do bounding sphere em corpos esféricos e irregulares
-    const boundingRadius = getBoundingSphereRadiusFromBody(body);
+    const boundingRadius = getBoundingSphereRadiusFromMesh(mesh);
 
     // Atualiza limite de zoom
     const orbitControls = orbitControlsRef.current;

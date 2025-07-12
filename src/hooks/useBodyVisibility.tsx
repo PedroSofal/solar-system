@@ -30,13 +30,6 @@ export default function useBodyVisibility(
       isCurrentVisible = true;
     }
 
-    // if (containerRef.current) {
-    //   containerRef.current.visible = isCurrentVisible;
-    //   containerRef.current.traverse((obj) => {
-    //     if (obj.name === 'hitbox') obj.visible = isCurrentVisible;
-    //   });
-    // }
-
     if (isVisible !== isCurrentVisible) {
       setIsVisible(isCurrentVisible);
     }

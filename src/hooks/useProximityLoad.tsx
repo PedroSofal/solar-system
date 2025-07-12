@@ -13,11 +13,14 @@ export default function useProximityLoad(
     if (!bodyRef.current) return;
 
     const activeReference = getBodyMeshFromGroup(bodyRef.current);
-    const bodyPosition = activeReference.getWorldPosition(new Vector3());
-    const cameraDistance = camera.position.distanceTo(bodyPosition);
 
-    if (cameraDistance < distanceThreshold) {
-      if (!isLoaded) setIsLoaded(true);
+    if (activeReference) {
+      const bodyPosition = activeReference.getWorldPosition(new Vector3());
+      const cameraDistance = camera.position.distanceTo(bodyPosition);
+
+      if (cameraDistance < distanceThreshold) {
+        if (!isLoaded) setIsLoaded(true);
+      }
     }
   });
 

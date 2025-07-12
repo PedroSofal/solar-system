@@ -25,10 +25,13 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   // Acompanhamento automático do movimento orbital
   useFrame(() => {
     if (isFollowing && targetRef.current && orbitControlsRef.current) {
+      // console.log(targetRef.current);
       targetRef.current.updateMatrixWorld(true);
 
       const orbitControls = orbitControlsRef.current;
       const body = getBodyMeshFromGroup(targetRef.current);
+      if (!body) return;
+
       const bodyPosition = body.getWorldPosition(new Vector3());
 
       const direction = new Vector3()

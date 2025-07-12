@@ -28,8 +28,8 @@ export function getActiveLOD<T extends Object3D>(target: T): T {
   return target;
 }
 
-export function getBodyMeshFromGroup(body: Group): Mesh {
-  let mesh: Mesh | null = null;
+export function getBodyMeshFromGroup(body: Group): Mesh | undefined {
+  let mesh: Mesh | undefined = undefined;
 
   body.traverse((child: Object3D) => {
     if (mesh) return;
@@ -42,10 +42,6 @@ export function getBodyMeshFromGroup(body: Group): Mesh {
       }
     }
   });
-
-  if (!mesh) {
-    throw new Error('Nenhum mesh encontrado em ' + body.name);
-  }
 
   return mesh;
 }
