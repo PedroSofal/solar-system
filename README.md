@@ -4,7 +4,7 @@ NOVA ORBIS é um modelo 3D, em escala, do Sistema Solar, construído com Three.j
 
 ## Versão online
 
-Para executar o app em seu navegador, [clique aqui](https://solar-system-x4vg.onrender.com/).
+Para executar o app em seu navegador, [clique aqui](https://novaorbis.onrender.com/).
 
 ## Recursos principais
 
