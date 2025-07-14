@@ -1,6 +1,6 @@
 import TimeControls from './TimeControls';
 import NavBar from './NavBar';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Layers from './Layers';
 import Settings from './Settings';
 import { HomeIcon } from '@heroicons/react/24/outline';
@@ -27,8 +27,11 @@ export default function Overlay() {
   const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
   const [isTimeControlsExpanded, setIsTimeControlsExpanded] =
     useState<boolean>(true);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const match = useMatch('/corpos/:id');
+
+  const lastTap = useRef(0);
 
   useEffect(() => {
     if (match && match.params.id) {
@@ -41,8 +44,16 @@ export default function Overlay() {
 
   useEffect(() => {
     const onTouchStart = (e: TouchEvent) => {
-      if (e.touches.length === 3) {
+      if (e.touches.length > 1) return;
+
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap.current;
+
+      if (tapLength < 300 && tapLength > 0) {
         setIsOverlayHidden((prev) => !prev);
+        lastTap.current = 0;
+      } else {
+        lastTap.current = currentTime;
       }
     };
 
@@ -60,6 +71,11 @@ export default function Overlay() {
       window.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('keydown', onKeyDown);
     };
+  }, []);
+
+  useEffect(() => {
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(hasTouch);
   }, []);
 
   return (
@@ -101,13 +117,22 @@ export default function Overlay() {
       </div>
 
       {isOverlayHidden && (
-        <div className="animate-fadeTip fixed top-6 left-1/2 z-50 -translate-x-1/2 rounded-md bg-black/80 px-4 py-2 text-sm text-white shadow-lg backdrop-blur-sm">
-          Pressione{' '}
-          <kbd className="mx-1 font-mono text-base">
-            <span className="text-emerald-400">Shift</span> +{' '}
-            <span className="text-emerald-400">F</span>
-          </kbd>{' '}
-          para restaurar a interface
+        <div className="animate-fadeTip fixed top-6 left-1/2 z-50 -translate-x-1/2 rounded-md bg-black/80 px-4 py-2 text-center text-sm text-white shadow-lg backdrop-blur-sm">
+          {isTouchDevice ? (
+            <>
+              Toque <span className="text-emerald-400">duas vezes</span> para
+              restaurar a interface
+            </>
+          ) : (
+            <>
+              Pressione{' '}
+              <kbd className="mx-1 font-mono text-base">
+                <span className="text-emerald-400">Shift</span> +{' '}
+                <span className="text-emerald-400">F</span>
+              </kbd>{' '}
+              para restaurar a interface
+            </>
+          )}
         </div>
       )}
     </>
