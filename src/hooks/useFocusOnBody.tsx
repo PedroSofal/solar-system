@@ -5,6 +5,15 @@ import { getBodyMeshFromGroup } from '../utils/scene';
 import CameraContext from '../contexts/CameraContext';
 import gsap from 'gsap';
 import TimeContext from '../contexts/TimeContext';
+import { cameraConfig } from '../constants/camera';
+
+const {
+  MIN_DISTANCE,
+  FOCUS_LEFT_OFFSET,
+  FOCUS_UP_OFFSET,
+  FOCUS_DISTANCE,
+  FOLLOW_DELAY,
+} = cameraConfig;
 
 function getCameraOffsetFromBodyPosition(bodyPosition: Vector3) {
   // Direção do corpo em relação ao Sol
@@ -16,13 +25,10 @@ function getCameraOffsetFromBodyPosition(bodyPosition: Vector3) {
   const side = new Vector3().crossVectors(toCenter, worldUp).normalize();
   const up = new Vector3().crossVectors(side, toCenter).normalize();
 
-  const sideAmount = 0.8;
-  const upAmount = 0.2;
-
   return new Vector3()
     .copy(toCenter)
-    .add(side.multiplyScalar(sideAmount))
-    .add(up.multiplyScalar(upAmount))
+    .add(side.multiplyScalar(FOCUS_LEFT_OFFSET))
+    .add(up.multiplyScalar(FOCUS_UP_OFFSET))
     .normalize();
 }
 
@@ -77,7 +83,7 @@ export default function useFocusOnBody(
 
     // Atualiza limite de zoom
     const orbitControls = orbitControlsRef.current;
-    orbitControls.minDistance = Math.max(0.0003, boundingRadius * 1.5);
+    orbitControls.minDistance = Math.max(MIN_DISTANCE, boundingRadius * 1.5);
 
     const bodyPosition = body.getWorldPosition(new Vector3());
     const camPositionOrigin = orbitControls.object.position;
@@ -89,8 +95,9 @@ export default function useFocusOnBody(
     if (body.name === 'sun') {
       camPositionDestiny.add(new Vector3(15, 15, 5));
     } else {
-      const cameraOffset = getCameraOffsetFromBodyPosition(bodyPosition);
-      camPositionDestiny.add(cameraOffset.multiplyScalar(boundingRadius * 6));
+      const offset = getCameraOffsetFromBodyPosition(bodyPosition);
+      const distance = boundingRadius * FOCUS_DISTANCE;
+      camPositionDestiny.add(offset.multiplyScalar(distance));
     }
 
     // Interrompe o acompanhamento do corpo para evitar um flash de foco instantâneo
@@ -101,7 +108,7 @@ export default function useFocusOnBody(
         targetRef.current = bodyRef.current;
       },
       // Reinicia o acompanhamento imediatamente, se o tempo está acelerado, para evitar foco no vazio
-      Math.abs(timeScale) > 1 ? 0 : 2500,
+      Math.abs(timeScale) > 1 ? 0 : FOLLOW_DELAY,
     );
 
     // Animação da posição da câmera
