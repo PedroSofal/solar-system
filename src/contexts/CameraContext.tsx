@@ -23,6 +23,7 @@ const CameraContext = createContext<{
   setIsFollowing: React.Dispatch<React.SetStateAction<boolean>>;
   focusTrigger: Trigger;
   handleFocus: (newTargetId: string) => void;
+  resetTrigger: () => void;
 }>({
   orbitControlsRef: React.createRef(),
   trackballControlsRef: React.createRef(),
@@ -31,6 +32,7 @@ const CameraContext = createContext<{
   setIsFollowing: () => {},
   focusTrigger: initTrigger,
   handleFocus: () => {},
+  resetTrigger: () => {},
 });
 
 export function CameraProvider({ children }: { children: React.ReactNode }) {
@@ -48,6 +50,10 @@ export function CameraProvider({ children }: { children: React.ReactNode }) {
     }));
   }
 
+  function resetTrigger() {
+    setFocusTrigger(initTrigger);
+  }
+
   return (
     <CameraContext.Provider
       value={{
@@ -58,6 +64,7 @@ export function CameraProvider({ children }: { children: React.ReactNode }) {
         setIsFollowing,
         focusTrigger,
         handleFocus,
+        resetTrigger,
       }}
     >
       {children}

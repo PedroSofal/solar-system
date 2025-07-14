@@ -11,8 +11,13 @@ import { getBodyMeshFromGroup } from '../../utils/scene';
 import { cameraConfig } from '../../constants/camera';
 
 export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
-  const { orbitControlsRef, trackballControlsRef, targetRef, isFollowing } =
-    useContext(CameraContext);
+  const {
+    orbitControlsRef,
+    trackballControlsRef,
+    targetRef,
+    isFollowing,
+    resetTrigger,
+  } = useContext(CameraContext);
   const scene = useContext(SceneContext);
 
   const { pathname } = useLocation();
@@ -25,7 +30,6 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
   // Acompanhamento automático do movimento orbital
   useFrame(() => {
     if (isFollowing && targetRef.current && orbitControlsRef.current) {
-      // console.log(targetRef.current);
       targetRef.current.updateMatrixWorld(true);
 
       const orbitControls = orbitControlsRef.current;
@@ -69,6 +73,7 @@ export default function CameraControls({ isLoaded }: { isLoaded: boolean }) {
 
     const sceneSun = scene.current.getObjectByName('sun');
     if (sceneSun) targetRef.current = sceneSun as Group;
+    resetTrigger();
 
     orbitControls.object.position.copy(cameraConfig.INITIAL_POS);
 
