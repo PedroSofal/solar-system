@@ -94,7 +94,7 @@
 }
 
 .button--toggle {
-  @apply hover:text-neutral-900 hover:after:top-0 hover:after:h-full;
+  @apply hover:text-neutral-900 hover:after:top-0 hover:after:h-full active:text-neutral-900 active:after:top-0 active:after:h-full;
 }
 
 .button--checkbox {
@@ -130,5 +130,5 @@
 }
 
 .title {
-  @apply max-w-96 text-4xl font-bold text-white;
+  @apply max-w-96 text-3xl font-bold text-white sm:text-4xl;
 }

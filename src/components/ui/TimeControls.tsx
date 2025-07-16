@@ -1,19 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import TimeContext from '../../contexts/TimeContext';
 import Button from './Button';
-import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { fromJulianDate, toJulianDate } from '../../utils/time';
 import { timeConfig } from '../../constants/time';
 
-export default function TimeControls({
-  isExpanded,
-  setIsExpanded,
-  isOverlayHidden,
-}: {
-  isExpanded: boolean;
-  setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>;
-  isOverlayHidden: boolean;
-}) {
+export default function TimeControls({ isExpanded }: { isExpanded: boolean }) {
   const { play, pause, reset, modifier, isPaused, label, isValidTime } =
     useContext(TimeContext);
 
@@ -28,67 +19,52 @@ export default function TimeControls({
 
   return (
     <div
-      className={`${isOverlayHidden ? 'translate-y-[100%]' : ''} pointer-events-none absolute bottom-0 w-full duration-700`}
+      className={`flex flex-col items-center px-2 ${isExpanded ? '' : 'hidden'}`}
     >
-      <div
-        className={`flex flex-col items-center px-2 duration-300 ${isExpanded || !isValidTime ? '' : 'invisible translate-y-24 opacity-0'}`}
-      >
-        {!isValidTime && (
-          <div className="mb-4 text-center text-red-500">
-            Limite de simulação atingida. Por favor, escolha uma data entre
-            01/01/1900 e 31/12/2112.
-          </div>
-        )}
-        <div className="pointer-events-auto relative w-full max-w-96 pb-8">
-          <input
-            type="range"
-            min={-timeConfig.STEPS}
-            max={timeConfig.STEPS}
-            step={1}
-            value={modifier}
-            onChange={handleChange}
-            className="slider"
-            title={label}
-            draggable
-            onDragStart={fixSlider}
-          />
+      {!isValidTime && (
+        <div className="mb-4 text-center text-red-500">
+          Limite de simulação atingida. Por favor, escolha uma data entre
+          01/01/1900 e 31/12/2112.
         </div>
-
-        <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr] md:items-center">
-          <div className="pointer-events-auto flex justify-center gap-4 md:order-2">
-            <Button label="Reset" onClick={reset} title="Tempo ao vivo" />
-            <Button
-              label={isPaused ? 'Play' : 'Pause'}
-              onClick={isPaused ? () => play() : pause}
-              title={
-                isPaused
-                  ? 'Continuar simulação do tempo'
-                  : 'Suspender simulação do tempo'
-              }
-              className="min-w-[8ch]"
-            />
-          </div>
-          <div className="pointer-events-auto grid sm:grid-cols-2 md:contents">
-            <span className="mx-6 border-x-2 border-neutral-800 px-10 text-center text-neutral-500 hover:bg-slate-950 sm:border-b-0 md:order-1">
-              <Clock />
-            </span>
-            <span className="mx-6 border-x-2 border-neutral-800 px-10 text-center text-neutral-500 sm:border-t-0 md:order-3">
-              {label}
-            </span>
-          </div>
-        </div>
+      )}
+      <div className="pointer-events-auto relative w-full max-w-96 pb-8">
+        <input
+          type="range"
+          min={-timeConfig.STEPS}
+          max={timeConfig.STEPS}
+          step={1}
+          value={modifier}
+          onChange={handleChange}
+          className="slider"
+          title={label}
+          draggable
+          onDragStart={fixSlider}
+        />
       </div>
 
-      <button
-        className="pointer-events-auto mx-auto mt-4 -mb-2 block cursor-pointer p-2 duration-300 hover:-translate-y-2"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        {isExpanded ? (
-          <ChevronDownIcon className="size-6 text-white" />
-        ) : (
-          <ChevronUpIcon className="size-6 text-white" />
-        )}
-      </button>
+      <div className="grid gap-4 md:grid-cols-[1fr_auto_1fr] md:items-center">
+        <div className="pointer-events-auto flex justify-center gap-4 md:order-2">
+          <Button label="Reset" onClick={reset} title="Tempo ao vivo" />
+          <Button
+            label={isPaused ? 'Play' : 'Pause'}
+            onClick={isPaused ? () => play() : pause}
+            title={
+              isPaused
+                ? 'Continuar simulação do tempo'
+                : 'Suspender simulação do tempo'
+            }
+            className="min-w-[8ch]"
+          />
+        </div>
+        <div className="pointer-events-auto grid sm:grid-cols-2 md:contents">
+          <span className="mx-6 border-x-2 border-neutral-800 px-10 text-center text-neutral-500 hover:bg-slate-950 active:bg-slate-950 sm:border-b-0 md:order-1">
+            <Clock />
+          </span>
+          <span className="mx-6 border-x-2 border-neutral-800 px-10 text-center text-neutral-500 sm:border-t-0 md:order-3">
+            {label}
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
@@ -105,6 +81,12 @@ function Clock() {
 
   const [time, setTime] = useState(new Date());
   const [isInputExpanded, setIsInputExpanded] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(hasTouch);
+  }, []);
 
   useEffect(() => {
     const updateClock = () => {
@@ -154,7 +136,7 @@ function Clock() {
       <span>{day + ', ' + hour}</span>
 
       <form
-        className={`absolute bottom-[100%] left-[50%] mb-2 -translate-x-[50%] ${isInputExpanded || !isValidTime ? '' : 'hidden'}`}
+        className={`absolute bottom-[100%] left-[50%] mb-2 flex -translate-x-[50%] gap-2 ${isInputExpanded || !isValidTime ? '' : 'hidden'}`}
         onSubmit={handleSubmitCustomDate}
         onClick={(e) => e.stopPropagation()}
       >
@@ -170,7 +152,7 @@ function Clock() {
             if (e.key === 'Escape') setIsInputExpanded(false);
           }}
         />
-        <button className="hidden">Submit</button>
+        <Button className={isTouchDevice ? '' : 'hidden!'} label="Ok" />
       </form>
     </div>
   );

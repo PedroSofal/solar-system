@@ -208,54 +208,63 @@ export default function BodyInfo({
 
   return (
     <>
-      <div className="mt-6">
-        <Button label="Voltar" onClick={goBack} />
-      </div>
-      <div
-        style={{ direction: 'rtl' }}
-        className="mt-6 flex h-[80vh] max-w-96 flex-col gap-6 overflow-y-scroll pl-6"
-      >
-        <div className="absolute left-[2px] h-[80vh] w-[1px] bg-emerald-400/50"></div>
-        <div className="contents" style={{ direction: 'ltr' }}>
-          <div>
-            <div className="mb-1 font-semibold text-emerald-400">
-              {formatBodyType(body.bodyType)}
-            </div>
-            <h1 className="flex items-end gap-2">
-              <div className="title border-bottom gradient-bg w-fit px-4 py-2">
-                {body.name}
+      <div className="relative">
+        <Button
+          label="Voltar"
+          onClick={goBack}
+          className="mt-6 hidden! sm:inline-block!"
+        />
+        <div
+          style={{ direction: 'rtl' }}
+          className="mt-6 flex max-h-[75dvh] flex-col gap-6 overflow-y-scroll pl-6 sm:max-w-96"
+        >
+          <div className="absolute left-[2px] h-[80vh] w-[1px] bg-emerald-400/50"></div>
+          <div className="contents" style={{ direction: 'ltr' }}>
+            <div>
+              <div className="mb-1 font-semibold text-emerald-400">
+                {formatBodyType(body.bodyType)}
               </div>
-              <nav>
-                <Link to={`corpos/${body.id}`}>
-                  <Button
-                    icon={<RocketLaunchIcon className="size-6" />}
-                    className="secondary-btn-clr"
-                    title={`Navegar até ${body.name}`}
-                    onClick={() => handleFocus(body.id)}
-                  />
-                </Link>
-              </nav>
-              <ButtonCheckbox
-                icon={<ViewfinderCircleIcon className="size-6" />}
-                className="secondary-btn-clr"
-                title="Acompanhar movimento orbital"
-                checked={isFollowing}
-                onChange={(e) => setIsFollowing(e.target.checked)}
-              />
-            </h1>
+              <h1 className="flex items-end gap-2">
+                <div className="title border-bottom gradient-bg w-fit px-4 py-2">
+                  {body.name}
+                </div>
+                <nav>
+                  <Link to={`corpos/${body.id}`}>
+                    <Button
+                      icon={<RocketLaunchIcon className="size-6" />}
+                      className="secondary-btn-clr"
+                      title={`Navegar até ${body.name}`}
+                      onClick={() => handleFocus(body.id)}
+                    />
+                  </Link>
+                </nav>
+                <ButtonCheckbox
+                  icon={<ViewfinderCircleIcon className="size-6" />}
+                  className="secondary-btn-clr"
+                  title="Acompanhar movimento orbital"
+                  checked={isFollowing}
+                  onChange={(e) => setIsFollowing(e.target.checked)}
+                />
+              </h1>
+            </div>
+            {body.description && <Description>{body.description}</Description>}
           </div>
-          {body.description && <Description>{body.description}</Description>}
-        </div>
 
-        <InfoTable body={body} setSelectedBody={setSelectedBody} />
+          <InfoTable body={body} setSelectedBody={setSelectedBody} />
 
-        <div className="contents" style={{ direction: 'ltr' }}>
-          {body.discoveredBy && body.discoveryDate && (
-            <p className="text-sm text-white">
-              Descoberto por {body.discoveredBy} em {body.discoveryDate}.
-            </p>
-          )}
+          <div className="contents" style={{ direction: 'ltr' }}>
+            {body.discoveredBy && body.discoveryDate && (
+              <p className="text-sm text-white">
+                Descoberto por {body.discoveredBy} em {body.discoveryDate}.
+              </p>
+            )}
+          </div>
         </div>
+        <Button
+          label="Voltar"
+          onClick={goBack}
+          className="mt-4 ml-7 px-4! py-2 sm:hidden!"
+        />
       </div>
     </>
   );

@@ -1,9 +1,9 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import { DEFAULT_SETTINGS_CONFIG } from '../constants/settings';
 
 const SettingsContext = createContext<{
   settings: SettingsOption[];
-  setSettings: (obj: SettingsOption[]) => void;
+  setSettings: React.Dispatch<React.SetStateAction<SettingsOption[]>>;
   getSettings: (settingsId: SettingsOption['id']) => SettingsOption | undefined;
 }>({
   settings: DEFAULT_SETTINGS_CONFIG,

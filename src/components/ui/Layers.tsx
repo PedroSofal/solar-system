@@ -39,7 +39,7 @@ export default function Layers({ isExpanded }: { isExpanded: boolean }) {
 
   return (
     <aside
-      className={`main-container mt-6 flex max-h-[70vh] max-w-[16rem] flex-col gap-4 ${!isExpanded ? 'hidden!' : ''}`}
+      className={`main-container flex max-h-[70vh] flex-col gap-4 sm:mt-6 sm:max-w-[16rem] ${!isExpanded ? 'hidden!' : ''}`}
     >
       <h1 className="font-semibold text-white">Camadas</h1>
       <hr className="border-emerald-400/50" />

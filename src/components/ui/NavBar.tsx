@@ -3,20 +3,17 @@ import BodyDataContext from '../../contexts/BodyDataContext';
 import SearchBar from './SearchBar';
 import Nav from './Nav';
 import { mapBodyToNavItem } from '../../utils/ui';
+import BodyInfo from './BodyInfo';
+import { useMatch } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 
-export default function NavBar({
-  isExpanded,
-  selectedBody,
-  setSelectedBody,
-}: {
-  isExpanded: boolean;
-  selectedBody: string | null | undefined;
-  setSelectedBody: React.Dispatch<
-    React.SetStateAction<string | null | undefined>
-  >;
-}) {
+export default function NavBar({ isExpanded }: { isExpanded: boolean }) {
   const { sun, planets, moons, dwarfPlanets, asteroids, comets, loading } =
     useContext(BodyDataContext);
+
+  const [selectedBody, setSelectedBody] = useState<string | null | undefined>();
+
+  const match = useMatch('/corpos/:id');
 
   const navTree = useMemo(() => {
     return [
@@ -68,10 +65,21 @@ export default function NavBar({
     }
   }, [loading]);
 
+  useEffect(() => {
+    if (match && match.params.id) {
+      // setIsNavbarExpanded(true);
+      setSelectedBody(match.params.id);
+    } else {
+      setSelectedBody(undefined);
+    }
+  }, [match]);
+
   return (
-    <>
+    <aside
+      className={`max-w-[34rem] min-w-[20rem] ${!isExpanded ? 'hidden' : ''}`}
+    >
       <div
-        className={`main-container mt-6 flex max-h-[70vh] flex-col gap-4 ${selectedBody ? 'hidden!' : ''}`}
+        className={`main-container mt-6 flex max-h-[80dvh] flex-col gap-4 sm:max-h-[70vh] ${selectedBody ? 'hidden!' : ''}`}
       >
         <div>
           <p className="mb-1 font-semibold">
@@ -79,7 +87,7 @@ export default function NavBar({
               ? 'Sistema de propulsores pronto!'
               : 'Ops! Falha no sistema de localização'}
           </p>
-          <h1 className="title mb-8">
+          <h1 className="title mb-2">
             {selectedBody === undefined
               ? 'Selecione um destino para navegar'
               : 'O corpo celeste que você está procurando não foi encontrado'}
@@ -101,6 +109,20 @@ export default function NavBar({
           setSelectedBody={setSelectedBody}
         />
       </div>
-    </>
+      {selectedBody && (
+        <>
+          <BodyInfo
+            selectedBody={selectedBody}
+            setSelectedBody={setSelectedBody}
+          />
+          {createPortal(
+            <div
+              className={`pointer-events-none absolute inset-0 bg-slate-950/80 duration-300 sm:hidden ${isExpanded ? '' : 'opacity-0'}`}
+            />,
+            document.body,
+          )}
+        </>
+      )}
+    </aside>
   );
 }
