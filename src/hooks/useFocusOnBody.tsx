@@ -9,8 +9,8 @@ import { cameraConfig } from '../constants/camera';
 
 const {
   MIN_DISTANCE,
-  FOCUS_LEFT_OFFSET,
-  FOCUS_UP_OFFSET,
+  FOCUS_OFFSET_LEFT,
+  FOCUS_OFFSET_UP,
   FOCUS_DISTANCE,
   FOLLOW_DELAY,
 } = cameraConfig;
@@ -27,8 +27,8 @@ function getCameraOffsetFromBodyPosition(bodyPosition: Vector3) {
 
   return new Vector3()
     .copy(toCenter)
-    .add(side.multiplyScalar(FOCUS_LEFT_OFFSET))
-    .add(up.multiplyScalar(FOCUS_UP_OFFSET))
+    .add(side.multiplyScalar(FOCUS_OFFSET_LEFT))
+    .add(up.multiplyScalar(FOCUS_OFFSET_UP))
     .normalize();
 }
 
@@ -83,7 +83,10 @@ export default function useFocusOnBody(
 
     // Atualiza limite de zoom
     const orbitControls = orbitControlsRef.current;
-    orbitControls.minDistance = Math.max(MIN_DISTANCE, boundingRadius * 1.5);
+    orbitControls.minDistance = Math.max(
+      MIN_DISTANCE * 0.05,
+      boundingRadius * 1.5,
+    );
 
     const bodyPosition = body.getWorldPosition(new Vector3());
     const camPositionOrigin = orbitControls.object.position;
