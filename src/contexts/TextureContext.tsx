@@ -1,29 +1,36 @@
-import React, { createContext, createRef, useRef } from 'react';
+import React, {
+  createContext,
+  createRef,
+  useCallback,
+  useRef,
+  useState,
+} from 'react';
 import { Texture } from 'three';
 import { KTX2Loader } from 'three/examples/jsm/Addons.js';
 
 const TextureContext = createContext<{
-  textureMap: React.RefObject<TextureMap | null>;
+  setTextureMap: React.Dispatch<React.SetStateAction<TextureMap>>;
   getTexture: (textureId: string) => Texture;
   ktx2Loader: React.RefObject<KTX2Loader | null>;
 }>({
-  textureMap: createRef(),
+  setTextureMap: () => {},
   getTexture: (() => {}) as unknown as (textureId: string) => Texture,
   ktx2Loader: createRef(),
 });
 
 export function TextureProvider({ children }: { children: React.ReactNode }) {
-  const textureMap = useRef<TextureMap>(null);
+  const [textureMap, setTextureMap] = useState<TextureMap>({});
   const ktx2Loader = useRef<KTX2Loader>(null);
 
-  function getTexture(textureId: string) {
-    if (textureMap.current) {
-      return textureMap.current[textureId];
-    }
-  }
+  const getTexture = useCallback(
+    (key: string) => {
+      return textureMap[key];
+    },
+    [textureMap],
+  );
 
   return (
-    <TextureContext.Provider value={{ textureMap, getTexture, ktx2Loader }}>
+    <TextureContext.Provider value={{ setTextureMap, getTexture, ktx2Loader }}>
       {children}
     </TextureContext.Provider>
   );

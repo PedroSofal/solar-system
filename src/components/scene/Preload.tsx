@@ -7,7 +7,7 @@ import { UP_FRONT } from '../../constants/textures';
 import { TextureLoader } from 'three';
 
 export default function Preload() {
-  const { textureMap, ktx2Loader } = useContext(TextureContext);
+  const { setTextureMap, ktx2Loader } = useContext(TextureContext);
   const { gl } = useThree();
 
   const ktx2Entries: [string, string][] = [];
@@ -38,7 +38,8 @@ export default function Preload() {
       textureMapResult[key] = tradTextures[index];
     });
 
-    textureMap.current = textureMapResult;
+    setTextureMap(textureMapResult);
+    console.log(textureMapResult);
   }, []);
 
   useEffect(() => {
