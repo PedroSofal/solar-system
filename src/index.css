@@ -90,7 +90,7 @@
 }
 
 .button {
-  @apply relative inline-block bg-neutral-800/50 text-center text-lg font-bold text-emerald-500 uppercase backdrop-blur-xs duration-200 after:absolute after:right-0 after:bottom-0 after:left-0 after:z-0 after:block after:bg-emerald-500 after:duration-200;
+  @apply relative inline-block bg-neutral-800/50 text-center text-lg font-bold text-emerald-500 uppercase backdrop-blur-xs duration-200 after:absolute after:right-0 after:bottom-0 after:left-0 after:z-[-10] after:block after:bg-emerald-500 after:duration-200;
 }
 
 .button--toggle {
