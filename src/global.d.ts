@@ -17,6 +17,17 @@ declare module '*.frag' {
   export default value;
 }
 
+interface ProcessedBodyData {
+  sun?: BodyType;
+  planets?: BodyType[];
+  moons?: BodyType[];
+  dwarfPlanets?: BodyType[];
+  asteroids?: BodyType[];
+  comets?: BodyType[];
+  allBodies?: BodyType[];
+  heliocentricBodies?: BodyType[];
+}
+
 interface Mass {
   massValue: number;
   massExponent: number;
